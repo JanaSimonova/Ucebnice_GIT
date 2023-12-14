@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn</title>
-    <!-- <link rel="stylesheet" href="style.css" > -->
+    <link rel="stylesheet" href="style.css" >
 
     <script
         src="https://code.jquery.com/jquery-3.7.0.min.js"
@@ -56,7 +56,7 @@
             <p>S Gitem velmi často také pracují týmy více lidí.
                 Možnost větvení je proto skvělé řešení, protože každý člen má jen svou větev a tvoří si vlastní změny.</p>
             <div class="parent">
-                <img src="images/git_branch.webp" class="learn_img">  <!-- dole https://www.g2.com/compare/phpstorm-vs-gitkraken-client -->
+                <img src="images/git_branch.webp" class="learn_img_big">  <!-- dole https://www.g2.com/compare/phpstorm-vs-gitkraken-client -->
                 <div class="image_descr">Příklad větvení v aplikaci GitKraken</div>
             </div>
 
@@ -66,15 +66,45 @@
                 odkaz</a> -->
 
             <h2>Výhody VCS</h2>
-            <h3>Complete long-term change history of every file</h3>
-            <p>Every change made by many individuals over the years.</p>
-            <h3>Branching and merging</h3>
-            <p>Creating a "branch" in VCS tools keeps multiple streams of work independent from each other while also providing 
-                the facility to merge that work back together, enabling developers to verify that the changes on each branch do not conflict.</p>
-            <h3>Traceability</h3>
-            <p>Being able to trace each change made to the software and connect it to project management and bug tracking software such as Jira, 
-                and being able to annotate each change with a message describing the purpose and intent of the change can help not only with root 
-                cause analysis and other forensics</p>
+                <h3>Kompletní historie změn každého souboru</h3>
+                    <p>Zaznamenávají se všechny změny. Vytváření, mazání a úprava souborů. Díky tomu se můžete kdykoliv vrátit a podívat se na provedené změny.</p>
+                    <p>Změny se značí krátkými popisky, aby bylo snadné se v nich vyznat.</p>
+                    <p class="text-info"><strong>Pozor!</strong> Nezaznamenává se vše při každém uložení souboru. Uživatel si sám určuje kdy a co se bude zálohovat.</p>            
+                <h3>Větvení</h3>
+                    <p>Je skvělé při práci v týmech, ale může se hodit i samostatnému vývojáři. Provedené změny jsou pouze na jedné větvi.
+                        Větve se dají zase spojovat dohromady, což umožňuje zkontrolovat kolize mezi nimi a řešit je.
+                        Každý pracovník tak může pracovat na svojí větvi, a ty se pak spojí do jedné.</p>
+                <h3>Oprava chyb</h3>
+                    <p>Při výskytu chyby se můžete jednoduše podívat do historie a najít, čím je chyba způsobena.</p>
+
+
+            <h2>Druhy VCS</h2>
+            <!-- https://digilib.k.utb.cz/bitstream/handle/10563/41264/novos%C3%A1d_2017_dp.pdf?sequence=1&isAllowed=y -->
+                <h3>Centralizované (CVCS)</h3>
+                    <p>Existuje jeden centrální server, na kterém je kompletní historie změn. Každý uživatel má na svém počítači jen nejaktuálnější verzi.</p>
+                    <p class="margin_before">Výhodou je, že všichni členové mohou vidět, na čem pracují ostatní, a je jednodušší na naučení. Administrátoři mohou definovat různá oprávnění.</p>
+                    <p class="margin_before">Nevýhodou je, že při výpadku centrálního serveru nelze ukládat ani stahovat žádné verze, a při poškození dat na serveru je vše pryč.</p>
+                    <ul>
+                        <li>Subversion</li>
+                        <li>CVS</li>
+                        <li>Perforce</li>
+                    </ul>
+                    <div class="parent">
+                        <img src="images/image_part_001v2.png" class="learn_img_small"> </div>
+                        <!-- https://www.researchgate.net/figure/Centralized-Version-Control-vs-Distributed-Version-Control_fig2_316553817 -->
+                <h3>Distribuované (decentralizované,DVCS)</h3>
+                    <p>Nemá centrální databázi, každý uživatel má celou kopii u sebe. Poté změny "pushne" do sítě, nebo centrálního repozitáře.</p>
+                    <p class="text-info">Repozitář = úložiště s historií všech uložených změn, všechny soubory a složky, celý "projekt"</p>
+                    <p class="margin_before">Hlavními výhodami je možnost pracovat offline, protože každý uživatel má celý repozitář na svém počítači, což urychluje proces. 
+                        Snadnější přepínání mezi větvemi a verzemi, řešení konfliktů. Větší bezpečnost.</p>
+                    <p class="margin_before">Nevýhodou je pak trochu složitější fungování, stále ale určitě pochopitelné.</p>
+                    <ul>
+                        <li><strong><u>Git</u></strong></li>
+                        <li>Mercurial</li>
+                        <li>Bazaar</li>
+                    </ul>
+                    <div class="parent">
+                        <img src="images/image_part_002v2.png" class="learn_img_small"> </div>
 
             <h2>Další verzovací systémy</h2>
             <h3>Kdjfkl</h3>

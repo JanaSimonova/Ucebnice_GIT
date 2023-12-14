@@ -74,7 +74,7 @@ body {
 
 main{
     margin: 0 100px;
-    height:100%;
+    height:max-content;
     min-width: 365px;
     background-color:var(--background-color);
     border-radius: 24px;
@@ -151,7 +151,7 @@ aside{
     
     justify-self:end;
     font-size:large;
-    word-spacing: 5px;
+    word-spacing: 4px;
 }
 
 .learn-text::selection{
@@ -166,6 +166,12 @@ p::selection, h1::selection, h2::selection, h3::selection, .image_descr::selecti
     margin-top: 20px;
     margin-bottom: 5px;
 }
+.learn-text h3{
+    margin-top: 5px;
+}
+h3::before{
+    content: "→ ";
+}
 
 .text-info{
     background-color: var(--secondary-color);
@@ -179,7 +185,7 @@ p::selection, h1::selection, h2::selection, h3::selection, .image_descr::selecti
 .text-info::selection{
     background-color: var(--primary-color);
 }
-
+/* IMAGES */
 .parent{
     width: auto;
     min-width: 200px;
@@ -188,8 +194,9 @@ p::selection, h1::selection, h2::selection, h3::selection, .image_descr::selecti
     overflow: hidden;
     border-radius: 24px;
     margin: 20px 0;
+    text-align: center;
 }
-.learn_img{
+.learn_img_big{
     width: 100%;
     height: 100%;
     /* margin: 20px 0; */
@@ -198,20 +205,32 @@ p::selection, h1::selection, h2::selection, h3::selection, .image_descr::selecti
     transform: scale(100%);
     transition: all 0.8s;
 }
-/* .learn_img:hover{
+/* .learn_img_big:hover{
     transform: scale(1.5); 
 } */
 
 /* pridat mezeru za <p> */
 /* Nastajlovat <a> */
 
+.learn_img_small{
+    height: 300px;
+    border-radius: 15px;
+    background-size:cover;
+}
+
 .image_descr{
     padding-left: 40px ;
     font-size:medium;
     font-weight: 100;
     word-spacing:0 ;
+    text-align: start;
 }
 
-h3::before{
-    content: "→ ";
+ul{
+    margin-left: 40px;
+    margin-top: 5px;
+}
+
+.margin_before{
+    margin-top: 5px;
 }
