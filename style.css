@@ -211,3 +211,7 @@ p::selection, h1::selection, h2::selection, h3::selection, .image_descr::selecti
     font-weight: 100;
     word-spacing:0 ;
 }
+
+h3::before{
+    content: "→ ";
+}
