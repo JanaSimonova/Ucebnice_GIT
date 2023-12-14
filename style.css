@@ -158,8 +158,13 @@ aside{
     background-color: var(--secondary-color);  /* neefunguje, nwm proc*/
 }
 
-p::selection, h1::selection{
+p::selection, h1::selection, h2::selection, h3::selection, .image_descr::selection{
     background-color: var(--secondary-color);  /* proto je tu tohle */
+}
+
+.learn-text h2{
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .text-info{
