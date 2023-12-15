@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <link rel="stylesheet" href="style.css" >
+    <title>Učebnice GITu</title>
 
     <script
         src="https://code.jquery.com/jquery-3.7.0.min.js"
@@ -16,23 +17,61 @@
         });
     </script> 
 
+    
+    <script 
+        src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js">
+    </script>
+
 </head>
 <body>
+    
     <div id="header"></div>
 
+    <nav>
+
+    </nav>
+
     <main>
-        <div class="first">
-            <div class="left">
-                <img src="/images/home_image.jpg" class="home_image">
-            </div>
-            <div class="right">
-                <h1>GIT</h1>
-                <p>Nejpoužívanější verzovací systém na světě. </p> 
-                    <a href="#">Nauč se ho používat i ty!</a>
-                
-            </div>
-        </div>
+        <div id="div1"></div>
     </main>
 
+
+    <footer>
+
+    </footer>
+
+
+    
 </body>
+
+
+<script>
+    var converter = new showdown.Converter()
+    text = '# hello, markdown!\
+    asdkfdf'
+    par = 'ccc'
+    html = converter.makeHtml(text)
+    para = converter.makeHtml(par)
+
+    var md = '[**Showdown**](http://www.showdownjs.com) is *great* \n' +
+         'because:\n\n' +
+         ' - it\'s easy to use\n' +
+         ' - it\'s extensible\n' +
+         ' - works in the server and in the browser';
+    var html = converter.makeHtml(md);
+
+    document.getElementById("div1").innerHTML = html+para
+    // document.getElementById("div1").innerHTML = para
+
+    // document.body.appendChild(html)
+    // console.log("sss")
+
+    // const para2 = document.createElement("p");
+    // para2.innerText = "This is a paragraph";
+    // document.body.appendChild(para2);
+
+    // https://github.com/showdownjs/showdown/issues/542
+
+</script>
+
 </html>
