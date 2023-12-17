@@ -22,7 +22,9 @@ var customClassExt = {
             });
     }
 };
-// Add extension to converter
+
+
+// ROZŠÍŘENÍ DO CONVERTORU showdown
 
 var converter = new showdown.Converter(
     {
@@ -32,7 +34,7 @@ var converter = new showdown.Converter(
         ghCodeBlocks: true,
         emoji: true,
         customizedHeaderId: true,
-        noHeaderId: true
+        noHeaderId: true,
     }
 );
 converter.addExtension(customClassExt);
@@ -40,9 +42,9 @@ converter.addExtension(customClassExt);
 var html = converter.makeHtml(text);
 
 
-// Přidat do určitého elementu v HTML
-let main = document.getElementById('main')
+// Přidá do určitého (main) elementu v HTML
+let main = document.getElementById('learn-text')
 main.innerHTML += html;
 
-// Přidat na konec HTML
+// Přidá na konec HTML
 // document.body.innerHTML += html;

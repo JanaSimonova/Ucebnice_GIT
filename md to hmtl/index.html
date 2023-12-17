@@ -5,29 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../style.css" >
     <script src="https://cdn.jsdelivr.net/npm/showdown@2.0.3/dist/showdown.min.js"></script>
     <script type="module" src="script.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+        $("#header").load("../header.html"); 
+        });
+    </script> 
 
 </head>
 
 
 <body>
-
-    <header>
-        <h1>haeadubcg</h1>
-        <p>sefffs</p>
-        <hr>
-    </header>
-
+    
+    <div id="header"></div>
+    
     <main id="main" class="main">
-        
+
+        <aside>
+            <ul>
+                <li> <a href="#">Úvod</a></li>
+                <li> <a href="#">Instalace</a></li>
+                <li> <a href="#">Základní příkazy</a></li>
+                <li> <a href="#">Inicializace</a></li>
+                <li> <a href="#">První změny a commit</a></li>
+                <li> <a href="#"></a></li>
+                <li> <a href="#">aa</a></li>
+                <li> <a href="#">aa</a></li>
+                <li> <a href="#">aa</a></li>
+                <li> <a href="#">aa</a></li>
+                <li> <a href="#">Pokročilé</a></li>
+                <li> <a href="#">aa</a></li>
+                <li> <a href="#">aa</a></li>
+                <li> <a href="#">aa</a></li>
+                <li> <a href="#">aa</a></li>
+            </ul>
+        </aside>
+
+        <div class="learn-text" id="learn-text"></div>
+
     </main>
 
-    <footer>
-        <hr>
-        <h1>Paticka</h1>
-        <p>asdl hfksdjfh ksjdfh sjdf</p>
-    </footer>
+        
+    
 
 </body>
 
