@@ -164,7 +164,7 @@ p::selection, h1::selection, h2::selection, h3::selection, .image_descr::selecti
 }
 
 .learn-text h2{
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 5px;
 }
 .learn-text h3{
@@ -225,6 +225,11 @@ h3::before{
 /* Nastajlovat <a> */
 
 .learn_img_small{
+    height: 300px;
+    border-radius: 15px;
+    background-size:cover;
+}
+.learnImgSmall{
     height: 300px;
     border-radius: 15px;
     background-size:cover;

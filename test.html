@@ -50,7 +50,7 @@
     text = '# hello, markdown!\
     asdkfdf'
     par = 'ccc'
-    html = converter.makeHtml(text)
+    htmll = converter.makeHtml(text)
     para = converter.makeHtml(par)
 
     var md = '[**Showdown**](http://www.showdownjs.com) is *great* \n' +
@@ -60,7 +60,7 @@
          ' - works in the server and in the browser';
     var html = converter.makeHtml(md);
 
-    document.getElementById("div1").innerHTML = html+para
+    document.getElementById("div1").innerHTML = html+para+htmll
     // document.getElementById("div1").innerHTML = para
 
     // document.body.appendChild(html)

@@ -1,4 +1,3 @@
-
 import text from './text.js';
 
 // CUSTOM CLASS EXTENSION FOR SHOWDOWN

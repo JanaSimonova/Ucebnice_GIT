@@ -74,6 +74,7 @@
 .underline{
     text-decoration: underline;
 }
+/* --------- */
 
 .textinfo{
 background-color: var(--secondary-color);
@@ -85,8 +86,31 @@ word-spacing: 2px;
 }
 
 h2{
-    color: violet;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
+
+h3{
+    margin-top: 5px;
+}
+h3::before{
+    content: "→ ";
+}
+
+.imageDescr{
+    padding-left: 40px ;
+    font-size:medium;
+    font-weight: 100;
+    word-spacing:0 ;
+    text-align: start;
+}
+
+.learnImgSmall{
+    height: 300px;
+    border-radius: 15px;
+    background-size:cover;
+}
+
 
 </style>
 
