@@ -4,6 +4,7 @@ const kapitoly = [
         text: `
         
     <div id="aside"></div>
+    
         <div class="learn-text">
             <h1>Uvod</h1>
             <p>LOrem Ipsum blablabla</p>

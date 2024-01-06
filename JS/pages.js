@@ -2,6 +2,11 @@
 const notFound = `
 <h1>404 Not Found</h1>
 <p>Oh no! It looks like the page you're trying to get to is missing!</p>
+
+<script>
+    document.title = "Error"
+</script>
+
 `;
 
 const index = `
@@ -21,11 +26,6 @@ const index = `
 
 const uvod = `
 
-
-    <div id="aside"></div>
-
-    
-    <div class="learn-text">
         <h1>Úvod</h1>
         <p>Git je nejpoužívanější verzovací systém, pomáhá miliónům programátorů při jejich práci. 
             Snadno se používá, je lehký na pochopení a je zdarma. </p>
@@ -99,65 +99,28 @@ const uvod = `
         <a href="/uvod/kap1" onclick="route()"> kap1 </a>
         <a href="/uvod/kap2" onclick="route()"> kap2 </a>
         <a href="/uvod/kap3" onclick="route()"> kap3 </a>
-    </div>
+
 `;
 
 
 const kap1 = `
 
-
-
-    <div class="learn-text">
-        <h1>Kapitola 1</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ullam, dolore magnam sed perspiciatis sequi
-            quidem voluptatum praesentium eius nesciunt illo quasi consectetur asperiores esse nisi quisquam fugiat
-            exercitationem hic. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum mollitia, animi
-            assumenda ducimus hic dolorem itaque quas eos dolores quo illum qui maiores fuga explicabo officia, praesentium
-            harum expedita ratione?
-        </p>
-        <p>blblb</p>
-        <div>ahoj</div>
-        <h1>Kapitola 1</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ullam, dolore magnam sed perspiciatis sequi
-            quidem voluptatum praesentium eius nesciunt illo quasi consectetur asperiores esse nisi quisquam fugiat
-            exercitationem hic. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum mollitia, animi
-            assumenda ducimus hic dolorem itaque quas eos dolores quo illum qui maiores fuga explicabo officia, praesentium
-            harum expedita ratione?
-        </p>
-        <p>blblb</p>
-        <div>ahoj</div>
-        <h1>Kapitola 1</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ullam, dolore magnam sed perspiciatis sequi
-            quidem voluptatum praesentium eius nesciunt illo quasi consectetur asperiores esse nisi quisquam fugiat
-            exercitationem hic. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum mollitia, animi
-            assumenda ducimus hic dolorem itaque quas eos dolores quo illum qui maiores fuga explicabo officia, praesentium
-            harum expedita ratione?
-        </p>
-        <p>blblb</p>
-        <div>ahoj</div>
-    </div>
+        <h1>Instalace</h1>
+        
 `;
 
-const kap2 =  [
-    {
-        title: "Kapitola 2",
-        text: `<h1>Kapitola 2</h1>
+const kap2 =  `
+        
+        <h1>Kapitola 2</h1>
         <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ullam, dolore magnam sed perspiciatis sequi
             quidem voluptatum praesentium eius nesciunt illo quasi consectetur asperiores esse nisi quisquam fugiat
             exercitationem hic. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum mollitia, animi
             assumenda ducimus hic dolorem itaque quas eos dolores quo illum qui maiores fuga explicabo officia, praesentium
             harum expedita ratione?
-        </p>`
-    }
-]
-;
+        </p>
 
-
-
+`;
 
 
 
