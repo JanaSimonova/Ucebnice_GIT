@@ -63,8 +63,8 @@ const uvod = `
         <!-- https://digilib.k.utb.cz/bitstream/handle/10563/41264/novos%C3%A1d_2017_dp.pdf?sequence=1&isAllowed=y -->
             <h3>Centralizované (CVCS)</h3>
                 <p>Existuje jeden centrální server, na kterém je kompletní historie změn. Každý uživatel má na svém počítači jen nejaktuálnější verzi.</p>
-                <p class="margin_before">Výhodou je, že všichni členové mohou vidět, na čem pracují ostatní, a je jednodušší na naučení. Administrátoři mohou definovat různá oprávnění.</p>
-                <p class="margin_before">Nevýhodou je, že při výpadku centrálního serveru nelze ukládat ani stahovat žádné verze, a při poškození dat na serveru je vše pryč.</p>
+                <p class="margin_top">Výhodou je, že všichni členové mohou vidět, na čem pracují ostatní, a je jednodušší na naučení. Administrátoři mohou definovat různá oprávnění.</p>
+                <p class="margin_top">Nevýhodou je, že při výpadku centrálního serveru nelze ukládat ani stahovat žádné verze, a při poškození dat na serveru je vše pryč.</p>
                 <ul>
                     <li>Subversion</li>
                     <li>CVS</li>
@@ -76,9 +76,9 @@ const uvod = `
             <h3>Distribuované (decentralizované,DVCS)</h3>
                 <p>Nemá centrální databázi, každý uživatel má celou kopii u sebe. Poté změny "pushne" do sítě, nebo centrálního repozitáře.</p>
                 <p class="text-info">Repozitář = úložiště s historií všech uložených změn, všechny soubory a složky, celý "projekt"</p>
-                <p class="margin_before">Hlavními výhodami je možnost pracovat offline, protože každý uživatel má celý repozitář na svém počítači, což urychluje proces. 
+                <p class="margin_top">Hlavními výhodami je možnost pracovat offline, protože každý uživatel má celý repozitář na svém počítači, což urychluje proces. 
                     Snadnější přepínání mezi větvemi a verzemi, řešení konfliktů. Větší bezpečnost.</p>
-                <p class="margin_before">Nevýhodou je pak trochu složitější fungování, stále ale určitě pochopitelné.</p>
+                <p class="margin_top">Nevýhodou je pak trochu složitější fungování, stále ale určitě pochopitelné.</p>
                 <ul>
                     <li><strong><u>Git</u></strong></li>
                     <li>Mercurial</li>
@@ -104,9 +104,50 @@ const uvod = `
 
 
 const kap1 = `
+        
+        <h1>Ověření instalace</h1>
+        
+        <p class="margin_top"> Do Příkazového řádku (Command prompt) napište tento příkaz: </p>
+        <p class="text-info padding_left">git --version </p>
+        <!-- <br>Nebo zkráceně: <br> git -v -->
+
+        <p>Pokud máte Git už nainstalovaný, zobrazí se vaše aktuální verze:</p>
+        <div class="parent">
+            <img src="/images/git--version_installed2.jpg" class="learn_img_small">
+        </div>
+        <p>Pokud ještě nemáte, příkaz nebude rozpoznán:</p>
+        <div class="parent">
+            <img src="/images/git--version_not_installed3.jpg" class="learn_img_small">
+        </div>
 
         <h1>Instalace</h1>
         
+        <h2 style="margin-top:5px;">Git na Windows</h2>
+        <h3>Stáhněte si nejnovější verzi Gitu na <a href="https://git-scm.com" class="underline" >git-scm.com</a> </h3>
+        <div class="parent">
+            <img src="/images/git_download2.jpg" class="learn_img_big">
+        </div>
+        <h3>Průvodce instalací:</h3>
+        <p><strong>Který editor vybrat: </strong>Nejlepší je asi VS Code editor, když programujete ve Visual Studio Code, konzoli máte přímo v aplikaci.</p>
+        <div class="parent">
+            <img src="/images/git_editor_choose.jpg" class="learn_img_small">
+        </div>
+        <p><strong>Jak pojmenovat defaultní branch: </strong>Můžete použít starý název Master nebo novější a více používaný Main. Nebo úplně vlastní, ale to se moc nedělá.</p>
+        <div class="parent">
+            <img src="/images/git_branch_name.jpg" class="learn_img_small">
+        </div>
+        <p><strong>Ostatní: </strong>Zbytek stačí už jen proklikat, nebo můžete případně vygooglit. A je to!</p>
+        <div class="parent">
+            <img src="/images/git_setup_finish.jpg" class="learn_img_small">
+        </div>
+
+        <h2>Git na Linux Ubuntu</h2>
+        <p>Do terminálu napište tyto příkazy:</p>
+        <div class="parent">
+            <img src="/images/git_install_linux.jpg" class="learn_img_small">
+        </div>
+
+
 `;
 
 const kap2 =  `

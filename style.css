@@ -26,13 +26,16 @@ header{
     align-items: center;
 }
 
+a{
+    text-decoration:none;
+    /* display: flex;
+    align-items: center; */
+}
+
 .logo{
     font-weight: 700; 
     font-size: x-large;
-}
 
-a{
-    text-decoration:none;
     display: flex;
     align-items: center;
 }
@@ -60,6 +63,9 @@ a{
     border-radius: 30px ;
     padding: 10px;
     margin-left: 10px;
+
+    /* display: flex;
+    align-items: center; */
 }
 
 /* -------------------------------------- */
@@ -140,7 +146,7 @@ aside{
     border-radius: 24px;
     padding: 20px 40px;
     margin-right: 20px;
-    font-size: large;
+    font-size: medium;
     font-weight:400;
 
     justify-self: start;
@@ -157,7 +163,7 @@ aside{
     border-radius: 24px;
     
     justify-self:end;
-    font-size:large;
+    font-size:medium;
     word-spacing: 4px;
 }
 
@@ -231,7 +237,7 @@ h3::before{
 /* Nastajlovat <a> */
 
 .learn_img_small{
-    height: 300px;
+    max-height: 300px;
     border-radius: 15px;
     background-size:cover;
 }
@@ -254,6 +260,12 @@ ul{
     margin-top: 5px;
 }
 
-.margin_before{
+.margin_top{
     margin-top: 5px;
+}
+.padding_left{
+    padding-left: 30px;
+}
+.underline{
+    text-decoration: underline;
 }
