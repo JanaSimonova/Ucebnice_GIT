@@ -152,15 +152,70 @@ const kap1 = `
 
 const kap2 =  `
         
-        <h1>Kapitola 2</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ullam, dolore magnam sed perspiciatis sequi
-            quidem voluptatum praesentium eius nesciunt illo quasi consectetur asperiores esse nisi quisquam fugiat
-            exercitationem hic. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum mollitia, animi
-            assumenda ducimus hic dolorem itaque quas eos dolores quo illum qui maiores fuga explicabo officia, praesentium
-            harum expedita ratione?
-        </p>
+        <h1>Základní příkazy</h1>
+        <p>Základní příkazy jsou stejné jako v Linuxu. Pro ukázky je použita aplikace Git Bash, která se instaluje spolu s Gitem. Můžete použít také terminal ve VSCode který přepnete vpravo na Git Bash.</p>
+        
+        <h3>ls</h3>
+        <p><strong>List files.</strong> Tento příkaz nám vypíše složky a soubory ze složky ve které se nacházíme. Výchozí složkou je náš adresář, tedy C:/Users/&ltjméno&gt. </p>
+        <div class="parent">
+            <img src="/images/ls.jpg" class="learn_img_small" >
+        </div>
 
+        <h3>pwd</h3>
+        <p><strong>Print Working Directory.</strong> Vypíše cestu kde se právě nacházíme.</p>
+        <div class="parent">
+            <img src="/images/pwd.jpg" class="learn_img_small">
+        </div>
+
+        <h3>cd</h3>
+        <p><strong>Change directory.</strong> Změní aktuální složku na jinou. Musí to být ale složka, která je v té, ve které se právě nacházíme.</p>
+        <!-- Nebo se muze napsat Documents/test/ -->
+        <p>Samotné <strong>cd</strong> nás odkudkoliv přepne do výchozí složky.</p>
+        <div class="parent">
+            <img src="/images/cd.jpg" class="learn_img_small">
+        </div>
+
+        <h3>cd . .</h3>
+        <p>Změní aktuální složku na nadřazenou.</p>
+        <div class="parent">
+            <img src="/images/cd...jpg" class="learn_img_small">
+        </div>
+        
+        <h3>mkdir</h3>
+        <p><strong>Make directory.</strong> Vytvoří složku.  </p>
+        <div class="parent">
+            <img src="/images/mkdir.jpg" class="learn_img_small">
+        </div>
+
+        <h3>rmdir</h3>
+        <p><strong>Remove directory.</strong> Odstraní jen prázdnou složku.  </p>
+        <div class="parent">
+            <img src="/images/rmdir.jpg" class="learn_img_small">
+        </div>
+
+        <h3>rm -r</h3>
+        <p>Odstraní složku i s obsahem  </p>
+
+        <h3>touch</h3>
+        <p>Vytvoří soubor.  </p>
+        <div class="parent">
+            <img src="/images/touch2.jpg" class="learn_img_small" >
+            <img src="/images/touch(fileexp).jpg" class="learn_img_small" >
+        </div>
+
+        <h3>rm</h3>
+        <p>Odstraní soubor.  </p>
+        <div class="parent">
+            <img src="/images/rm.jpg" class="learn_img_small" >
+        </div>
+    
+        <h3>cat</h3>
+        <p>Vypíše obsah souboru</p>
+        <div class="parent">
+            <img src="/images/cat.jpg" class="learn_img_small" >
+            <img src="/images/cat-file.jpg" class="learn_img_small" >
+        </div>
+        
 `;
 
 
