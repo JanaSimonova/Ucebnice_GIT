@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn</title>
+    <title>Learning</title>
     <link rel="stylesheet" href="style.css" >
 
     <script
@@ -13,8 +13,14 @@
     </script>
     <script> 
         $(function(){
-        $("#header").load("header.html"); 
+            $("#header").load("header.html"); 
         });
+
+        $(function(){
+            $("#aside").load("aside.html"); 
+        });
+
+
     </script> 
 
 </head>
@@ -24,7 +30,9 @@
 
     <main>
 
-        <aside>
+        <div id="aside"></div>
+
+        <!-- <aside>
             <ul>
                 <li> <a href="#">Úvod</a></li>
                 <li> <a href="#">Instalace</a></li>
@@ -42,9 +50,7 @@
                 <li> <a href="#">aa</a></li>
                 <li> <a href="/md to hmtl/index.html">Druhy index</a></li>
             </ul>
-        </aside>
-
-        <div id="dejtosem"></div>
+        </aside> -->
 
         <div class="learn-text">
             <h1>Úvod</h1>
