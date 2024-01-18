@@ -92,14 +92,6 @@ const uvod = `
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, earum! Incidunt quos eum corrupti, rem architecto ipsum ducimus 
             consectetur sequi adipisci, beatae obcaecati debitis eaque qui atque eveniet dolores harum.</p>
 
-
-        <br>
-
-
-        <a href="/uvod/kap1" onclick="route()"> kap1 </a>
-        <a href="/uvod/kap2" onclick="route()"> kap2 </a>
-        <a href="/uvod/kap3" onclick="route()"> kap3 </a>
-
 `;
 
 
@@ -153,7 +145,7 @@ const kap1 = `
 const kap2 =  `
         
         <h1>Základní příkazy</h1>
-        <p>Základní příkazy jsou stejné jako v Linuxu. Pro ukázky je použita aplikace Git Bash, která se instaluje spolu s Gitem. Můžete použít také terminal ve VSCode který přepnete vpravo na Git Bash.</p>
+        <p>Základní příkazy Gitu jsou stejné jako v Linuxu. Pro ukázky je použita aplikace Git Bash, která se instaluje spolu s Gitem. Můžete použít také terminal ve VSCode, který přepnete vpravo na Git Bash.</p>
         
         <h3>ls</h3>
         <p><strong>List files.</strong> Tento příkaz nám vypíše složky a soubory ze složky ve které se nacházíme. Výchozí složkou je náš adresář, tedy C:/Users/&ltjméno&gt. </p>
@@ -218,9 +210,14 @@ const kap2 =  `
         
 `;
 
+const kap3 = `
+
+    <h1></h1>
+
+
+`;
 
 
 
 
-
-export {notFound, index, uvod, kap1, kap2 };
+export {notFound, index, uvod, kap1, kap2, kap3 };

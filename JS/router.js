@@ -1,4 +1,4 @@
-import { notFound, index, uvod, kap1, kap2  } from "./pages.js";
+import { notFound, index, uvod, kap1, kap2, kap3  } from "./pages.js";
 import { kapitoly } from "./kapitoly.js";
 
 const route = (event) => {
@@ -16,6 +16,7 @@ const routes = {
     "/uvod" : uvod,
     "/kapitola1":kap1,
     "/kapitola2": kap2,
+    "/kapitola3": kap3,  // udělat dynamicky do pole
 };
 
 
@@ -29,7 +30,7 @@ const handleLocation = () => {
         $("#aside").load("aside.html"); 
     });
 
-    console.log(path)
+    // console.log(path)
 
     // if url path is number in array kapitoly
     if (pathInt > 0 && pathInt <= kapitoly.length) {
