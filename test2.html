@@ -27,154 +27,59 @@
     
 <div id="header"></div>
 
-<!-- VID TUTORIAL -->
-<!-- https://www.youtube.com/watch?v=mx5WVKkioLk&ab_channel=C%C3%B3digoWeb -->
 
 <main>
 
     <div class="learn-text">
-    <div class="quiz">
-
+        <!-- <hr>
         <h1>Kvíz</h1>
-       
-        <!-- <div class="result" id="divvvv">
-            <label id="result" class="result_label">cus</label>    
-        </div> -->
+        <h3>Otázka nějaka první?</h3>
+        <input type="radio" name="ot1" id="1.1"> <label for="1.1"> Odpověd prvni </label> <br>
+        <input type="radio" name="ot1" id="1.2"> <label for="1.2"> Odpověd prvni </label> <br>
+        <input type="radio" name="ot1" id="1.3"> <label for="1.3"> Odpověd prvni </label> <br>
 
-        <!-- <h2>Result:
-            <span id="result"></span></h2> -->
+        <h3>Otázka nějaka trerti?</h3>
+        <input type="radio" name="ot2" id="2.2"> <label for="2.2"> Odpověd prvni </label> <br>
+        <input type="radio" name="ot2" id="2.3"> <label for="2.3"> Odpověd prvni </label> <br>
+        <input type="radio" name="ot2" id="2.1"> <label for="2.1"> Odpověd prvni </label> <br>
 
-        <section id="p0">    
-            <h3>Otázka nějaka první?</h3>
-            <input type="radio" name="ot1" id="1.1" value="1" onclick="response(0,this)"> 
-                <label id="l1.1" for="1.1"> Odpověd prvni </label> <br>
-            <input type="radio" name="ot1" id="1.2" value="2" onclick="response(0,this)"> 
-                <label id="l1.2" for="1.2"> Odpověd prvni </label> <br>
-            <input type="radio" name="ot1" id="1.3" value="3" onclick="response(0,this)"> 
-                <label id="l1.3" for="1.3"> Odpověd prvni </label> <br>
-        </section>
+        <h3>Otázka nějaka druha?</h3>
+        <input type="radio" name="ot3" id="3.1"> <label for="3.1"> Odpověd prvni </label> <br>
+        <input type="radio" name="ot3" id="3.2"> <label for="3.2"> Odpověd prvni </label> <br>
+        <input type="radio" name="ot3" id="3.3"> <label for="3.3"> Odpověd prvni </label> <br> <br> -->
 
-        <section id="p1">
-            <h3>Otázka nějaka trerti?</h3>
-            <input type="radio" name="ot2" id="2.1" value="1" onclick="response(1,this)"> 
-                <label id="l2.1" for="2.1"> Odpověd prvni </label> <br>
-            <input type="radio" name="ot2" id="2.2" value="2" onclick="response(1,this)"> 
-                <label id="l2.2" for="2.2"> Odpověd prvni </label> <br>
-            <input type="radio" name="ot2" id="2.3" value="3" onclick="response(1,this)"> 
-                <label id="l2.3" for="2.3"> Odpověd prvni </label> <br>
-        </section>
+        <!-- <input type="button" value="Vyhodnotit" class="glossyBtn">  <br> -->
+        <!-- <button onclick="submit()" > Vyhodnotit <img src="/images/buttons/send.png" style="width: 25px; margin-left: 5px;"></button> -->
 
-        <section id="p2">
-            <h3>Otázka nějaka druha?</h3>
-            <input type="radio" name="ot3" id="3.1" value="1" onclick="response(2,this)"> 
-                <label id="l3.1" for="3.1"> Odpověd prvni </label> <br>
-            <input type="radio" name="ot3" id="3.2" value="2" onclick="response(2,this)"> 
-                <label id="l3.2" for="3.2"> Odpověd prvni </label> <br>
-            <input type="radio" name="ot3" id="3.3" value="3" onclick="response(2,this)"> 
-                <label id="l3.3" for="3.3"> Odpověd prvni </label> <br> <br>
-        </section>
 
-        <div class="buttons" style="display: flex; justify-content: space-between; width: 430px;">
+        <div id="quiz">
+            <h2 id="question"> Question text</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer"> <label for="a" id="a_text"> Odpověd prvni </label> <br>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer"> <label for="b" id="b_text"> Odpověd prvni </label> <br>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer"> <label for="c" id="c_text"> Odpověd prvni </label> <br>
+                </li>
+            </ul>
+        <br>
         <button onclick="submit()" id="submit" > Vyhodnotit <img src="/images/buttons/send.png" style="width: 25px; margin-left: 5px;"></button>
-        <button onclick="location.reload()" id="reload" style="visibility: hidden;" > Zkusit znovu <img src="/images/buttons/reset.png" style="width: 25px; margin-left: 5px;"></button>
-        <button onclick="show()" id="show" style="visibility: hidden;" > Ukázat odpovědi <img src="/images/buttons/find.png" style="width: 25px; margin-left: 5px;"></button>
+
         </div>
-       
-    
-    </div>
 
 
     </div>
 
-    <script>
-        let correct = [1, 2, 3]
-
-        let choosed_answer = [];
-        let score = 0;
-
-        let let_id ;
-
-        function response(question_number, selected){
-            choosed_answer[question_number] = selected.value
-            let_id = "l" +selected.id
-
-            id = "p" + question_number
-
-            labels = document.getElementById(id).childNodes
-
-
-        }
-
-        function submit(){
-            for (let i = 0; i < correct.length; i++) {
-                if (correct[i]==choosed_answer[i]){
-                    score++;
-
-                    // correct answers are green
-                    j = i+1
-
-                    let correctLabelId = "l" + j + "." + correct[i];
-                    // console.log(correctLabelId)
-                    let correctLabel = document.getElementById(correctLabelId);
-                    // console.log(correctLabel)
-                    
-                    
-                    if (correctLabel) {
-                        correctLabel.classList.add("correct");
-                    }
-                }else{
-                    // wrong answers are red
-                    j = i+1
-                    
-                    let wrongLabelId = "l" + j + "." + choosed_answer[i];
-                    console.log(wrongLabelId)
-                    let wrongLabel = document.getElementById(wrongLabelId);
-                    if (wrongLabel) {
-                        wrongLabel.classList.add("wrong");
-                    }
-                }
-            }
-            
-            // Result circle
-            if(!document.getElementById("result")){
-                
-                var div = document.createElement("div");
-                div.className = "result";
-                div.id = "result"
-
-                var label = document.createElement("label")
-                label.className = "result_label"
-                label.id = "result_label"
-
-                div.appendChild(label)
-
-                document.body.appendChild(div);
-                // document.getElementById("result").appendChild("label")
-            }
-
-            document.getElementById("result_label").innerHTML = score + "/" + correct.length
-            document.getElementById("submit").disabled = true
-            document.getElementById("reload").style.visibility = "visible"
-            document.getElementById("show").style.visibility = "visible"
-        }
-
-
-        function show() {
-         
-            for (let i = 0; i < correct.length; i++) {
-                j = i+1
-                let correctAnswerId = "l" +j + "." + correct[i]
-                // console.log(correct[i])
-                // console.log(choosed_answer[i])
-                console.log(correctAnswerId)
-                let correctAnswer = document.getElementById(correctAnswerId)
-                correctAnswer.classList.add("correct")
-            }
-        }
-    </script>
 
 
 <style>
+    .glossyBtn {
+        background:url(/images/buttons/send.png) right no-repeat;
+        padding-left:0px;
+    }
 
     input:hover,  label:hover{
         cursor: pointer;
@@ -189,68 +94,177 @@
         align-items: center;
         border: 0;
         border-radius: 15px;
-        /* background-color: #f0f0f0; */
     }
-    button:hover:enabled{
+    button:hover{
         background-color: var(--background-color);
         cursor: pointer;
     }
-    button:active:enabled{
+    button:active{
         background-color: var(--secondary-color);
-    }
-    button:disabled{
-        background-color: rgba(239, 239, 239, 0.3)
     }
 
     ul{
         list-style-type:none;
     }
 
-    .result{
-        /* background-color: var(--secondary-color);  */
-        background-color: #2196F3; 
-        width: 100px; 
-        height: 100px; 
-        border-radius: 50px;
-        position: absolute;
-        top: 10em;
-        left: 40em;
-        align-items: center;
-        align-content: center;
-        display: flex;
-        justify-content: center;
-        /* font-size: 40px; 
-        color:white */
-    }
-    .result_label{
-        font-size: 40px; 
-        color:var(--text-color);  /* cerna */
-        color:var(--background-color);  /* bila */
-        /* color:#f0f0f0  same as button */
-    }
-    .correct{
-        color:greenyellow
-    }
-    .correct::after{
-        content: url(/images/buttons/correct2.png);
-    }
-    .wrong{
-        color: red;
-    }
-    .wrong::after{
-        content: url(/images/buttons/wrong2.png);
-    }
-    /* https://dev.to/melvin2016/how-to-put-an-image-inside-pseudo-elements-in-css-1io0 */
-
 </style>
+<script>
+    function submit(){
+        console.log("hey")
+    }
+    
+    const quizData = [
+        {
+            question: "Which Language bla bla",
+            a: "sss",
+            b: "sdf",
+            c: "df",
+            correct: "b"
+        },
+        {
+            question: "What adhblsad ldsfkj ",
+            a: "sdfg",
+            b: "hkhj",
+            c: "bvncfg",
+            correct: "a"
+        },
+        {
+            question: "NCbkasjfbm  vvb ",
+            a: "fjdvn vbn",
+            b: "roi ",
+            c: "wlkfn ",
+            correct: "c"
+        }
+    ]
+
+    const quizData2 = [
+        {
+            question: "Wh222 la bla",
+            a: "sss",
+            b: "sdf",
+            c: "df",
+            correct: "b"
+        },
+        {
+            question: "What adhblsad ldsfkj ",
+            a: "sdfg",
+            b: "hkhj",
+            c: "bvncfg",
+            correct: "a"
+        },
+        {
+            question: "NCbkasjfbm  vvb ",
+            a: "fjdvn vbn",
+            b: "roi ",
+            c: "wlkfn ",
+            correct: "c"
+        }
+    ]
 
     
- 
+    const quiz = document.getElementById('quiz')
+    const answerEls = document.querySelectorAll('.answer')
+    const questionEl = document.getElementById('question')
+    const a_text = document.getElementById('a_text')
+    const b_text = document.getElementById('b_text')
+    const c_text = document.getElementById('c_text')
+    const submitBtn = document.getElementById('submit')
+    
+    let currentQuiz = 0;
+    let score = 0;
+    
+    loadQuiz()
+
+    function loadQuiz(){
+
+        deselectAnswer()
+
+        const  currentQuizData = quizData[currentQuiz]
+
+        questionEl.innerText = currentQuizData.question
+        a_text.innerText = currentQuizData.a
+        b_text.innerText = currentQuizData.b
+        c_text.innerText = currentQuizData.c
+
+    }
+
+
+    function deselectAnswer() {
+        answerEls.forEach(answerEl => answerEl.checked = false)
+    }
+
+    function getSelected(){
+        let answer
+        answerEls.forEach(answerEl => {
+            if(answerEl.checked){
+                answer = answerEl.id 
+            }
+        })
+        return answer
+    }
+
+    submitBtn.addEventListener('click', () => {
+        const answer = getSelected()
+        if(answer){
+            if (answer === quizData[currentQuiz].correct){
+                score ++
+            }
+            
+            currentQuiz++
+
+            if(currentQuiz < quizData.length){
+                loadQuiz()
+            } else{
+                quiz.innerHTML = `
+                    <h2> Your score ${score} / ${(quizData.length)} ! </h2>
+                    <button onclick="location.reload()"> Reload </button>
+                `
+            }
+        }
+    })
+
+</script>
+    
+
+
 
 </main>
 
 
     
 </body>
+
+
+
+
+<!-- 
+<script>
+    var converter = new showdown.Converter()
+    text = '# hello, markdown!\
+    asdkfdf'
+    par = 'ccc'
+    htmll = converter.makeHtml(text)
+    para = converter.makeHtml(par)
+
+    var md = '[**Showdown**](http://www.showdownjs.com) is *great* \n' +
+         'because:\n\n' +
+         ' - it\'s easy to use\n' +
+         ' - it\'s extensible\n' +
+         ' - works in the server and in the browser';
+    var html = converter.makeHtml(md);
+
+    document.getElementById("div1").innerHTML = html+para+htmll
+    // document.getElementById("div1").innerHTML = para
+
+    // document.body.appendChild(html)
+    // console.log("sss")
+
+    // const para2 = document.createElement("p");
+    // para2.innerText = "This is a paragraph";
+    // document.body.appendChild(para2);
+
+    // https://github.com/showdownjs/showdown/issues/542
+
+</s> -->
 
 </html>

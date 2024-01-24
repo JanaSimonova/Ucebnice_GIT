@@ -57,19 +57,24 @@ const handleLocation = () => {
         const aside = `<div id="aside"></div>`
         const learnText =   `<div id="learntext" class="learn-text"></div> `
         const html = routes[path] || routes["notFound"];
+        const quiz = `<div id="quiz"></div>`
+
         // console.log(html)
 
-        if(pathString.includes("kap") || pathString.includes("learn")  || pathString.includes("uvod") ){
+        if(pathString.includes("kapitola") || pathString.includes("learn")  || pathString.includes("uvod") ){
             // možná neni potřeba ten uvod
 
             document.getElementById("main").innerHTML = aside;
             document.getElementById("main").innerHTML += learnText
             document.getElementById("learntext").innerHTML += html
+
+            if(pathString.includes("kapitola")){
+                document.getElementById("learntext").innerHTML += quiz
+            }
+
         }
         else{
-            // const html = routes[path] || routes["notFound"];
-            document.getElementById("main").innerHTML = html;
-            
+            document.getElementById("main").innerHTML = html;            
             // makes a title
             
         }
