@@ -17,7 +17,7 @@ const index = `
         <div class="right">
             <h1>GIT</h1>
             <p>Nejpoužívanější verzovací systém na světě. </p> 
-                <a href="#">Nauč se ho používat i ty!</a>
+                <a href="/learn">Nauč se ho používat i ty!</a>
             
         </div>
     </div>
@@ -27,7 +27,7 @@ const index = `
 const uvod = `
 
         <h1>Úvod</h1>
-        <p>Git je nejpoužívanější verzovací systém, pomáhá miliónům programátorů při jejich práci. 
+        <p>Git je nejrozšířenější verzovací systém, pomáhá miliónům programátorů při jejich práci. 
             Snadno se používá, je lehký na pochopení a je zdarma. </p>
         <p class="text-info">Verzovací systém = systém správy historie souborů, verzí</p>
         <p>Anglicky: Version Control System, VCS.</p>
@@ -50,7 +50,7 @@ const uvod = `
             <h3>Kompletní historie změn každého souboru</h3>
                 <p>Zaznamenávají se všechny změny. Vytváření, mazání a úprava souborů. Díky tomu se můžete kdykoliv vrátit a podívat se na provedené změny.</p>
                 <p>Změny se značí krátkými popisky, aby bylo snadné se v nich vyznat.</p>
-                <p class="text-info"><strong>Pozor!</strong> Nezaznamenává se vše při každém uložení souboru. Uživatel si sám určuje kdy a co se bude zálohovat.</p>            
+                <p class="text-info"><b>Pozor!</b> Nezaznamenává se vše při každém uložení souboru. Uživatel si sám určuje kdy a co se bude zálohovat.</p>            
             <h3>Větvení</h3>
                 <p>Je skvělé při práci v týmech, ale může se hodit i samostatnému vývojáři. Provedené změny jsou pouze na jedné větvi.
                     Větve se dají zase spojovat dohromady, což umožňuje zkontrolovat kolize mezi nimi a řešit je.
@@ -80,7 +80,7 @@ const uvod = `
                     Snadnější přepínání mezi větvemi a verzemi, řešení konfliktů. Větší bezpečnost.</p>
                 <p class="margin_top">Nevýhodou je pak trochu složitější fungování, stále ale určitě pochopitelné.</p>
                 <ul>
-                    <li><strong><u>Git</u></strong></li>
+                    <li><b><u>Git</u></b></li>
                     <li>Mercurial</li>
                     <li>Bazaar</li>
                 </ul>
@@ -120,15 +120,15 @@ const kap1 = `
             <img src="/images/git_download2.jpg" class="learn_img_big">
         </div>
         <h3>Průvodce instalací:</h3>
-        <p><strong>Který editor vybrat: </strong>Nejlepší je asi VS Code editor, když programujete ve Visual Studio Code, konzoli máte přímo v aplikaci.</p>
+        <p><b>Který editor vybrat: </b>Nejlepší je asi VS Code editor, když programujete ve Visual Studio Code, konzoli máte přímo v aplikaci.</p>
         <div class="parent">
             <img src="/images/git_editor_choose.jpg" class="learn_img_small">
         </div>
-        <p><strong>Jak pojmenovat defaultní branch: </strong>Můžete použít starý název Master nebo novější a více používaný Main. Nebo úplně vlastní, ale to se moc nedělá.</p>
+        <p><b>Jak pojmenovat defaultní branch: </b>Můžete použít starý název Master nebo novější a více používaný Main. Nebo úplně vlastní, ale to se moc nedělá.</p>
         <div class="parent">
             <img src="/images/git_branch_name.jpg" class="learn_img_small">
         </div>
-        <p><strong>Ostatní: </strong>Zbytek stačí už jen proklikat, nebo můžete případně vygooglit. A je to!</p>
+        <p><b>Ostatní: </b>Zbytek stačí už jen proklikat, nebo můžete případně vygooglit. A je to!</p>
         <div class="parent">
             <img src="/images/git_setup_finish.jpg" class="learn_img_small">
         </div>
@@ -148,21 +148,21 @@ const kap2 =  `
         <p>Základní příkazy Gitu jsou stejné jako v Linuxu. Pro ukázky je použita aplikace Git Bash, která se instaluje spolu s Gitem. Můžete použít také terminal ve VSCode, který přepnete vpravo na Git Bash.</p>
         
         <h3>ls</h3>
-        <p><strong>List files.</strong> Tento příkaz nám vypíše složky a soubory ze složky ve které se nacházíme. Výchozí složkou je náš adresář, tedy C:/Users/&ltjméno&gt. </p>
+        <p><b>List files.</b> Tento příkaz nám vypíše složky a soubory ze složky ve které se nacházíme. Výchozí složkou je náš adresář, tedy C:/Users/&ltjméno&gt. </p>
         <div class="parent">
             <img src="/images/ls.jpg" class="learn_img_small" >
         </div>
 
         <h3>pwd</h3>
-        <p><strong>Print Working Directory.</strong> Vypíše cestu kde se právě nacházíme.</p>
+        <p><b>Print Working Directory.</b> Vypíše cestu kde se právě nacházíme.</p>
         <div class="parent">
             <img src="/images/pwd.jpg" class="learn_img_small">
         </div>
 
         <h3>cd</h3>
-        <p><strong>Change directory.</strong> Změní aktuální složku na jinou. Musí to být ale složka, která je v té, ve které se právě nacházíme.</p>
+        <p><b>Change directory.</b> Změní aktuální složku na jinou. Musí to být ale složka, která je v té, ve které se právě nacházíme.</p>
         <!-- Nebo se muze napsat Documents/test/ -->
-        <p>Samotné <strong>cd</strong> nás odkudkoliv přepne do výchozí složky.</p>
+        <p>Samotné <b>cd</b> nás odkudkoliv přepne do výchozí složky = domovská složka uživatele.</p>
         <div class="parent">
             <img src="/images/cd.jpg" class="learn_img_small">
         </div>
@@ -174,13 +174,13 @@ const kap2 =  `
         </div>
         
         <h3>mkdir</h3>
-        <p><strong>Make directory.</strong> Vytvoří složku.  </p>
+        <p><b>Make directory.</b> Vytvoří složku.  </p>
         <div class="parent">
             <img src="/images/mkdir.jpg" class="learn_img_small">
         </div>
 
         <h3>rmdir</h3>
-        <p><strong>Remove directory.</strong> Odstraní jen prázdnou složku.  </p>
+        <p><b>Remove directory.</b> Odstraní jen prázdnou složku.  </p>
         <div class="parent">
             <img src="/images/rmdir.jpg" class="learn_img_small">
         </div>
@@ -212,12 +212,40 @@ const kap2 =  `
 
 const kap3 = `
 
-    <h1></h1>
+    <h1>Založení jména a emailu</h1>
+    <p>Pokud chceme používat Git, musíme si nejdříve uložit/založit jméno a email. Jméno se zobrazuje u každé provedené změny, aby bylo vidět, kdo změnu provedl. 
+    Email se později propojuje s GitHubem(??real).</p>
+    <p>Otevřeme si Git Bash, příkazový řádek nebo Terminal ve VSCode. Do konzole napíšeme tento příkaz: </p>
+    
+    <p class="code"> git config --global user.name "vaše jméno" </p>
+    <!-- <p class="code2"> git config --global user.name "vaše jméno"</p> -->
+    
+    <p>Do uvozovek napíšeme jméno i příjmení, můžeme použít i mezery. Pokud po odentrování nedostaneme žádný eror, akce proběhla úspěšně. Zkontrolujeme pomocí: </p>
+    <p class="code"> git config --global user.name </p>
 
+    <p>Stejným způsobem teď nastavíme email:</p>
+    <p class="code"> git config --global user.email "váš email" </p>
 
+    <br>
+    <h1>První inicializace</h1>
+    <p>Abychom mohli používat Git, zaznamenávat změny a ukládat historii, potřebujeme <b>inicializovat složku.</b> 
+    Inicializovaná složka se nazývá <b>repozitář</b>.</p>
+    <div class=text-info> Repozitář = inicializovaná složka, ve které <i>funguje/je/běží/ <b>pracujeme s </b></i> Gitem </div>
+    <p>Složka se inicializuje příkazem <b>git init:</b> </p>
+    <div class="parent" style="color:red">
+            <img src="/images/init.jpg" class="learn_img_big" >
+            oriznout/zmenit obrazek
+    </div>
+    <p>Zde máme ukázku toho, jak v terminálu vypadá, když jsme v inicializované složce. Za cestou ke složce vidíme v závorce slovo <b>main</b>. To je náš název hlavní větve.</p>
+    <div class="parent">
+            <img src="/images/git_initialized.jpg" class="learn_img_big" >
+    </div>
+    <p>Takto vypadá repozitář v průzkumníku souborů. Přibyla zde skrytá složka s názvem <b>.git</b>. V ní se bude ukládat všechna naše historie a různé soubory Gitu.</p>
+    <div class="parent">
+            <img src="/images/git_initialized_pruzkumnik.jpg" class="learn_img_small" >
+    </div>
+    <p>A můžeme se pustit do práce (s Gitem)!</p>
 `;
-
-
 
 
 export {notFound, index, uvod, kap1, kap2, kap3 };
