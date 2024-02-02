@@ -99,15 +99,15 @@ const kap1 = `
         
         <h1>Ověření instalace</h1>
         
-        <p class="margin_top"> Do Příkazového řádku (Command prompt) napište tento příkaz: </p>
+        <p class="margin_top">Pro ověření, zda Git nemáme už nainstalovaný, do Příkazového řádku (Command prompt) napíšeme tento příkaz: </p>
         <p class="text-info padding_left">git --version </p>
         <!-- <br>Nebo zkráceně: <br> git -v -->
 
-        <p>Pokud máte Git už nainstalovaný, zobrazí se vaše aktuální verze:</p>
+        <p>Pokud máme Git už nainstalovaný, zobrazí se vaše aktuální verze:</p>
         <div class="parent">
             <img src="/images/git--version_installed2.jpg" class="learn_img_small">
         </div>
-        <p>Pokud ještě nemáte, příkaz nebude rozpoznán:</p>
+        <p>Pokud ještě nemáme, příkaz nebude rozpoznán:</p>
         <div class="parent">
             <img src="/images/git--version_not_installed3.jpg" class="learn_img_small">
         </div>
@@ -142,7 +142,7 @@ const kap1 = `
 
 `;
 
-const kap2 =  `
+const kap2 = `
         
         <h1>Základní příkazy</h1>
         <p>Základní příkazy Gitu jsou stejné jako v Linuxu. Pro ukázky je použita aplikace Git Bash, která se instaluje spolu s Gitem. Můžete použít také terminal ve VSCode, který přepnete vpravo na Git Bash.</p>
@@ -247,5 +247,89 @@ const kap3 = `
     <p>A můžeme se pustit do práce (s Gitem)!</p>
 `;
 
+const kap4 = `
 
-export {notFound, index, uvod, kap1, kap2, kap3 };
+    <h1>Commit</h1>
+    <h3>Co je to commit?</h3>
+    <p>Commit je základní prvek verzovacího systému. Je to záznam o změnách, které jsme provedli.
+    Každý commit má popisek, který by měl být krátký a výstižný.  </p>
+    Každý commmit se uloží do historie projektu.
+    Díky tomu se můžeme kdykoliv vrátit zpět a podívat se, jak projekt vypadal v minulosti.
+    <div class=text-info> Commit = změny uložené do historie projektu </div>
+
+    Při commitování pracujeme ve třech fázích:
+    <div class="parent">
+        <img src="/images/git_commit_scheme.png" class="learn_img_small" >
+    </div>
+
+    <p> 
+
+    <!--
+    <p>Working directory = složka, ve které pracujeme <br>
+    Staging Area = přípravná plocha, kam se dávají soubory připravené na commit <br>
+    Commit = záznam o změnách, které jsme provedli. </p>
+    -->
+
+    <br>
+    <p>Abychom mohli provést commit, potřebujeme nejdříve změněné soubory přidat do tzv. Staging Area.
+    Staging Area je taková přípravná plocha, kam se dávají soubory připravené na commit. </p>
+    
+    <p>Soubory se do Staging Area přidají příkazem:
+    <p class="code">git add "název souboru"</p>
+
+    <p>Ukázka přidání souboru do Staging Area:</p>
+    <div class="parent">
+            <img src="/images/add.jpg" class="learn_img_big" >
+    </div>
+    <br>
+    <p>Pro přidání všech souborů najednou použijeme příkaz <b>git add .</b> </p>
+
+
+    <br><br>
+    <p/>Pokud už máme připravené všechny soubory, které chceme commitnout, napíšeme tento příkaz:<p>
+    <p class="code">git commit -m "popisek"</p>
+
+    
+    
+    <h3>Historie commitů</h3>
+    <p>Historii commitů si můžeme zobrazit příkazem <b>git log</b>. </p>
+    <p>Ukázka zobrazení historie:</p>
+    <div class="parent">
+            <img src="/images/log.jpg" class="learn_img_big" >
+    </div>
+    <p>Historie se zobrazí vždy ve složce, kterou jsme inicializovali. </p>
+
+    <h3>Upravení commitu</h3>
+    <p>Pokud jsme se s commitováním trochu spletli, můžeme commit upravit.
+    Upravit se dá jen poslední commit, který jsme provedli. </p>
+    <p>Upravíme se příkazem <b>git commit --amend -m "nový popisek"</b>. </p>
+    <p>Ukázka úpravy commitu:</p>
+    <div class="parent">
+            <img src="/images/amend.jpg" class="learn_img_big" >
+
+    </div>
+    <p>Upravení se provede vždy ve složce, kterou jsme inicializovali. </p>
+    <p>Upravený commit se zobrazí v historii jako nový commit. </p>
+    
+    <h3>Smazání commitu</h3>
+    <p>Pokud jsme se s commitováním trochu spletli, můžeme commit smazat.
+    Smazat se dá jen poslední commit, který jsme provedli. </p>
+    <p>Smazání se provede příkazem <b>git reset --soft HEAD~1</b>. </p>
+    <p>Ukázka smazání commitu:</p>
+    <div class="parent">
+            <img src="/images/reset.jpg" class="learn_img_big" >
+    </div>
+    <p>Smazání se provede vždy ve složce, kterou jsme inicializovali. </p>
+    <p>Smazaný commit se z historie úplně smaže. </p>
+    <p>Smazání commitu je velmi nebezpečné, protože se smaže i veškerá historie, která s ním souvisí. </p>
+    <p>Smazání commitu se nedá vrátit. </p>
+
+
+
+
+
+
+`;
+
+
+export { notFound, index, uvod, kap1, kap2, kap3, kap4 };
