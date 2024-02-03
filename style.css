@@ -1,24 +1,25 @@
-:root{
+:root {
     --primary-color: #93DEFF;
     --secondary-color: #D9D9D9;
-    --text-color: #323643 ;
+    --text-color: #323643;
     --background-color: #F7F7F7;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
-    font-family:'Inria Sans', sans-serif;
+    font-family: 'Inria Sans', sans-serif;
     color: var(--text-color);
 }
-*::selection{
+
+*::selection {
     background-color: var(--primary-color);
 }
 
-header{
+header {
     /* font-family:'Inria Sans', sans-serif;  */
     background-color: var(--primary-color);
-    background:  linear-gradient(to right, white 0% , var(--primary-color) 10%, var(--primary-color) 90%, white 100%);
+    background: linear-gradient(to right, white 0%, var(--primary-color) 10%, var(--primary-color) 90%, white 100%);
     padding: 0 200px;
     margin-bottom: 12px;
 
@@ -26,27 +27,27 @@ header{
     align-items: center;
 }
 
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
     /* display: flex;
     align-items: center; */
 }
 
-.logo{
-    font-weight: 700; 
+.logo {
+    font-weight: 700;
     font-size: x-large;
 
     display: flex;
     align-items: center;
 }
 
-.logo_img{
-    height: 45px; 
+.logo_img {
+    height: 45px;
     padding: 10px;
     margin-right: 20px;
 }
 
-.headbuts{
+.headbuts {
     /* background-color: aquamarine; */
     font-weight: 700;
 
@@ -56,11 +57,11 @@ a{
     justify-content: end;
 }
 
-.headbut{
+.headbut {
     /* height: 10px; */
     /* background-color: #eeeeee; */
     /* border: 1px #000 solid; */
-    border-radius: 30px ;
+    border-radius: 30px;
     padding: 10px;
     margin-left: 10px;
 
@@ -70,7 +71,7 @@ a{
 
 /* -------------------------------------- */
 
-html{
+html {
     height: calc(100% - 157px);
 }
 
@@ -79,38 +80,39 @@ body {
     height: 100%;
 }
 
-main{
+main {
     margin: 0 100px;
-    height:max-content;
+    height: max-content;
     min-width: 365px;
-    background-color:var(--background-color);
+    background-color: var(--background-color);
     border-radius: 24px;
-    padding: 40px ;
+    padding: 40px;
 
-    display:flex;
+    display: flex;
 }
 
-#main{
-    height:max-content;
+#main {
+    height: max-content;
     min-width: 365px;
-    display:flex;
+    display: flex;
 }
 
-.home_image{
+.home_image {
     height: 600px;
     border-radius: 24px;
 }
 
-.first{
+.first {
     display: flex;
     /* background-color: bisque; */
 
 }
 
-.left{
+.left {
     display: flex;
 }
-.right{
+
+.right {
     background-color: var(--primary-color);
     border-radius: 24px;
     padding: 2.5rem;
@@ -122,21 +124,25 @@ main{
 
     /* align-self: center; */
 }
-.right h1{
+
+.right h1 {
     font-size: 5rem;
     /* margin-left: 20px; */
     align-self: center;
 }
-.right p, .right a{
+
+.right p,
+.right a {
     font-size: 1.5rem;
     display: inline;
 }
+
 /* .right a{
     font-weight: bold;
 } */
 
 /* -------------- LEARN ---------------- */
-aside{
+aside {
     background-color: var(--secondary-color);
     height: max-content;
     width: 500px;
@@ -147,16 +153,16 @@ aside{
     padding: 20px 40px;
     margin-right: 20px;
     font-size: medium;
-    font-weight:400;
+    font-weight: 400;
 
     justify-self: start;
 }
 
-aside ul{
+aside ul {
     line-height: 25px;
 }
 
-.learn-text{
+.learn-text {
     background-color: var(--primary-color);
     height: max-content;
     width: 800px;
@@ -165,32 +171,40 @@ aside ul{
     padding: 40px;
     margin-left: auto;
     border-radius: 24px;
-    
-    justify-self:end;
-    font-size:medium;
+
+    justify-self: end;
+    font-size: medium;
     word-spacing: 4px;
 }
 
-.learn-text::selection{
-    background-color: var(--secondary-color);  /* neefunguje, nwm proc*/
+.learn-text::selection {
+    background-color: var(--secondary-color);
+    /* neefunguje, nwm proc*/
 }
 
-p::selection, h1::selection, h2::selection, h3::selection, .image_descr::selection{
-    background-color: var(--secondary-color);  /* proto je tu tohle */
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+.image_descr::selection {
+    background-color: var(--secondary-color);
+    /* proto je tu tohle */
 }
 
-.learn-text h2{
+.learn-text h2 {
     margin-top: 30px;
     margin-bottom: 5px;
 }
-.learn-text h3{
+
+.learn-text h3 {
     margin-top: 5px;
 }
-h3::before{
+
+h3::before {
     content: "→ ";
 }
 
-.text-info{
+.text-info {
     background-color: var(--secondary-color);
     padding: 6px 15px;
     margin: 10px;
@@ -199,40 +213,44 @@ h3::before{
     word-spacing: 2px;
 }
 
-.text-info::selection{
+.text-info::selection {
     background-color: var(--primary-color);
 }
+
 /* IMAGES */
-.parent{
+.parent {
     width: auto;
     min-width: 200px;
-    height:auto; /* musi byt presne px, jinak pri hover se to hybe malinko -- POZDEJI*/
+    height: auto;
+    /* musi byt presne px, jinak pri hover se to hybe malinko -- POZDEJI*/
     /* min-height: ; */
     overflow: hidden;
     border-radius: 24px;
     margin: 20px 0;
     text-align: center;
 }
-.learn_img_big{
+
+.learn_img_big {
     width: 100%;
     height: 100%;
     /* margin: 20px 0; */
     border-radius: 24px;
-    background-size:cover;
+    background-size: cover;
     transform: scale(100%);
     transition: all 0.8s;
 }
 
-.learnImgBig>img{
+.learnImgBig>img {
     width: 100%;
     height: 100%;
     /* margin: 20px 0; */
     border-radius: 24px;
-    background-size:cover;
+    background-size: cover;
     transform: scale(100%);
     transition: all 0.8s;
     margin-top: 1rem;
 }
+
 /* .learn_img_big:hover{
     transform: scale(1.5); 
 } */
@@ -240,64 +258,157 @@ h3::before{
 /* pridat mezeru za <p> */
 /* Nastajlovat <a> */
 
-.learn_img_small{
+.learn_img_small {
     max-height: 300px;
     border-radius: 15px;
-    background-size:cover;
-}
-.learnImgSmall{
-    height: 300px;
-    border-radius: 15px;
-    background-size:cover;
+    background-size: cover;
 }
 
-.image_descr{
-    padding-left: 40px ;
-    font-size:medium;
+.learnImgSmall {
+    height: 300px;
+    border-radius: 15px;
+    background-size: cover;
+}
+
+.image_descr {
+    padding-left: 40px;
+    font-size: medium;
     font-weight: 100;
-    word-spacing:0 ;
+    word-spacing: 0;
     text-align: start;
 }
 
-ul{
+ul {
     margin-left: 40px;
     margin-top: 5px;
 }
 
-.margin_top{
+.margin_top {
     margin-top: 5px;
 }
-.padding_left{
+
+.padding_left {
     padding-left: 30px;
 }
-.underline{
+
+.underline {
     text-decoration: underline;
 }
 
 
-.code{
-    font-family: Consolas,'courier new';  
-    color:#f1f1f1; 
-    background-color:#303030;
-    font-size:smaller;
-    border-radius:50px;
-    height:30px;
-    padding-left:15px;
-    display:flex; 
-    align-items:center; 
-    word-spacing:0px;
+.code {
+    font-family: Consolas, 'courier new';
+    color: #f1f1f1;
+    background-color: #303030;
+    font-size: smaller;
+    border-radius: 50px;
+    height: 30px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    word-spacing: 0px;
     margin: 10px 0;
 }
 
-.code2{
-    font-family: Consolas,'courier new';  
-    color:crimson; 
-    background-color:#f1f1f1;
-    font-size:smaller;
-    border-radius:50px;
-    height:30px;
-    padding-left:15px;
-    display:flex; 
-    align-items:center;
-    word-spacing:0px;
+.code2 {
+    font-family: Consolas, 'courier new';
+    color: crimson;
+    background-color: #f1f1f1;
+    font-size: smaller;
+    border-radius: 50px;
+    height: 30px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    word-spacing: 0px;
 }
+
+
+
+/* -------------------- QUIZ ---------------------- */
+
+.quiz {
+    position: relative;
+}
+
+.quiz #quiz-container {}
+
+.quiz input:hover,
+.quiz label:hover {
+    cursor: pointer;
+}
+
+.quiz button {
+    /* width: auto;
+        height: auto; */
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 15px;
+    /* background-color: #f0f0f0; */
+}
+
+.quiz button:hover:enabled {
+    background-color: var(--background-color);
+    cursor: pointer;
+}
+
+.quiz button:active:enabled {
+    background-color: var(--secondary-color);
+}
+
+.quiz button:disabled {
+    background-color: rgba(239, 239, 239, 0.3)
+}
+
+.quiz ul {
+    list-style-type: none;
+}
+
+.quiz .result {
+    /* background-color: var(--secondary-color);  */
+    background-color: #2196F3;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    /* left: 40em; */
+    right: 0;
+    /* porad jezdi nekam, idk proc */
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.quiz .result_label {
+    font-size: 40px;
+    color: var(--text-color);
+    /* cerna */
+    color: var(--background-color);
+    /* bila */
+    /* color:#f0f0f0  same as button */
+}
+
+.quiz .correct {
+    color: greenyellow
+}
+
+.quiz .correct::after {
+    content: url(/images/buttons/correct2.png);
+}
+
+.quiz .wrong {
+    color: red;
+}
+
+.quiz .wrong::after {
+    content: url(/images/buttons/wrong2.png);
+}
+
+/* https://dev.to/melvin2016/how-to-put-an-image-inside-pseudo-elements-in-css-1io0 */
+
+/* ------------------------------------------------ */

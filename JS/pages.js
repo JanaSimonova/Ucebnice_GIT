@@ -1,30 +1,29 @@
-
-const notFound = `
-<h1>404 Not Found</h1>
-<p>Oh no! It looks like the page you're trying to get to is missing!</p>
-
-<script>
-    document.title = "Error"
-</script>
-
-`;
-
-const index = `
-    <div class="first">
-        <div class="left">
-            <img src="/images/home_image.jpg" class="home_image">
+const pagesData = {
+    notFound: {
+        html: `
+        <h1>404 Not Found</h1>
+        <p>Oh no! It looks like the page you're trying to get to is missing!</p>
+        <script>
+            document.title = "Error"
+        </script>
+        `,
+    },
+    index: {
+        html: `
+        <div class="first">
+            <div class="left">
+                <img src="/images/home_image.jpg" class="home_image">
+            </div>
+            <div class="right">
+                <h1>GIT</h1>
+                <p>Nejpoužívanější verzovací systém na světě. </p> 
+                    <a href="/learn">Nauč se ho používat i ty!</a> 
+            </div>
         </div>
-        <div class="right">
-            <h1>GIT</h1>
-            <p>Nejpoužívanější verzovací systém na světě. </p> 
-                <a href="/learn">Nauč se ho používat i ty!</a>
-            
-        </div>
-    </div>
-`;
-
-
-const uvod = `
+        `,
+    },
+    uvod: {
+        html: `
 
         <h1>Úvod</h1>
         <p>Git je nejrozšířenější verzovací systém, pomáhá miliónům programátorů při jejich práci. 
@@ -91,12 +90,10 @@ const uvod = `
         <h3>Kdjfkl</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, earum! Incidunt quos eum corrupti, rem architecto ipsum ducimus 
             consectetur sequi adipisci, beatae obcaecati debitis eaque qui atque eveniet dolores harum.</p>
-
-`;
-
-
-const kap1 = `
-        
+        `,
+    },
+    kap1: {
+        html: `   
         <h1>Ověření instalace</h1>
         
         <p class="margin_top">Pro ověření, zda Git nemáme už nainstalovaný, do Příkazového řádku (Command prompt) napíšeme tento příkaz: </p>
@@ -138,11 +135,23 @@ const kap1 = `
         <div class="parent">
             <img src="/images/git_install_linux.jpg" class="learn_img_small">
         </div>
+    `,
+        quiz: [
+            {
+                question: "Jak ověříme, zda máme Git nainstalovaný?",
+                answers: ["git --version", "git -v", "git --help"],
+                correctAnswer: 1,
+            },
+            {
+                question: "Jaký příkaz vypíše obsah souboru?",
+                answers: ["ls", "cat", "cd"],
+                correctAnswer: 1,
+            }
+        ]
 
-
-`;
-
-const kap2 = `
+    },
+    kap2: {
+        html: `
         
         <h1>Základní příkazy</h1>
         <p>Základní příkazy Gitu jsou stejné jako v Linuxu. Pro ukázky je použita aplikace Git Bash, která se instaluje spolu s Gitem. Můžete použít také terminal ve VSCode, který přepnete vpravo na Git Bash.</p>
@@ -207,129 +216,147 @@ const kap2 = `
             <img src="/images/cat.jpg" class="learn_img_small" >
             <img src="/images/cat-file.jpg" class="learn_img_small" >
         </div>
-        
-`;
+        `,
+        quiz: [
+            {
+                question: "Jaký příkaz vypíše obsah souboru?",
+                answers: ["ls", "cat", "cd"],
+                correctAnswer: 2,
+            },
+        ]
 
-const kap3 = `
+    },
+    kap3: {
+        html: `
 
-    <h1>Založení jména a emailu</h1>
-    <p>Pokud chceme používat Git, musíme si nejdříve uložit/založit jméno a email. Jméno se zobrazuje u každé provedené změny, aby bylo vidět, kdo změnu provedl. 
-    Email se později propojuje s GitHubem(??real).</p>
-    <p>Otevřeme si Git Bash, příkazový řádek nebo Terminal ve VSCode. Do konzole napíšeme tento příkaz: </p>
-    
-    <p class="code"> git config --global user.name "vaše jméno" </p>
-    <!-- <p class="code2"> git config --global user.name "vaše jméno"</p> -->
-    
-    <p>Do uvozovek napíšeme jméno i příjmení, můžeme použít i mezery. Pokud po odentrování nedostaneme žádný eror, akce proběhla úspěšně. Zkontrolujeme pomocí: </p>
-    <p class="code"> git config --global user.name </p>
+            <h1>Založení jména a emailu</h1>
+            <p>Pokud chceme používat Git, musíme si nejdříve uložit/založit jméno a email. Jméno se zobrazuje u každé provedené změny, aby bylo vidět, kdo změnu provedl.
+                Email se později propojuje s GitHubem(??real).</p>
+            <p>Otevřeme si Git Bash, příkazový řádek nebo Terminal ve VSCode. Do konzole napíšeme tento příkaz: </p>
 
-    <p>Stejným způsobem teď nastavíme email:</p>
-    <p class="code"> git config --global user.email "váš email" </p>
+            <p class="code"> git config --global user.name "vaše jméno" </p>
+            <!-- <p class="code2"> git config --global user.name "vaše jméno"</p> -->
 
-    <br>
-    <h1>První inicializace</h1>
-    <p>Abychom mohli používat Git, zaznamenávat změny a ukládat historii, potřebujeme <b>inicializovat složku.</b> 
-    Inicializovaná složka se nazývá <b>repozitář</b>.</p>
-    <div class=text-info> Repozitář = inicializovaná složka, ve které <i>funguje/je/běží/ <b>pracujeme s </b></i> Gitem </div>
-    <p>Složka se inicializuje příkazem <b>git init:</b> </p>
-    <div class="parent" style="color:red">
-            <img src="/images/init.jpg" class="learn_img_big" >
-            oriznout/zmenit obrazek
-    </div>
-    <p>Zde máme ukázku toho, jak v terminálu vypadá, když jsme v inicializované složce. Za cestou ke složce vidíme v závorce slovo <b>main</b>. To je náš název hlavní větve.</p>
-    <div class="parent">
-            <img src="/images/git_initialized.jpg" class="learn_img_big" >
-    </div>
-    <p>Takto vypadá repozitář v průzkumníku souborů. Přibyla zde skrytá složka s názvem <b>.git</b>. V ní se bude ukládat všechna naše historie a různé soubory Gitu.</p>
-    <div class="parent">
-            <img src="/images/git_initialized_pruzkumnik.jpg" class="learn_img_small" >
-    </div>
-    <p>A můžeme se pustit do práce (s Gitem)!</p>
-`;
+            <p>Do uvozovek napíšeme jméno i příjmení, můžeme použít i mezery. Pokud po odentrování nedostaneme žádný eror, akce proběhla úspěšně. Zkontrolujeme pomocí: </p>
+            <p class="code"> git config --global user.name </p>
 
-const kap4 = `
+            <p>Stejným způsobem teď nastavíme email:</p>
+            <p class="code"> git config --global user.email "váš email" </p>
 
-    <h1>Commit</h1>
-    <h3>Co je to commit?</h3>
-    <p>Commit je základní prvek verzovacího systému. Je to záznam o změnách, které jsme provedli.
-    Každý commit má popisek, který by měl být krátký a výstižný.  </p>
-    Každý commmit se uloží do historie projektu.
-    Díky tomu se můžeme kdykoliv vrátit zpět a podívat se, jak projekt vypadal v minulosti.
-    <div class=text-info> Commit = změny uložené do historie projektu </div>
+            <br>
+            <h1>První inicializace</h1>
+            <p>Abychom mohli používat Git, zaznamenávat změny a ukládat historii, potřebujeme <b>inicializovat složku.</b>
+                Inicializovaná složka se nazývá <b>repozitář</b>.</p>
+            <div class=text-info> Repozitář = inicializovaná složka, ve které <i>funguje/je/běží/ <b>pracujeme s </b></i> Gitem </div>
+            <p>Složka se inicializuje příkazem <b>git init:</b> </p>
+            <div class="parent" style="color:red">
+                <img src="/images/init.jpg" class="learn_img_big" >
+                    oriznout/zmenit obrazek
+            </div>
+            <p>Zde máme ukázku toho, jak v terminálu vypadá, když jsme v inicializované složce. Za cestou ke složce vidíme v závorce slovo <b>main</b>. To je náš název hlavní větve.</p>
+            <div class="parent">
+                <img src="/images/git_initialized.jpg" class="learn_img_big" >
+            </div>
+            <p>Takto vypadá repozitář v průzkumníku souborů. Přibyla zde skrytá složka s názvem <b>.git</b>. V ní se bude ukládat všechna naše historie a různé soubory Gitu.</p>
+            <div class="parent">
+                <img src="/images/git_initialized_pruzkumnik.jpg" class="learn_img_small" >
+            </div>
+            <p>A můžeme se pustit do práce (s Gitem)!</p>
+            `,
+        quiz: [
+            {
+                question: "Jaký příkaz vypíše obsah souboru?",
+                answers: ["ls", "cat", "cd"],
+                correctAnswer: 2,
+            },
+        ]
+    },
+    kap4: {
+        html: `
+            <h1>Commit</h1>
+            <h3>Co je to commit?</h3>
+            <p>Commit je základní prvek verzovacího systému. Je to záznam o změnách, které jsme provedli.
+                Každý commit má popisek, který by měl být krátký a výstižný. </p>
+            Každý commmit se uloží do historie projektu.
+            Díky tomu se můžeme kdykoliv vrátit zpět a podívat se, jak projekt vypadal v minulosti.
+            <div class=text-info> Commit = změny uložené do historie projektu </div>
 
-    Při commitování pracujeme ve třech fázích:
-    <div class="parent">
-        <img src="/images/git_commit_scheme.png" class="learn_img_small" >
-    </div>
+            Při commitování pracujeme ve třech fázích:
+            <div class="parent">
+                <img src="/images/git_commit_scheme.png" class="learn_img_small">
+            </div>
 
-    <p> 
+            https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh
 
-    <!--
-    <p>Working directory = složka, ve které pracujeme <br>
-    Staging Area = přípravná plocha, kam se dávají soubory připravené na commit <br>
-    Commit = záznam o změnách, které jsme provedli. </p>
-    -->
+            <p>
 
-    <br>
-    <p>Abychom mohli provést commit, potřebujeme nejdříve změněné soubory přidat do tzv. Staging Area.
-    Staging Area je taková přípravná plocha, kam se dávají soubory připravené na commit. </p>
-    
-    <p>Soubory se do Staging Area přidají příkazem:
-    <p class="code">git add "název souboru"</p>
+            <!--
+                <p>Working directory = složka, ve které pracujeme <br>
+                Staging Area = přípravná plocha, kam se dávají soubory připravené na commit <br>
+                Commit = záznam o změnách, které jsme provedli. </p>
+            -->
 
-    <p>Ukázka přidání souboru do Staging Area:</p>
-    <div class="parent">
-            <img src="/images/add.jpg" class="learn_img_big" >
-    </div>
-    <br>
-    <p>Pro přidání všech souborů najednou použijeme příkaz <b>git add .</b> </p>
+            <br>
+            <p>Abychom mohli provést commit, potřebujeme nejdříve změněné soubory přidat do tzv. Staging Area.
+                Staging Area je taková přípravná plocha, kam se dávají soubory připravené na commit. </p>
 
+            <p>Soubory se do Staging Area přidají příkazem:
+            <p class="code">git add "název souboru"</p>
 
-    <br><br>
-    <p/>Pokud už máme připravené všechny soubory, které chceme commitnout, napíšeme tento příkaz:<p>
-    <p class="code">git commit -m "popisek"</p>
+            <p>Ukázka přidání souboru do Staging Area:</p>
+            <div class="parent">
+                <img src="/images/add.jpg" class="learn_img_big">
+            </div>
 
-    
-    
-    <h3>Historie commitů</h3>
-    <p>Historii commitů si můžeme zobrazit příkazem <b>git log</b>. </p>
-    <p>Ukázka zobrazení historie:</p>
-    <div class="parent">
-            <img src="/images/log.jpg" class="learn_img_big" >
-    </div>
-    <p>Historie se zobrazí vždy ve složce, kterou jsme inicializovali. </p>
-
-    <h3>Upravení commitu</h3>
-    <p>Pokud jsme se s commitováním trochu spletli, můžeme commit upravit.
-    Upravit se dá jen poslední commit, který jsme provedli. </p>
-    <p>Upravíme se příkazem <b>git commit --amend -m "nový popisek"</b>. </p>
-    <p>Ukázka úpravy commitu:</p>
-    <div class="parent">
-            <img src="/images/amend.jpg" class="learn_img_big" >
-
-    </div>
-    <p>Upravení se provede vždy ve složce, kterou jsme inicializovali. </p>
-    <p>Upravený commit se zobrazí v historii jako nový commit. </p>
-    
-    <h3>Smazání commitu</h3>
-    <p>Pokud jsme se s commitováním trochu spletli, můžeme commit smazat.
-    Smazat se dá jen poslední commit, který jsme provedli. </p>
-    <p>Smazání se provede příkazem <b>git reset --soft HEAD~1</b>. </p>
-    <p>Ukázka smazání commitu:</p>
-    <div class="parent">
-            <img src="/images/reset.jpg" class="learn_img_big" >
-    </div>
-    <p>Smazání se provede vždy ve složce, kterou jsme inicializovali. </p>
-    <p>Smazaný commit se z historie úplně smaže. </p>
-    <p>Smazání commitu je velmi nebezpečné, protože se smaže i veškerá historie, která s ním souvisí. </p>
-    <p>Smazání commitu se nedá vrátit. </p>
+            <br>
+            <p>Pro přidání všech souborů najednou použijeme příkaz <b>git add .</b> </p>
 
 
+            <br><br>
+            <p />Pokud už máme připravené všechny soubory, které chceme commitnout, napíšeme tento příkaz:<p>
+            <p class="code">git commit -m "popisek"</p>
 
+            <h3>Historie commitů</h3>
+            <p>Historii commitů si můžeme zobrazit příkazem <b>git log</b>. </p>
+            <p>Ukázka zobrazení historie:</p>
+            <div class="parent">
+                <img src="/images/log.jpg" class="learn_img_big">
+            </div>
+            <p>Historie se zobrazí vždy ve složce, kterou jsme inicializovali. </p>
 
+            <h3>Upravení commitu</h3>
+            <p>Pokud jsme se s commitováním trochu spletli, můžeme commit upravit.
+                Upravit se dá jen poslední commit, který jsme provedli. </p>
+            <p>Upravíme se příkazem <b>git commit --amend -m "nový popisek"</b>. </p>
+            <p>Ukázka úpravy commitu:</p>
+            <div class="parent">
+                <img src="/images/amend.jpg" class="learn_img_big">
 
+            </div>
+            <p>Upravení se provede vždy ve složce, kterou jsme inicializovali. </p>
+            <p>Upravený commit se zobrazí v historii jako nový commit. </p>
 
-`;
+            <h3>Smazání commitu</h3>
+            <p>Pokud jsme se s commitováním trochu spletli, můžeme commit smazat.
+                Smazat se dá jen poslední commit, který jsme provedli. </p>
+            <p>Smazání se provede příkazem <b>git reset --soft HEAD~1</b>. </p>
+            <p>Ukázka smazání commitu:</p>
+            <div class="parent">
+                <img src="/images/reset.jpg" class="learn_img_big">
+            </div>
+            <p>Smazání se provede vždy ve složce, kterou jsme inicializovali. </p>
+            <p>Smazaný commit se z historie úplně smaže. </p>
+            <p>Smazání commitu je velmi nebezpečné, protože se smaže i veškerá historie, která s ním souvisí. </p>
+            <p>Smazání commitu se nedá vrátit. </p>
+            `,
+        quiz: [
+            {
+                question: "Jaký příkaz vypíše obsah souboru?",
+                answers: ["ls", "cat", "cd"],
+                correctAnswer: 2,
+            },
+        ]
+    }
+}
 
-
-export { notFound, index, uvod, kap1, kap2, kap3, kap4 };
+export { pagesData };
