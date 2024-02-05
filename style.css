@@ -327,20 +327,28 @@ ul {
 
 /* -------------------- QUIZ ---------------------- */
 
+hr {
+    margin: 50px 0 20px 0;
+    border: 0;
+    border-top: 1px solid var(--text-color);
+
+}
+
 .quiz {
     position: relative;
 }
 
-.quiz #quiz-container {}
+/* .quiz #quiz-container {} */
 
 .quiz input:hover,
 .quiz label:hover {
     cursor: pointer;
+    color: #000;
 }
 
 .quiz button {
-    /* width: auto;
-        height: auto; */
+    /* width: auto; */
+    /* height: 30px; */
     padding: 5px 10px;
     display: flex;
     justify-content: center;
@@ -363,8 +371,18 @@ ul {
     background-color: rgba(239, 239, 239, 0.3)
 }
 
-.quiz ul {
-    list-style-type: none;
+.quiz-container {
+    margin-bottom: 10px;
+}
+
+.quiz section {
+    /* margin-bottom: 8px */
+    line-height: 28px;
+    /* margin-bottom: 10px; */
+}
+
+.quiz label {
+    margin-left: 5px;
 }
 
 .quiz .result {
@@ -399,6 +417,7 @@ ul {
 
 .quiz .correct::after {
     content: url(/images/buttons/correct2.png);
+    margin-left: 10px;
 }
 
 .quiz .wrong {
@@ -407,6 +426,7 @@ ul {
 
 .quiz .wrong::after {
     content: url(/images/buttons/wrong2.png);
+    margin-left: 10px;
 }
 
 /* https://dev.to/melvin2016/how-to-put-an-image-inside-pseudo-elements-in-css-1io0 */

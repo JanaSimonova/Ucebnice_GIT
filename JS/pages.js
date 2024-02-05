@@ -219,10 +219,15 @@ const pagesData = {
         `,
         quiz: [
             {
-                question: "Jaký příkaz vypíše obsah souboru?",
+                question: "Jakým příkazem změníme aktuální složku?",
                 answers: ["ls", "cat", "cd"],
-                correctAnswer: 2,
+                correctAnswer: 3,
             },
+            {
+                question: "Co děla příkaz touch?",
+                answers: ["vytvoří soubor", "vypíše obsah souboru", "odstraní soubor"],
+                correctAnswer: 1,
+            }
         ]
 
     },
@@ -251,7 +256,7 @@ const pagesData = {
             <p>Složka se inicializuje příkazem <b>git init:</b> </p>
             <div class="parent" style="color:red">
                 <img src="/images/init.jpg" class="learn_img_big" >
-                    oriznout/zmenit obrazek
+                    oriznout/zmenit obrazek - oriznuto
             </div>
             <p>Zde máme ukázku toho, jak v terminálu vypadá, když jsme v inicializované složce. Za cestou ke složce vidíme v závorce slovo <b>main</b>. To je náš název hlavní větve.</p>
             <div class="parent">
@@ -265,8 +270,8 @@ const pagesData = {
             `,
         quiz: [
             {
-                question: "Jaký příkaz vypíše obsah souboru?",
-                answers: ["ls", "cat", "cd"],
+                question: "Čím se inicializuje složka?",
+                answers: ["initialize git", "git init", "git --init"],
                 correctAnswer: 2,
             },
         ]
@@ -276,45 +281,84 @@ const pagesData = {
             <h1>Commit</h1>
             <h3>Co je to commit?</h3>
             <p>Commit je základní prvek verzovacího systému. Je to záznam o změnách, které jsme provedli.
-                Každý commit má popisek, který by měl být krátký a výstižný. </p>
-            Každý commmit se uloží do historie projektu.
-            Díky tomu se můžeme kdykoliv vrátit zpět a podívat se, jak projekt vypadal v minulosti.
+                Každý commit má popisek, který by měl být krátký a výstižný. 
+                Všechny commmity se ukládají do historie projektu.
+                Díky tomu se můžeme kdykoliv vrátit zpět a podívat se, jak projekt vypadal v minulosti. </p>
             <div class=text-info> Commit = změny uložené do historie projektu </div>
+            <div class=text-info> Commit = záznam o změnách uložených do historie projektu </div>
+
 
             Při commitování pracujeme ve třech fázích:
             <div class="parent">
                 <img src="/images/git_commit_scheme.png" class="learn_img_small">
             </div>
 
-            https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh
+            <!-- https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh -->
 
-            <p>
+            <p> <b>Working directory </b> je složka, ve které pracujeme. Vytváříme soubory, upravujeme obsah, atd. 
+            Poté se rozhodneme, že chceme nějaké změny uložit. Nejdříve je musíme přidat do tzv. <b>Staging Area </b>. 
+            To je taková přípravná plocha, kam se dávají soubory připravené na commit. Můžeme tam přidat všechny upravené soubory najednou, nebo jen některé.
+            Když máme všechny soubory, které chceme uložit, provedeme <b>commit</b> a vytvoří se záznam do historie. </p>
+            <br>
+            <p >Do Staging Area přidáme <b>soubor</b> tímto příkazem: </p>
+            <p class="code">git add "název souboru"</p>
+            
+            <p> Můžeme také přidat <b>více souborů</b> najednou, stačí do uvozovek napsat názvy souborů oddělené mezerou, např.: </p>
+            <p class="code">git add "soubor1.txt soubor2.txt soubor3.txt"</p>
+
+            <p>Pro přidání <b>všech změněných souborů</b> najednou použijeme příkaz: </p>
+            <p class="code">git add . </p>
+
+            <br>
+            <p>Pokud už máme připravené všechny soubory, které chceme commitnout, napíšeme tento příkaz:</p>
+            <p class="code">git commit -m "popisek" </p>
+
+
+            <br><br>
+
+            3 typy souborů:
+            <ul>
+                <li>změněné soubory</li>
+                <li>nové soubory</li>
+                <li>smazané soubory</li>
+            </ul>
+
+            4 types of files:
+            untracked files
+            modified files
+            staged files
+            committed files
+
+            <div class="parent">
+                <img src="https://git-scm.com/book/en/v2/images/lifecycle.png" class="learn_img_big">
+            </div>
+
+            Untracked files = nesledované soubory; soubory, které jsme vytvořili, ale ještě nikdy necommitovali
+            Modified files = změněné soubory; soubory, které jsme změnili, ale ještě nejsou připravené na commit
+            Staged files = připravené soubory; soubory, které jsou připravené na commit
+            Committed files = commitnuté soubory; soubory, které jsou již commitnuté
+            
+
+            <br><br><br> <br>
+            
+            
 
             <!--
                 <p>Working directory = složka, ve které pracujeme <br>
                 Staging Area = přípravná plocha, kam se dávají soubory připravené na commit <br>
                 Commit = záznam o změnách, které jsme provedli. </p>
-            -->
+            
 
             <br>
+
+            
             <p>Abychom mohli provést commit, potřebujeme nejdříve změněné soubory přidat do tzv. Staging Area.
                 Staging Area je taková přípravná plocha, kam se dávají soubory připravené na commit. </p>
 
             <p>Soubory se do Staging Area přidají příkazem:
             <p class="code">git add "název souboru"</p>
 
-            <p>Ukázka přidání souboru do Staging Area:</p>
-            <div class="parent">
-                <img src="/images/add.jpg" class="learn_img_big">
-            </div>
-
-            <br>
-            <p>Pro přidání všech souborů najednou použijeme příkaz <b>git add .</b> </p>
-
-
-            <br><br>
-            <p />Pokud už máme připravené všechny soubory, které chceme commitnout, napíšeme tento příkaz:<p>
-            <p class="code">git commit -m "popisek"</p>
+            -->
 
             <h3>Historie commitů</h3>
             <p>Historii commitů si můžeme zobrazit příkazem <b>git log</b>. </p>
@@ -351,9 +395,9 @@ const pagesData = {
             `,
         quiz: [
             {
-                question: "Jaký příkaz vypíše obsah souboru?",
+                question: "Jaký příkaz změní aktuální složku?",
                 answers: ["ls", "cat", "cd"],
-                correctAnswer: 2,
+                correctAnswer: 3,
             },
         ]
     }

@@ -10,6 +10,9 @@ class QuizModule {
     generate() {
         const main = document.getElementById(this.anchor);
 
+        const hr = document.createElement("hr");
+        main.appendChild(hr);
+
         const quizDiv = document.createElement("div");
         quizDiv.className = "quiz";
         quizDiv.id = "quiz";
@@ -20,6 +23,7 @@ class QuizModule {
 
         const quizContainer = document.createElement("div");
         quizContainer.id = "quiz-container";
+        quizContainer.className = "quiz-container";
         quizDiv.appendChild(quizContainer);
 
         const buttonsDiv = document.createElement("div");
@@ -54,6 +58,7 @@ class QuizModule {
         quizContainer.innerHTML = ""; // Clear previous quiz content
 
         this.data.forEach((questionData, index) => {
+            // 
             const questionSection = document.createElement("section");
             questionSection.id = `p${index}`;
 
@@ -131,8 +136,8 @@ class QuizModule {
         document.getElementById("reload").style.visibility = "visible";
         document.getElementById("show").style.visibility = "visible";
 
-        var slf = document.getElementById("result");
-        console.log(slf.parentElement);
+        // var slf = document.getElementById("result");
+        // console.log(slf.parentElement);
 
         // disable all quiz answers
         var inputs = document.getElementsByClassName("quiz-answer");
