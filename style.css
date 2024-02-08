@@ -138,9 +138,10 @@ main {
     display: inline;
 }
 
-/* .right a{
+.right a, .learn-text a{
     font-weight: bold;
-} */
+    text-decoration: underline;
+}
 
 /* -------------- LEARN ---------------- */
 aside {
@@ -292,9 +293,9 @@ ul {
     color: #f1f1f1;
     background-color: #303030;
     font-size: smaller;
-    border-radius: 50px;
-    height: 30px;
-    padding-left: 15px;
+    border-radius: 20px;
+    height: auto;
+    padding: 10px 0 10px 15px;
     display: flex;
     align-items: center;
     word-spacing: 0px;

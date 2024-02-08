@@ -17,7 +17,7 @@ const pagesData = {
             <div class="right">
                 <h1>GIT</h1>
                 <p>Nejpoužívanější verzovací systém na světě. </p> 
-                    <a href="/learn">Nauč se ho používat i ty!</a> 
+                    <a href="/learn">Nauč se ho i ty!</a> 
             </div>
         </div>
         `,
@@ -117,7 +117,9 @@ const pagesData = {
             <img src="/images/git_download2.jpg" class="learn_img_big">
         </div>
         <h3>Průvodce instalací:</h3>
-        <p><b>Který editor vybrat: </b>Nejlepší je asi VS Code editor, když programujete ve Visual Studio Code, konzoli máte přímo v aplikaci.</p>
+        <p><b>Který editor vybrat: </b>Nejlepší je asi VS Code editor, když programujete ve Visual Studio Code, konzoli máte přímo v aplikaci??REAL??. 
+        HLAVNě: při některých příkazech se bude otevírat soubor ve VSCode, přehledný. Vim editor se otevírá přímo v konzoli a je složitější na práci.
+        Na Macu možná Sublime text. Později to ale lze změnit.</p>
         <div class="parent">
             <img src="/images/git_editor_choose.jpg" class="learn_img_small">
         </div>
@@ -237,7 +239,7 @@ const pagesData = {
             <h1>Založení jména a emailu</h1>
             <p>Pokud chceme používat Git, musíme si nejdříve uložit/založit jméno a email. Jméno se zobrazuje u každé provedené změny, aby bylo vidět, kdo změnu provedl.
                 Email se později propojuje s GitHubem(??real).</p>
-            <p>Otevřeme si Git Bash, příkazový řádek nebo Terminal ve VSCode. Do konzole napíšeme tento příkaz: </p>
+            <p>Otevřeme si Git Bash, příkazový řádek (cmd) nebo Terminal ve VSCode. Do konzole napíšeme tento příkaz: </p>
 
             <p class="code"> git config --global user.name "vaše jméno" </p>
             <!-- <p class="code2"> git config --global user.name "vaše jméno"</p> -->
@@ -256,7 +258,7 @@ const pagesData = {
             <p>Složka se inicializuje příkazem <b>git init:</b> </p>
             <div class="parent" style="color:red">
                 <img src="/images/init.jpg" class="learn_img_big" >
-                    oriznout/zmenit obrazek - oriznuto
+                    
             </div>
             <p>Zde máme ukázku toho, jak v terminálu vypadá, když jsme v inicializované složce. Za cestou ke složce vidíme v závorce slovo <b>main</b>. To je náš název hlavní větve.</p>
             <div class="parent">
@@ -284,9 +286,10 @@ const pagesData = {
             <h1>Commit</h1>
             <h3>Co je to commit?</h3>
             <p>Commit je základní prvek verzovacího systému. Je to záznam (snapshot) o změnách, které jsme provedli.
-                Každý commit má popisek, který by měl být krátký a výstižný. 
-                Všechny commmity se ukládají do historie projektu.
-                Díky tomu se můžeme kdykoliv vrátit zpět a podívat se, jak projekt vypadal v minulosti. </p>
+            Každý commit má popisek, který by měl být krátký a výstižný. 
+            Všechny commmity se ukládají do historie projektu.
+            Díky tomu se můžeme kdykoliv vrátit zpět a podívat se, jak projekt vypadal v minulosti. 
+            Je dobré dělat commity celkem často nebo po logických částech, aby bylo snadnější se vyznat ve změnách a vrátit se k nim.</p>
             <div class=text-info> Commit = záznam o změnách uložený do historie projektu </div>
 
 
@@ -347,93 +350,114 @@ const pagesData = {
 
             <p>Zdě můžeme vidět upravený a už také stagenutý soubor "test.txt" a nově vytvořený, nesledovaný soubor "new-file.txt":</p>
             <div class="parent">
-                <img src="/images/git_status.jpg" class="learn_img_big ">
+                <img src="/images/git_status.jpg" class="learn_img_big">
             </div>
 
             
             <h3>Historie commitů</h3>
-            <p>Historii commitů si můžeme zobrazit příkazem <b>git log</b>. </p>
-            <p>Ukázka zobrazení historie:</p>
-            
+            <p>Všechny commity se ukládají v našem repu a proto se můžeme kdykoliv podívat na jejich seznam.
 
-            <p class="code">git log </p>
-            <p class="code">git log --oneline</p>
-            
-            
+            Příkaz <b>git&nbsplog</b> nám umožňuje prohlížet historii commitů v repozitáři. 
+            Každý výpis commitu obsahuje jeho unikátní, 40 písmenný hash. Je to něco jako jeho ID, poznávací číslo. 
+            Dále obsahuje jméno a email autora (které jsme zadávali v kapitole <a href="/kapitola3" >Inicializace</a>), 
+            datum vytvoření a popisek. Nejnovější, poslední, commit je uplně nahoře, první uplně dole.</p>
 
+            <p style="color:grey;">JE to DULEzity?? Pokud jsme ještě žádný commit neprovedli a máme úplně nové repo, zobrazí se error: your current branch 'main' does not have any commits yet.</p>
 
-            <br><br><br><br><br><br>
-
-            
-
-            <h3>Upravení commitu</h3>
-            <p>Pokud jsme se s commitováním trochu spletli, můžeme commit upravit.
-                Upravit se dá jen poslední commit, který jsme provedli. </p>
-            <p>Upravíme se příkazem <b>git commit --amend -m "nový popisek"</b>. </p>
-            <p>Ukázka úpravy commitu:</p>
             <div class="parent">
-                <img src="/images/amend.jpg" class="learn_img_big">
-
+                <img src="/images/git_log.jpg" class="learn_img_big ">
             </div>
-            <p>Upravení se provede vždy ve složce, kterou jsme inicializovali. </p>
-            <p>Upravený commit se zobrazí v historii jako nový commit. </p>
 
+            <p>Můžeme také použít zkrácenou formu <b>git log --oneline</b>, která vypíše zkrácený 7 písmenný hash commitu a popisek, vše hezky na jednom řádku. 
+            To usnadňuje procházení historie commitů, což se vyplatí, když už máme commitů hodně.</p>
+
+            <div class="parent">
+                <img src="/images/git_log_oneline.jpg" class="learn_img_big">
+            </div>
+
+            <p>Později se vám také určitě stane to, že konzole neukáže všechny řádky, ale na konci zůstane jen dvojtečka. 
+            Není to žádná chyba, nebo zaseknutí, je to zcela normální. Znamená to, že výpis má více řádků než se vejde do okna konzole.
+            Pokračování výpisu spustíte stiskem mezerníku. Poté ale stále nebudete pryč, tentokrát se zobrazuje (END). 
+            Odusd vyjdete (zsae do normalni konzole) stiskem klávesy Q.</p>
+            
+            <div class="parent">
+                <img src="/images/git_log_notfull.jpg" class="learn_img_big ">
+                <img src="/images/git_log_end.jpg" class="learn_img_big ">
+            </div>
+            
+            
+            <h3>Upravení posledního commitu  ( kam ho dát? sem nebo ke commitování?) </h3>
+            <p>Pokud se nám stane, že provedeme commit, ale zapomněli jsme do něj například přidat soubor, můžeme to ještě napravit.
+            To lze ale pouze s posledním commitem.
+            Pomůže nám příkaz <b> git commit --amend </b>. 
+            <p class="code">git commit --amend</p>
+            Zapomenutý soubor nejdříve přidáme do StageArea jako kdybychom dělali normální commit. 
+            Napíšeme příkaz a otevře se soubor COMMIT_EDITMSG.
+            Na prvním řádku je náš popisek posledního commitu. Ten můžeme také přepsat. 
+            Kousek níže si zkontrolujeme, jestli v "Changes to be commited" máme ten soubor, který jsme zapomněli.
+            Pak křížkem soubor zavřeme, tím se potvrdí změny commitu. Můžeme zkontrolovat git log, že se commit provedl. </p>
+            obrazek
+
+            <p class="margin_top">Jestli chceme jen změnit popisek commitu, nemusíme otevírat celý soubor (ale můžeme). 
+            Stačí příkaz napsat podobně, jako píšeme normální commit:</p>
+            <p class="code">git commit --amend -m "novy popisek"</p>
+
+            
             <h3>Smazání commitu</h3>
             <p>Pokud jsme se s commitováním trochu spletli, můžeme commit smazat.
-                Smazat se dá jen poslední commit, který jsme provedli. </p>
+            Smazat se dá jen poslední commit, který jsme provedli. </p>
             <p>Smazání se provede příkazem <b>git reset --soft HEAD~1</b>. </p>
             <p>Ukázka smazání commitu:</p>
             <div class="parent">
                 <img src="/images/reset.jpg" class="learn_img_big">
             </div>
-            <p>Smazání se provede vždy ve složce, kterou jsme inicializovali. </p>
             <p>Smazaný commit se z historie úplně smaže. </p>
             <p>Smazání commitu je velmi nebezpečné, protože se smaže i veškerá historie, která s ním souvisí. </p>
             <p>Smazání commitu se nedá vrátit. </p> 
+            
+            
 
 
-
-
-
-
+             <!--
 
             <hr style="border-top: 1px solid grey">
             <div style="color:grey;">
             VS CODE: 
             <ul >
-                <li style="color:grey;"> Untracked - zelené U </li>
-                <li style="color:grey;"> Staged - zelené A (jen když byl ted untracked) </li>
-                <li style="color:grey;"> Modified - oranžové M </li>
-                <li style="color:grey;"> Commited/Unmodified - nic, bílý text </li>
+            <li style="color:grey;"> Untracked - zelené U </li>
+            <li style="color:grey;"> Staged - zelené A (jen když byl ted untracked) </li>
+            <li style="color:grey;"> Modified - oranžové M </li>
+            <li style="color:grey;"> Commited/Unmodified - nic, bílý text </li>
             </ul>
             </div>
-
-
             
-            <!--
-                <p>Working directory = složka, ve které pracujeme <br>
-                Staging Area = přípravná plocha, kam se dávají soubory připravené na commit <br>
-                Commit = záznam o změnách, které jsme provedli. </p>
             
-
+            <p>Working directory = složka, ve které pracujeme <br>
+            Staging Area = přípravná plocha, kam se dávají soubory připravené na commit <br>
+            Commit = záznam o změnách, které jsme provedli. </p>
+            
+            
             <br>
-
+            
             
             <p>Abychom mohli provést commit, potřebujeme nejdříve změněné soubory přidat do tzv. Staging Area.
-                Staging Area je taková přípravná plocha, kam se dávají soubory připravené na commit. </p>
-
+            Staging Area je taková přípravná plocha, kam se dávají soubory připravené na commit. </p>
+            
             <p>Soubory se do Staging Area přidají příkazem:
             <p class="code">git add "název souboru"</p>
+            
+            EXIT = Q Nepanikařte, pokud se nemůžete dostat pryč. Stačí stisknout klávesu Q a zobrazí se nám zase ...zadavaci plocha..
+
 
             -->
 
 
-
-
+            
+            
             `,
-        quiz: [
+            quiz: [
             {
-                question: "Který příkaz nám ukáže všechny změny (se soubory) od posledního commitu?",
+                question: "Který příkaz nám ukáže všechny změny (se soubory?) od posledního commitu?",
                 answers: ["git log", "git state", "git status"],
                 correctAnswer: 3,
             },
