@@ -76,7 +76,8 @@ html {
 }
 
 body {
-    margin: 0 200px;
+    /* margin: 0 200px; */
+    margin:0 7vw ;
     height: 100%;
 }
 
@@ -234,7 +235,7 @@ h3::before {
     width: 100%;
     height: 100%;
     /* margin: 20px 0; */
-    border-radius: 24px;
+    /* border-radius: 24px; */
     background-size: cover;
     transform: scale(100%);
     transition: all 0.8s;
@@ -283,17 +284,7 @@ ul {
     margin-top: 5px;
 }
 
-.margin_top {
-    margin-top: 5px;
-}
 
-.padding_left {
-    padding-left: 30px;
-}
-
-.underline {
-    text-decoration: underline;
-}
 
 
 .code {
@@ -432,3 +423,22 @@ hr {
 /* https://dev.to/melvin2016/how-to-put-an-image-inside-pseudo-elements-in-css-1io0 */
 
 /* ------------------------------------------------ */
+
+
+/* --------------- CLASSES like bootstrap ----------------- */
+
+.margin_top {
+    margin-top: 5px;
+}
+
+.padding_left {
+    padding-left: 30px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.no-border-radius{
+    border-radius: 0;
+}

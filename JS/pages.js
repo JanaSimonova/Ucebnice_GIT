@@ -278,14 +278,16 @@ const pagesData = {
     },
     kap4: {
         html: `
+
+            <h2 style="color: red";> ROZPOZNÁVAT KDY JE V PŘÍKAZU "" A KDY JEN SLOVO, píšu to stejně. Změna=např. \< nazev souboru \> </h2>
+
             <h1>Commit</h1>
             <h3>Co je to commit?</h3>
-            <p>Commit je základní prvek verzovacího systému. Je to záznam o změnách, které jsme provedli.
+            <p>Commit je základní prvek verzovacího systému. Je to záznam (snapshot) o změnách, které jsme provedli.
                 Každý commit má popisek, který by měl být krátký a výstižný. 
                 Všechny commmity se ukládají do historie projektu.
                 Díky tomu se můžeme kdykoliv vrátit zpět a podívat se, jak projekt vypadal v minulosti. </p>
-            <div class=text-info> Commit = změny uložené do historie projektu </div>
-            <div class=text-info> Commit = záznam o změnách uložených do historie projektu </div>
+            <div class=text-info> Commit = záznam o změnách uložený do historie projektu </div>
 
 
             Při commitování pracujeme ve třech fázích:
@@ -299,8 +301,8 @@ const pagesData = {
             Poté se rozhodneme, že chceme nějaké změny uložit. Nejdříve je musíme přidat do tzv. <b>Staging Area </b>. 
             To je taková přípravná plocha, kam se dávají soubory připravené na commit. Můžeme tam přidat všechny upravené soubory najednou, nebo jen některé.
             Když máme všechny soubory, které chceme uložit, provedeme <b>commit</b> a vytvoří se záznam do historie. </p>
-            <br>
-            <p >Do Staging Area přidáme <b>soubor</b> tímto příkazem: </p>
+            
+            <p class="margin_top">Do Staging Area přidáme <b>soubor</b> tímto příkazem: </p>
             <p class="code">git add "název souboru"</p>
             
             <p> Můžeme také přidat <b>více souborů</b> najednou, stačí do uvozovek napsat názvy souborů oddělené mezerou, např.: </p>
@@ -309,64 +311,60 @@ const pagesData = {
             <p>Pro přidání <b>všech změněných souborů</b> najednou použijeme příkaz: </p>
             <p class="code">git add . </p>
 
+            <p>Jestliže jsme omylem do Staging Area přidali soubor, který nechceme teď commitovat, <b>odebereme</b> ho příkazem: </p>
+            <p class="code">git restore --staged "nazev souboru" </p>
+
             <br>
-            <p>Pokud už máme připravené všechny soubory, které chceme commitnout, napíšeme tento příkaz:</p>
+            <p>Pokud už máme připravené všechny soubory, které chceme <b>commitnout</b>, napíšeme tento příkaz:</p>
             <p class="code">git commit -m "popisek" </p>
 
-
-            <br><br>
-
-            3 typy souborů:
+            <br>
+            <h3>Cyklus stavu souboru </h3>
+            Máme 4 stavy souboru:
             <ul>
-                <li>změněné soubory</li>
-                <li>nové soubory</li>
-                <li>smazané soubory</li>
+                <li>Untracked - nesledovaný soubor</li>
+                <li>Unmodified/Commited - nezměněný = commitnutý</li> 
+                <li>Modified - změněný, upravený soubor</li>
+                <li>Staged - připravený soubor na commit</li>
             </ul>
+            <div class="parent no-border-radius">
+                <img src="https://git-scm.com/book/en/v2/images/lifecycle.png" class="learn_img_big ">
+            </div>
+            <p>Když vytvoříme nebo přidáme <b>nový soubor</b>, je <b>Untracked</b> - nesledovaný. A to i když ho upravíme. Pro Git je to (prostě) nový soubor, který ještě nikdy nebyl zaznamenáván.
+            Pak ho přidáme do Staging area (přípravná plocha) - soubor je <b>Staged</b>, připravený na commit. 
+            Provedeme <b>commit</b> a soubor je <b>Unmodified/Commited</b> - neupravený, commitnutý. Když ho znovu <b>upravíme</b>, stane se už <b>Modified</b> - upravený.
+            A ten zase dáme do Staging Area a commitneme, a tak stále dokola.</p>
+            <p>Soubor můžeme také <b>přestat sledovat</b> (šipka "Remove the file"). Soubor se nám neodstraní ze složky, pouze se přestane sledovat, jako kdyby byl nový.
+            To se dělá příkazem: <b>git rm --cached "název souboru"</b></p>
 
-            4 types of files:
-            untracked files
-            modified files
-            staged files
-            committed files
+            
+            <br>
+            <h3>Git status</h3>
+            <p> Pro zobrazení stavu souborů v našem repozitáři existuje chytrý příkaz <b>git status</b>. 
+            Ten nám ukáže, jaké soubory jsme od posledního commitu přidali, upravili, smazali, nebo jaké soubory máme ve Staging Area. 
+            Pokud žádné změny ještě neproběhly, konzole vypíše, že není nic ke commitování.</p>
+            <p class="code">git status </p>
 
+            <p>Zdě můžeme vidět upravený a už také stagenutý soubor "test.txt" a nově vytvořený, nesledovaný soubor "new-file.txt":</p>
             <div class="parent">
-                <img src="https://git-scm.com/book/en/v2/images/lifecycle.png" class="learn_img_big">
+                <img src="/images/git_status.jpg" class="learn_img_big ">
             </div>
 
-            Untracked files = nesledované soubory; soubory, které jsme vytvořili, ale ještě nikdy necommitovali
-            Modified files = změněné soubory; soubory, které jsme změnili, ale ještě nejsou připravené na commit
-            Staged files = připravené soubory; soubory, které jsou připravené na commit
-            Committed files = commitnuté soubory; soubory, které jsou již commitnuté
             
-
-            <br><br><br> <br>
-            
-            
-
-            <!--
-                <p>Working directory = složka, ve které pracujeme <br>
-                Staging Area = přípravná plocha, kam se dávají soubory připravené na commit <br>
-                Commit = záznam o změnách, které jsme provedli. </p>
-            
-
-            <br>
-
-            
-            <p>Abychom mohli provést commit, potřebujeme nejdříve změněné soubory přidat do tzv. Staging Area.
-                Staging Area je taková přípravná plocha, kam se dávají soubory připravené na commit. </p>
-
-            <p>Soubory se do Staging Area přidají příkazem:
-            <p class="code">git add "název souboru"</p>
-
-            -->
-
             <h3>Historie commitů</h3>
             <p>Historii commitů si můžeme zobrazit příkazem <b>git log</b>. </p>
             <p>Ukázka zobrazení historie:</p>
-            <div class="parent">
-                <img src="/images/log.jpg" class="learn_img_big">
-            </div>
-            <p>Historie se zobrazí vždy ve složce, kterou jsme inicializovali. </p>
+            
+
+            <p class="code">git log </p>
+            <p class="code">git log --oneline</p>
+            
+            
+
+
+            <br><br><br><br><br><br>
+
+            
 
             <h3>Upravení commitu</h3>
             <p>Pokud jsme se s commitováním trochu spletli, můžeme commit upravit.
@@ -391,12 +389,52 @@ const pagesData = {
             <p>Smazání se provede vždy ve složce, kterou jsme inicializovali. </p>
             <p>Smazaný commit se z historie úplně smaže. </p>
             <p>Smazání commitu je velmi nebezpečné, protože se smaže i veškerá historie, která s ním souvisí. </p>
-            <p>Smazání commitu se nedá vrátit. </p>
+            <p>Smazání commitu se nedá vrátit. </p> 
+
+
+
+
+
+
+
+            <hr style="border-top: 1px solid grey">
+            <div style="color:grey;">
+            VS CODE: 
+            <ul >
+                <li style="color:grey;"> Untracked - zelené U </li>
+                <li style="color:grey;"> Staged - zelené A (jen když byl ted untracked) </li>
+                <li style="color:grey;"> Modified - oranžové M </li>
+                <li style="color:grey;"> Commited/Unmodified - nic, bílý text </li>
+            </ul>
+            </div>
+
+
+            
+            <!--
+                <p>Working directory = složka, ve které pracujeme <br>
+                Staging Area = přípravná plocha, kam se dávají soubory připravené na commit <br>
+                Commit = záznam o změnách, které jsme provedli. </p>
+            
+
+            <br>
+
+            
+            <p>Abychom mohli provést commit, potřebujeme nejdříve změněné soubory přidat do tzv. Staging Area.
+                Staging Area je taková přípravná plocha, kam se dávají soubory připravené na commit. </p>
+
+            <p>Soubory se do Staging Area přidají příkazem:
+            <p class="code">git add "název souboru"</p>
+
+            -->
+
+
+
+
             `,
         quiz: [
             {
-                question: "Jaký příkaz změní aktuální složku?",
-                answers: ["ls", "cat", "cd"],
+                question: "Který příkaz nám ukáže všechny změny (se soubory) od posledního commitu?",
+                answers: ["git log", "git state", "git status"],
                 correctAnswer: 3,
             },
         ]
