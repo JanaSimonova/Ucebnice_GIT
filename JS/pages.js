@@ -282,7 +282,7 @@ const pagesData = {
         html: `
 
             <h2 style="color: red";> ROZPOZNÁVAT KDY JE V PŘÍKAZU "" A KDY JEN SLOVO, píšu to stejně. 
-            Změna=např. \< nazev souboru \>  == nwbo neřešit. <br>
+            Změna=např. \< nazev souboru \>  == nwbo neřešit. <br><br>
             UDělat barevně h3?? <br><br> Dořešit label result u kvizu - position a cursor
             </h2>
 
@@ -444,6 +444,27 @@ const pagesData = {
             <p> Jiný způsob může být: </p>
             <p class="code"> git reset --hard HEAD~1 </p>
             
+
+            <h3>Info o commitu</h3>
+            <p>V konzoli si můžeme příkazem ukázat informace o jednom commitu. 
+            Vypíše se info jako při git log a k tomu provedené změny v souborech.
+            Není to ale moc přehledné, takže to nejspíš moc používat nebudete. Kdyby přeci jen, příkaz je následující:</p>
+            <p class="code">git show "hash commitu"</p>
+
+
+            <h3>Přepínání commitů</h3>
+            <p>Přepínání commitů je vlastně to stále zmiňované <b>vrácení se zpět v projektu </b>. 
+            Naše pracovní složka a soubory se přepnou do podoby, jakou měly v daném commitu. 
+            Pozor! Při přepnutí na commit se nacházíme v tzv. <b>detached HEAD</b> stavu, což znamená, 
+            že nejsme na žádné větvi a naše změny se nebudou ukládat do repozitáře, 
+            dokud se nepřepneme zpět na aktuální větev, nebo nevytvoříme novou. Přepnutí na poslední commit nepomůže.
+            Můžeme dělat změny a zkoušet, ale nedoporučuje se poté dělat commity, je obtížné je najít.</p>
+            <p class="code">git checkout "hash commitu"</p>
+            Přepnutí zpět do větve:
+            <p class="code">git switch "název větve"</p>
+
+
+
 
              <!--
 
