@@ -380,11 +380,11 @@ hr {
 .quiz .result {
     /* background-color: var(--secondary-color);  */
     background-color: #2196F3;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50px;
     position: absolute;
-    top: 0;
+    top: -15px;
     /* left: 40em; */
     right: 0;
     /* porad jezdi nekam, idk proc */
@@ -396,7 +396,8 @@ hr {
 
 .quiz .result_label {
     cursor: default;
-    font-size: 40px;
+    font-size: 30px;
+    margin: 0;
     color: var(--text-color);
     /* cerna */
     color: var(--background-color);

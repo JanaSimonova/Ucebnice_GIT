@@ -520,6 +520,43 @@ const pagesData = {
                 correctAnswer: 1,
             },
         ]
+    },
+    kap5: {
+        html:`
+        
+        <h1>Branches</h1>
+        <p><b>Branch = větev</b>. Jak jsme si už řekli, je to taková odchylka od hlavního toku práce. 
+        Ten hlavní tok je ale také větev, a to <b>hlavní větev</b>, pojmenovaná <b>MAIN</b> (nebo master). </p> 
+        
+        <div class="parent">
+            <img src="/images/branch.png" class="learn_img_big ">
+        </div>
+
+        <p> Další větve se používají například při <b>opravách chyb</b> ve starších commitech, nebo když chceme udělat nějakou <b>novou funkci</b>, ale nepřijít o starou. 
+        Také se často nepracuje přímo v hlavní větvi, ale ve vedlejších a do hlavní se <b>slučují</b>, aby v ní byl jen čistý a funkční kód.
+        To se dá uplatnit i v <b>týmu</b> více lidí, každý pak pracuje s vlastní větví a svým prostředím. </p>
+
+        <h3>Vytvoření větve</h3>
+        <p>Novou větev můžeme buď vytvořit přímo na commitu kde právě jsme, nebo se vrátit na nějaký v historii a tam ji vytvořit.
+        Obojí se ale dělá stejným příkazem:</p>
+        <p class="code"> git branch "nova_vetev"</p>
+
+        (neco jsem asi zkousela na branchích v git-test, ale nwm co. třeba už nic)
+
+
+
+        <br><br>
+
+        `,
+        quiz: [
+            {
+                question: "asd",
+                answers: ["df", "sd"],
+                correctAnswer: 3,
+            }
+
+        ]
+
     }
 }
 
