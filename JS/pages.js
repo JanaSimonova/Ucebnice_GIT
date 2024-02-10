@@ -165,7 +165,7 @@ const pagesData = {
         </div>
 
         <h3>pwd</h3>
-        <p><b>Print Working Directory.</b> Vypíše cestu kde se právě nacházíme.</p>
+        <p><b>Print Working Directory.</b> Vypíše cestu ke složce, kde se právě nacházíme.</p>
         <div class="parent">
             <img src="/images/pwd.jpg" class="learn_img_small">
         </div>
@@ -281,7 +281,10 @@ const pagesData = {
     kap4: {
         html: `
 
-            <h2 style="color: red";> ROZPOZNÁVAT KDY JE V PŘÍKAZU "" A KDY JEN SLOVO, píšu to stejně. Změna=např. \< nazev souboru \> </h2>
+            <h2 style="color: red";> ROZPOZNÁVAT KDY JE V PŘÍKAZU "" A KDY JEN SLOVO, píšu to stejně. 
+            Změna=např. \< nazev souboru \>  == nwbo neřešit. <br>
+            UDělat barevně h3?? <br><br> Dořešit label result u kvizu - position a cursor
+            </h2>
 
             <h1>Commit</h1>
             <h3>Co je to commit?</h3>
@@ -295,7 +298,7 @@ const pagesData = {
 
             Při commitování pracujeme ve třech fázích:
             <div class="parent">
-                <img src="/images/git_commit_scheme.png" class="learn_img_small">
+                <img src="/images/git_commit_scheme.png" class="learn_img_big">
             </div>
 
             <!-- https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh -->
@@ -306,7 +309,7 @@ const pagesData = {
             Když máme všechny soubory, které chceme uložit, provedeme <b>commit</b> a vytvoří se záznam do historie. </p>
             
             <p class="margin_top">Do Staging Area přidáme <b>soubor</b> tímto příkazem: </p>
-            <p class="code">git add "název souboru"</p>
+            <p class="code">git add "název souboru" </p>
             
             <p> Můžeme také přidat <b>více souborů</b> najednou, stačí do uvozovek napsat názvy souborů oddělené mezerou, např.: </p>
             <p class="code">git add "soubor1.txt soubor2.txt soubor3.txt"</p>
@@ -338,11 +341,12 @@ const pagesData = {
             Provedeme <b>commit</b> a soubor je <b>Unmodified/Commited</b> - neupravený, commitnutý. Když ho znovu <b>upravíme</b>, stane se už <b>Modified</b> - upravený.
             A ten zase dáme do Staging Area a commitneme, a tak stále dokola.</p>
             <p>Soubor můžeme také <b>přestat sledovat</b> (šipka "Remove the file"). Soubor se nám neodstraní ze složky, pouze se přestane sledovat, jako kdyby byl nový.
-            To se dělá příkazem: <b>git rm --cached "název souboru"</b></p>
+            To se dělá příkazem: </p>
+            <p class="code">git rm --cached "název souboru"</p>
 
             
             <br>
-            <h3>Git status</h3>
+            <h3>Stav souborů</h3>
             <p> Pro zobrazení stavu souborů v našem repozitáři existuje chytrý příkaz <b>git status</b>. 
             Ten nám ukáže, jaké soubory jsme od posledního commitu přidali, upravili, smazali, nebo jaké soubory máme ve Staging Area. 
             Pokud žádné změny ještě neproběhly, konzole vypíše, že není nic ke commitování.</p>
@@ -353,11 +357,25 @@ const pagesData = {
                 <img src="/images/git_status.jpg" class="learn_img_big">
             </div>
 
+            <!-- Grafická ukázka/ vyobrazení commitů -->
+
+            <h3>Grafické zobrazení commitů</h3>
+            <p>Abychom si lépe představili, jak vypadá náš repozitář s commity, můžeme si ho graficky znázornit. 
+            Jednotlivé commity se zobrazují jako <b>kroužky spojené linkou</b>. 
+            Na těchto ilustracích se ukazuje, jak fungují různé příkazy, co se děje s commity atd.
+            Aktuální commit na kterém se právě nacházíme (poslední, co jsme provedli) se označuje <b>HEAD</b>, také ukazatel nebo pointer. 
+            Master (jindy třeba main) je hlavní větev, feature je druhá větev.</p>
+            <div class="parent">
+                <img src="/images/commits_ilustrated.png" class="learn_img_big">
+                upravit barvy a pruhlednost
+            </div>
+
+
             
             <h3>Historie commitů</h3>
             <p>Všechny commity se ukládají v našem repu a proto se můžeme kdykoliv podívat na jejich seznam.
 
-            Příkaz <b>git&nbsplog</b> nám umožňuje prohlížet historii commitů v repozitáři. 
+            Příkaz <b>git&nbsplog</b> nám umožňuje <b>prohlížet historii</b> commitů v repozitáři. 
             Každý výpis commitu obsahuje jeho unikátní, 40 písmenný hash. Je to něco jako jeho ID, poznávací číslo. 
             Dále obsahuje jméno a email autora (které jsme zadávali v kapitole <a href="/kapitola3" >Inicializace</a>), 
             datum vytvoření a popisek. Nejnovější, poslední, commit je uplně nahoře, první uplně dole.</p>
@@ -368,55 +386,64 @@ const pagesData = {
                 <img src="/images/git_log.jpg" class="learn_img_big ">
             </div>
 
-            <p>Můžeme také použít zkrácenou formu <b>git log --oneline</b>, která vypíše zkrácený 7 písmenný hash commitu a popisek, vše hezky na jednom řádku. 
+            <p>Můžeme také použít zkrácenou formu <b>git log --oneline</b>, která vypíše zkrácený 7 písmenný hash commitu a popisek, vše hezky na <b>jednom řádku</b>. 
             To usnadňuje procházení historie commitů, což se vyplatí, když už máme commitů hodně.</p>
 
             <div class="parent">
                 <img src="/images/git_log_oneline.jpg" class="learn_img_big">
             </div>
 
-            <p>Později se vám také určitě stane to, že konzole neukáže všechny řádky, ale na konci zůstane jen dvojtečka. 
+            <p>Později se vám také určitě stane to, že konzole neukáže všechny řádky, ale na konci zůstane jen <b>dvojtečka</b>. 
             Není to žádná chyba, nebo zaseknutí, je to zcela normální. Znamená to, že výpis má více řádků než se vejde do okna konzole.
-            Pokračování výpisu spustíte stiskem mezerníku. Poté ale stále nebudete pryč, tentokrát se zobrazuje (END). 
-            Odusd vyjdete (zsae do normalni konzole) stiskem klávesy Q.</p>
+            Pokračování výpisu spustíte stiskem <b>mezerníku</b>, výpis jednoho dalšího řádku enterem. Poté ale stále nebudete pryč, tentokrát se zobrazuje <b>(END)</b>. 
+            Odsud vyjdete (zsae do normalni konzole) stiskem <b>klávesy Q</b>.</p>
             
             <div class="parent">
                 <img src="/images/git_log_notfull.jpg" class="learn_img_big ">
+                menšíííí
                 <img src="/images/git_log_end.jpg" class="learn_img_big ">
             </div>
             
             
             <h3>Upravení posledního commitu  ( kam ho dát? sem nebo ke commitování?) </h3>
-            <p>Pokud se nám stane, že provedeme commit, ale zapomněli jsme do něj například přidat soubor, můžeme to ještě napravit.
-            To lze ale pouze s posledním commitem.
-            Pomůže nám příkaz <b> git commit --amend </b>. 
+            <p>Pokud se nám stane, že provedeme commit, ale <b>zapomněli</b> jsme do něj například přidat soubor, můžeme to ještě napravit.
+            To lze ale <b>pouze s posledním</b> commitem.
+            Pomůže nám příkaz: </p>
             <p class="code">git commit --amend</p>
-            Zapomenutý soubor nejdříve přidáme do StageArea jako kdybychom dělali normální commit. 
+            <p>Zapomenutý <b>soubor</b> nejdříve přidáme do <b>StageArea</b> jako kdybychom dělali normální commit. 
             Napíšeme příkaz a otevře se soubor COMMIT_EDITMSG.
-            Na prvním řádku je náš popisek posledního commitu. Ten můžeme také přepsat. 
+            Na <b>prvním řádku</b> je náš <b>popisek</b> posledního commitu. Ten můžeme také přepsat, pokud potřebujeme. 
             Kousek níže si zkontrolujeme, jestli v "Changes to be commited" máme ten soubor, který jsme zapomněli.
-            Pak křížkem soubor zavřeme, tím se potvrdí změny commitu. Můžeme zkontrolovat git log, že se commit provedl. </p>
-            obrazek
+            Pak křížkem soubor <b>zavřeme</b>, tím se <b>potvrdí</b> změny commitu. Můžeme zkontrolovat git log, že se commit provedl. </p>
+            
+            <div class="parent">
+                <img src="/images/git_amend.jpg" class="learn_img_big ">
+                možná doma přefotit na lepší kvalitu
+                <img src="/images/git_amend2.jpg" class="learn_img_big ">
+            </div>
 
-            <p class="margin_top">Jestli chceme jen změnit popisek commitu, nemusíme otevírat celý soubor (ale můžeme). 
+            <p class="margin_top">Jestli chceme změnit jen popisek commitu, nemusíme otevírat celý soubor. 
             Stačí příkaz napsat podobně, jako píšeme normální commit:</p>
             <p class="code">git commit --amend -m "novy popisek"</p>
 
             
             <h3>Smazání commitu</h3>
-            <p>Pokud jsme se s commitováním trochu spletli, můžeme commit smazat.
-            Smazat se dá jen poslední commit, který jsme provedli. </p>
-            <p>Smazání se provede příkazem <b>git reset --soft HEAD~1</b>. </p>
-            <p>Ukázka smazání commitu:</p>
-            <div class="parent">
-                <img src="/images/reset.jpg" class="learn_img_big">
-            </div>
-            <p>Smazaný commit se z historie úplně smaže. </p>
-            <p>Smazání commitu je velmi nebezpečné, protože se smaže i veškerá historie, která s ním souvisí. </p>
-            <p>Smazání commitu se nedá vrátit. </p> 
-            
-            
+            <p>Pro smazání commitu existují <b>3 možnosti</b>: soft, mixed a hard.
+            Tyto možnosti určují, jaké změny jsou zachovány v pracovní složce po provedení příkazu <b>git reset</b>. 
+            K němu se připisuje, který typ chceme a na který commit se chceme přesunout. 
+            Můžeme napsat zkrácený hash commitu, nebo "HEAD~1", což znamená předchozí commit.</p>
 
+            <li> <b>Soft</b> = přesune aktuální pozici (head) na zadaný commit a zároveň zachová provedené změny ve StagingArea
+
+            <li> <b>Mixed</b> = přesune head na zadaný commit, změny zachová, ale ne ve StagingArea. Výchozí možnost
+
+            <li> <b>Hard</b> = úplně smaže poslední commit i se všemi provedenými změnami = nebezpečné, nedá se vrátit
+
+            <p class="margin_top">Příkaz, který se používá je tento: </p>
+            <p class="code"> git reset --soft "hash commitu" </p>
+            <p> Jiný způsob může být: </p>
+            <p class="code"> git reset --hard HEAD~1 </p>
+            
 
              <!--
 
@@ -457,9 +484,19 @@ const pagesData = {
             `,
             quiz: [
             {
-                question: "Který příkaz nám ukáže všechny změny (se soubory?) od posledního commitu?",
+                question: "Který příkaz nám ukáže, jaké změny se staly od posledního commitu?",
                 answers: ["git log", "git state", "git status"],
                 correctAnswer: 3,
+            },
+            {
+                question: "Co označuje head? (v Gitu)",
+                answers: ["hlavní větev ", "aktuální commit", "první commit"],
+                correctAnswer: 2,
+            },
+            {
+                question: "Co zmáčkneme, pokud nám konzole nevypíše vše?",
+                answers: ["mezerník a pak Q", "mezerník a pak X", "enter a pak Z "],
+                correctAnswer: 1,
             },
         ]
     }
