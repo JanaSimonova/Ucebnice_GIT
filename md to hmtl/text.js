@@ -14,7 +14,7 @@ Také můžete vytvářet tzv. větve, což jsou takové "odchylky" od hlavní c
 
 S Gitem velmi často také pracují týmy více lidí. Možnost větvení je proto skvělé řešení, protože každý člen má jen svou větev a tvoří si vlastní změny.
 
-[.learnImgBig]
+[.learn_img_big]
 ![Alt text](../images/git_branch.webp)
 
 [.imageDescr] Příklad větvení v aplikaci GitKraken
@@ -48,7 +48,7 @@ Každý pracovník tak může pracovat na svojí větvi, a ty se pak spojí do j
 </ul>
 
 <div class="parent">
-<img src="../images/image_part_001v2.png" class="learnImgSmall"> 
+<img src="../images/image_part_001v2.png" class="learn_img_small"> 
 </div>
 
 

@@ -13,8 +13,13 @@
 }
 
 *::selection {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
 }
+
+/* div#header {
+    position: sticky;
+    top: 0px;
+} */
 
 header {
     /* font-family:'Inria Sans', sans-serif;  */
@@ -25,6 +30,8 @@ header {
 
     display: flex;
     align-items: center;
+
+    
 }
 
 a {
@@ -147,17 +154,19 @@ main {
 aside {
     background-color: var(--secondary-color);
     height: max-content;
-    width: 500px;
+    width: 200px;
     min-width: 90px;
     max-width: 300px;
 
     border-radius: 24px;
-    padding: 20px 40px;
+    padding: 20px 20px 20px 10px;
     margin-right: 20px;
     font-size: medium;
     font-weight: 400;
 
-    justify-self: start;
+    /* justify-self: start; */
+    position: sticky;
+    top: 20px;
 }
 
 aside ul {
@@ -179,19 +188,6 @@ aside ul {
     word-spacing: 4px;
 }
 
-.learn-text::selection {
-    background-color: var(--secondary-color);
-    /* neefunguje, nwm proc*/
-}
-
-p::selection,
-h1::selection,
-h2::selection,
-h3::selection,
-.image_descr::selection {
-    background-color: var(--secondary-color);
-    /* proto je tu tohle */
-}
 
 .learn-text h2 {
     margin-top: 30px;
@@ -215,15 +211,11 @@ h3::before {
     word-spacing: 2px;
 }
 
-.text-info::selection {
-    background-color: var(--primary-color);
-}
-
 /* IMAGES */
 .parent {
     width: auto;
     min-width: 200px;
-    height: auto;
+    height: fit-content;
     /* musi byt presne px, jinak pri hover se to hybe malinko -- POZDEJI*/
     /* min-height: ; */
     overflow: hidden;
@@ -234,43 +226,23 @@ h3::before {
 
 .learn_img_big {
     width: 100%;
-    height: 100%;
-    /* margin: 20px 0; */
-    /* border-radius: 24px; */
-    background-size: cover;
-    transform: scale(100%);
-    transition: all 0.8s;
-}
-
-.learnImgBig>img {
-    width: 100%;
-    height: 100%;
+    /* height: 100%; */
     /* margin: 20px 0; */
     border-radius: 24px;
     background-size: cover;
-    transform: scale(100%);
+    /* transform: scale(100%); */
     transition: all 0.8s;
-    margin-top: 1rem;
 }
-
-/* .learn_img_big:hover{
-    transform: scale(1.5); 
-} */
 
 /* pridat mezeru za <p> */
 /* Nastajlovat <a> */
 
 .learn_img_small {
     max-height: 300px;
-    border-radius: 15px;
+    border-radius: 24px;
     background-size: cover;
 }
 
-.learnImgSmall {
-    height: 300px;
-    border-radius: 15px;
-    background-size: cover;
-}
 
 .image_descr {
     padding-left: 40px;
@@ -288,18 +260,30 @@ ul {
 
 
 
-.code {
+.code{
     font-family: Consolas, 'courier new';
     color: #f1f1f1;
     background-color: #303030;
     font-size: smaller;
+    word-spacing: 0px;
+
     border-radius: 20px;
     height: auto;
     padding: 10px 0 10px 15px;
-    display: flex;
     align-items: center;
-    word-spacing: 0px;
     margin: 10px 0;
+
+    white-space:no-wrap;
+
+    i {
+        font-family: Consolas, 'courier new';
+        color: #f1f1f1;
+        word-spacing: 0px;
+    }
+}
+
+.code::selection, .code *::selection{
+    color: var(--text-color);
 }
 
 .code2 {

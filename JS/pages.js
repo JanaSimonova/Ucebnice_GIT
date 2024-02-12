@@ -532,26 +532,65 @@ const pagesData = {
             <img src="/images/branch.png" class="learn_img_big ">
         </div>
 
-        <p> Další větve se používají například při <b>opravách chyb</b> ve starších commitech, nebo když chceme udělat nějakou <b>novou funkci</b>, ale nepřijít o starou. 
+        <p> Další větve se používají například při <b>opravách chyb</b> ve starších commitech, nebo když chceme vyzkoušet nějakou <b>novou funkci</b>. 
         Také se často nepracuje přímo v hlavní větvi, ale ve vedlejších a do hlavní se <b>slučují</b>, aby v ní byl jen čistý a funkční kód.
         To se dá uplatnit i v <b>týmu</b> více lidí, každý pak pracuje s vlastní větví a svým prostředím. </p>
 
+
         <h3>Vytvoření větve</h3>
-        <p>Novou větev můžeme buď vytvořit přímo na commitu kde právě jsme, nebo se vrátit na nějaký v historii a tam ji vytvořit.
+        <p>Novou větev můžeme buď vytvořit přímo na commitu, kde právě jsme, nebo se vrátit na nějaký v historii a tam ji vytvořit.
         Obojí se ale dělá stejným příkazem:</p>
-        <p class="code"> git branch "nova_vetev"</p>
+        <p class="code"> git branch <i>nova-vetev</i></p>
+        
+        <p>Název větve nesmí obsahovat mezery, ale můžeme použít pomlčky, lomítka, čísla a tečky. Více znaků se nedoporučuje kvůli přehlednosti.  <p> 
+        <p  class="margin_top" > Při vytvoření větve tímto způsobem stále zůstáváme v naší původní větvi.</p>
 
-        (neco jsem asi zkousela na branchích v git-test, ale nwm co. třeba už nic)
+        <p class="margin_top">Seznam všech větví si zobrazíme následujícím příkazem:</p>
+        <p class="code"> git branch </p>
+
+        <p>Větev, na které se právě nacházíme je označena hvězdičkou a jinou barvou. Na jaké jsme větvi poznáme také podle názvu v závorce za cestou.</p>
+        <div class="parent">
+            <img src="/images/branch_name.jpg" class="learn_img_big ">
+        </div>  
 
 
+        <h3>Přepínání mezi větvemi</h3>
+        <p>Na jinou větev přepneme pomocí příkazu:</p>
+        <p class="code"> git switch <i>nazev-vetve</i> </p>
+        <p>Pozor! Pokud uděláme nějaké změny, necommitneme a chceme se přepnout do jiné větve, git nám to nedovolí, protože by se změny mohly odstranit.<p/>
+        <p>Pozor! Pokud uděláme nějaké změny, necommitneme a chceme se přepnout do jiné větve, změny se přepnou i s námi. <p/>
 
-        <br><br>
+        <p class="margin_top">Příkazem git switch také můžeme vytvořit novou větev a rovnou se do ní přepnout. Jen příkaz trochu upravíme:</p>
+        <p class="code"> git switch -c <i>nazev-vetve</i> </p>
+
+
+        <h3>Přejmenování větve</h3>
+        <p>Jestli jsme omylem pojmenovali větev jinak, než jsme chtěli, nemusíme ji hned mazat a vytvářet novou. Můžeme ji přejmenovat. 
+        Podmínkou je, že v té větvi musíme být, protože se v příkazu neurčuje, co chceme přejmenovat. </p>
+        <p class="code"> git branch -m <i>novy-nazev</i> </p>
+        
+
+        <h3>Smazání větve</h3>
+        <p>Prázdná větev bez commitů se maže příkazem:</p>
+        <p class="code"> git branch -d <i>nazev-vetve</i> </p>
+
+        <p>Pokud už máme ve větvi commity, tímto příkazem se nám to nepodaří. Git nám sám poradí napsat velké D a důvod "The branch '<i>nazev-vetve</i>' is not fully merged".
+        To znamená právě to, že v ní jsou commity. A co je to to mergování, to se dozvíme v <a href=/kapitola6>příští kapitole</a>.</p>
+        <p class="code"> git branch -D <i>nazev-vetve</i> </p>
+
+        
+        <!-- https://www.atlassian.com/git/tutorials/using-branches -->
 
         `,
         quiz: [
             {
-                question: "asd",
-                answers: ["df", "sd"],
+                question: "Jakým příkazem si vypíšeme seznam větví?",
+                answers: ["git branch", "git show branch", "git branches"],
+                correctAnswer: 1,
+            },
+            {
+                question: "Jakým příkazem přepneme na jinou větev?",
+                answers: ["git alter", "git change", "git switch"],
                 correctAnswer: 3,
             }
 
