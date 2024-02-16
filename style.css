@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #93DEFF;
+    --primary-color: rgb(147, 222, 255);
     --secondary-color: #D9D9D9;
     --text-color: #323643;
     --background-color: #F7F7F7;
@@ -16,34 +16,68 @@
     background-color: var(--background-color);
 }
 
+
+
+html {
+    /* height: calc(100% - 157px);     */
+    /* idk why this */
+    /* maybe something with the right scrolling? */
+}
+
+body {
+    /* margin: 0 200px; */
+    margin:0 7vw ;
+    height: 100%;
+}
+
+main {
+    /* margin: 0 100px; */
+    margin: 0 9vw;
+    height: max-content;
+    min-width: 694px;
+    background-color: var(--background-color);
+    border-radius: 24px;
+    padding: 30px;
+    
+    display: flex;
+}
+
+#main {
+    /* height: max-content;
+    min-width: 365px;
+    display: flex; */
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ----------------- HEADER --------------------- */
+
+header {
+    background-color: var(--primary-color);
+    background: linear-gradient(to right, white 0%, var(--primary-color) 10%, var(--primary-color) 90%, white 100%);
+    /* padding: 0 200px; */
+    padding: 0 12.5rem;
+    margin-bottom: 12px;
+    
+    display: flex;
+    align-items: center; 
+    
+    font-weight: 700;
+    
+}
+
 /* div#header {
     position: sticky;
     top: 0px;
 } */
 
-header {
-    /* font-family:'Inria Sans', sans-serif;  */
-    background-color: var(--primary-color);
-    background: linear-gradient(to right, white 0%, var(--primary-color) 10%, var(--primary-color) 90%, white 100%);
-    padding: 0 200px;
-    margin-bottom: 12px;
-
-    display: flex;
-    align-items: center;
-
-    
-}
-
-a {
-    text-decoration: none;
-    /* display: flex;
-    align-items: center; */
-}
 
 .logo {
-    font-weight: 700;
     font-size: x-large;
-
+    
     display: flex;
     align-items: center;
 }
@@ -51,12 +85,11 @@ a {
 .logo_img {
     height: 45px;
     padding: 10px;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .headbuts {
     /* background-color: aquamarine; */
-    font-weight: 700;
 
     display: flex;
     flex-direction: row;
@@ -76,53 +109,39 @@ a {
     align-items: center; */
 }
 
-/* -------------------------------------- */
+/*------------------- INDEX -------------------------*/
 
-html {
-    height: calc(100% - 157px);
-}
 
-body {
-    /* margin: 0 200px; */
-    margin:0 7vw ;
-    height: 100%;
-}
+.index-div {
+    
+    width: 100%;
+    /* height: auto; */
 
-main {
-    margin: 0 100px;
-    height: max-content;
-    min-width: 365px;
-    background-color: var(--background-color);
-    border-radius: 24px;
-    padding: 40px;
-
-    display: flex;
-}
-
-#main {
-    height: max-content;
-    min-width: 365px;
-    display: flex;
-}
-
-.home_image {
-    height: 600px;
-    border-radius: 24px;
-}
-
-.first {
+    /* position: absolute; */
+    /* top: 65px;
+    left: 0; */
+    
     display: flex;
     /* background-color: bisque; */
-
+    
 }
 
 .left {
-    display: flex;
+    display:contents;
+}
+
+.index-image {
+    border-radius: 24px;
+    /* width: 80vw;     */
+    /* height: auto; */
+    height: calc(100vh - 65px);
 }
 
 .right {
-    background-color: var(--primary-color);
-    border-radius: 24px;
+    /* background-color: var(--primary-color); */
+    background-color: rgb(147, 222, 255, 0.6);
+    /* opacity: 0.6; */
+    /* border-radius: 24px; */
     padding: 2.5rem;
     margin-left: 2rem;
 
@@ -130,6 +149,9 @@ main {
     flex-direction: column;
     height: max-content;
 
+    position: absolute;
+    top: 250px;
+    right: 150px;
     /* align-self: center; */
 }
 
@@ -137,10 +159,10 @@ main {
     font-size: 5rem;
     /* margin-left: 20px; */
     align-self: center;
+    /* opacity: 0.9; */
 }
 
-.right p,
-.right a {
+.right p, .right a {
     font-size: 1.5rem;
     display: inline;
 }
@@ -150,13 +172,13 @@ main {
     text-decoration: underline;
 }
 
-/* -------------- LEARN ---------------- */
+/* ------------------ LEARN ------------------- */
 aside {
     background-color: var(--secondary-color);
     height: max-content;
     width: 200px;
-    min-width: 90px;
-    max-width: 300px;
+    /* min-width: 90px;
+    max-width: 300px; */
 
     border-radius: 24px;
     padding: 20px 20px 20px 10px;
@@ -176,14 +198,14 @@ aside ul {
 .learn-text {
     background-color: var(--primary-color);
     height: max-content;
-    width: 800px;
-    min-width: 500px;
+    /* width: 800px; */
+    min-width: 365px;
 
     padding: 40px;
-    margin-left: auto;
+    /* margin-left: auto; */
     border-radius: 24px;
 
-    justify-self: end;
+    /* justify-self: end; */
     font-size: medium;
     word-spacing: 4px;
 }

@@ -20,6 +20,7 @@ const routes = {
     "/kapitola3": pagesData.kap3,  // udělat dynamicky do pole
     "/kapitola4": pagesData.kap4,
     "/kapitola5": pagesData.kap5,
+    "/kapitola6": pagesData.kap6,
 };
 
 
