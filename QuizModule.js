@@ -42,7 +42,7 @@ class QuizModule {
         reloadButton.textContent = "Zkusit znovu";
         reloadButton.id = "reload";
         reloadButton.style.visibility = "hidden";
-        reloadButton.onclick = () => location.reload();
+        reloadButton.onclick = this.reset.bind(this);
         buttonsDiv.appendChild(reloadButton);
 
         const showButton = document.createElement("button");
@@ -131,6 +131,7 @@ class QuizModule {
             quizEl.appendChild(div);
         }
 
+        document.getElementById("result").style.visibility = "visible";
         document.getElementById("result_label").innerHTML = this.score + "/" + this.data.length;
         document.getElementById("submit").disabled = true;
         document.getElementById("reload").style.visibility = "visible";
@@ -153,6 +154,40 @@ class QuizModule {
             correctAnswer.classList.add("correct");
         }
     }
-}
+
+    reset() {
+            // Reset variables        
+            this.choosed_answer = [];
+            this.score = 0;
+            // Reset UI elements        
+            const resultLabel = document.getElementById("result_label");
+            if (resultLabel) {
+                resultLabel.innerHTML = "";
+                document.getElementById("result").style.visibility = "hidden";
+            } 
+            const submitButton = document.getElementById("submit"); 
+            if (submitButton) { 
+                submitButton.disabled = false; 
+            } 
+            const reloadButton = document.getElementById("reload"); 
+            if (reloadButton) { 
+                reloadButton.style.visibility = "hidden"; 
+            } 
+            const showButton = document.getElementById("show"); 
+            if (showButton) { 
+                showButton.style.visibility = "hidden"; 
+            } 
+            const inputs = document.getElementsByClassName("quiz-answer"); 
+            for (let i = 0; i < inputs.length; i++) { 
+                inputs[i].checked = false; inputs[i].disabled = false; 
+            } 
+            const labels = document.querySelectorAll(".quiz-answer + label"); 
+            labels.forEach(label => {
+                label.classList.remove("correct", "wrong");
+            });
+        }
+
+
+    }
 
 export default QuizModule;

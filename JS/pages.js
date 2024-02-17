@@ -9,15 +9,18 @@ const pagesData = {
         `,
     },
     index: {
-        html: `
-        <div class="index-div">
-            <div class="left">
-                <img src="/images/miscellaneous/index-image.jpg" class="index-image">
-            </div>
-            <div class="right">
-                <h1>GIT</h1>
-                <p>Nejpoužívanější verzovací systém na světě. </p> 
-                    <a href="/learn">Nauč se ho i ty!</a> 
+        html: ` 
+        <div class="landing">
+            <div class="container">
+                <img src="images/miscellaneous/landing-image.svg" class="landing-image" />
+            
+        
+            
+                <div class="text-box">
+                    <h1>GIT</h1>
+                    <p>Nejpoužívanější verzovací systém na světě. </p> 
+                        <a href="/learn">Nauč se ho používat i ty!</a> 
+                </div>
             </div>
         </div>
         `,
@@ -599,7 +602,7 @@ const pagesData = {
     },
     kap6: {
         html: `
-
+            <h1>udelast swsitch na dark a light rezim</h1>
         
         `,
         quiz: [

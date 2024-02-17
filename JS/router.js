@@ -58,7 +58,7 @@ const handleLocation = () => {
     // else = when its NOT A NUMBER, and the path MATCHES with ROUTE. OR it's NOT FOUND (not  number of kapitola or not defined path)
 
 
-    const aside = `<div id="aside"></div>`
+    const aside = `<div id="aside" class="hidden"></div>`
     const learnText = `<div id="learntext" class="learn-text"></div> `
     const page = routes[path] || routes["notFound"];
     const html = page.html;
