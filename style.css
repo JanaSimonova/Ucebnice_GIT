@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #000F22; /* */
-    --secondary-color: #0B2A50; /**/
+    --primary-color: #0B2A50; /* */
+    --secondary-color: #000F22; /**/
     --text-color: #f7f7f7;      /**/
-    --accent-color: #37AB57;
+    --accent-color: #37ab57;
     --accent-color-shade: #238f42;
 }
 
@@ -12,10 +12,14 @@
     font-family: 'Inria Sans', sans-serif;
     color: var(--text-color);
     box-sizing: border-box;
+    font-weight: 100;
 }
 
 *::selection {
-    background-color: var(--background-color);
+    background-color: var(--accent-color);
+    color:var(--secondary-color);
+    font-weight: 800;  
+    /* nefunguje */
 }
 
 
@@ -28,7 +32,7 @@ html {
 
 body {
     /* margin: 0 200px; */
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color); */
     /* margin:0 7vw ; */
     min-height: 100vh;
 
@@ -52,6 +56,9 @@ main {
     display: flex; */
     position: relative;
 
+    background-image: linear-gradient(135deg, var(--primary-color), var(--primary-color), var(--secondary-color));
+
+
 }
 
 
@@ -68,7 +75,7 @@ a {
 
 }
 header {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     /* background: linear-gradient(to right, white 0%, var(--primary-color) 10%, var(--primary-color) 90%, white 100%); */
     /* padding: 0 200px; */
     /* padding: 0 12.5rem; */
@@ -131,7 +138,7 @@ header {
     
     /* height: calc(100vh - 65px); */
 
-    background-image: linear-gradient(135deg, #0B2A50, #0B2A50, #000F22);
+    background-image: linear-gradient(135deg, var(--primary-color), var(--primary-color), var(--secondary-color));
     flex:1;
     display: flex;
     flex-direction: column;
@@ -156,24 +163,7 @@ header {
     width: clamp(20rem, 80vmin, 70rem);   
 }
 
-@media (width < 1050px) {
-    
-    .landing-image{
-        width: clamp(20rem, 60vmin, 60rem);   
-    }
-}
 
-@media (width < 700px) {
-    .landing .container{
-        flex-direction: column-reverse;
-        justify-content: center;
-        gap:10vh;
-    }
-
-    #learntext{
-        padding-inline: 16px;
-    }
-}
 
 .text-box {
     /* padding: 10rem; */
@@ -203,7 +193,7 @@ header {
 .text-box a{
     font-size: 1.2rem;
     background-color: var(--accent-color);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     border-radius: 30px;
     display: block;
     padding: 5px 15px;
@@ -227,7 +217,7 @@ header {
 }
 
 #aside{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     position:relative;
 }
 
@@ -235,20 +225,7 @@ header {
     display: block;
 }
 
-@media (width < 700px){
-    #aside{
-        position: fixed;
-        width: 100%;
-    }
-    #aside.hidden{
-        display: none;
-    }
-    
-.toggle-aside-open{
-    display:block;
-    /* padding: .5rem; */
-}
-}
+
 
 .menu-btn-1 {
     height: 32px;
@@ -256,54 +233,58 @@ header {
     width: 38px;
     cursor: pointer;
     margin-left: 5px;
+
+    /* display: none; */
 }
 
-    .menu-btn-1 span,
-    .menu-btn-1 span::before,
-    .menu-btn-1 span::after {
-        background: white;
-        border-radius: 3px;
-        content: '';
-        position: absolute;
-        width: 30px;
-        height: 4px;         
-        margin-top: 13px; 
+.menu-btn-1 span,
+.menu-btn-1 span::before,
+.menu-btn-1 span::after {
+    background: white;
+    border-radius: 3px;
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;         
+    margin-top: 13px; 
 
-        -webkit-transition: .3s ease-in-out;
-        -moz-transition: .3s ease-in-out;
-        -o-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
-    }
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 
-    .menu-btn-1 span::before {
-        margin-top:-12px;
-    }
+    /* display: none; */
+}
 
-    .menu-btn-1 span::after {
-        margin-top:12px;
-    }
+.menu-btn-1 span::before {
+    margin-top:-12px;
+}
 
-    .menu-btn-1.active span {
-        background: transparent;
-    }
+.menu-btn-1 span::after {
+    margin-top:12px;
+}
 
-    .menu-btn-1.active span::before {
-        margin-top: 0;
+.menu-btn-1.active span {
+    background: transparent;
+}
 
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
+.menu-btn-1.active span::before {
+    margin-top: 0;
 
-    .menu-btn-1.active span::after {
-        margin-top: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
+.menu-btn-1.active span::after {
+    margin-top: 0;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
 
 aside {
     /* height:100%; */
@@ -315,7 +296,6 @@ aside {
     position: sticky;
     top: 66px;
     /* margin-right: 20px; */
-    font-size: medium;
     font-weight: 400;
 
     /* justify-self: start; */
@@ -326,14 +306,16 @@ aside ul {
 }
 
 .learn-text {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    background-image: linear-gradient(135deg, var(--primary-color), var(--primary-color), var(--secondary-color));
+
     height: max-content;
     /* width: 800px; */
     min-width: 365px;
 
     padding: 40px;
     /* margin-left: auto; */
-    border-radius: 24px;
+    /* border-radius: 24px; */
 
     /* justify-self: end; */
     font-size: medium;
@@ -356,6 +338,7 @@ h3::before {
 
 .text-info {
     background-color: var(--secondary-color);
+    /* background-color: var(--accent-color); */
     padding: 6px 15px;
     margin: 10px;
     border-radius: 15px;
@@ -371,37 +354,31 @@ h3::before {
     /* musi byt presne px, jinak pri hover se to hybe malinko -- POZDEJI*/
     /* min-height: ; */
     overflow: hidden;
-    border-radius: 24px;
+    /* border-radius: 24px; */
     margin: 20px 0;
     text-align: center;
 }
 
-.learn_img_big {
+.learn-img-big {
     width: 100%;
-    /* height: 100%; */
+    max-width: 690px;
     /* margin: 20px 0; */
-    border-radius: 24px;
+    /* border-radius: 24px; */
     background-size: cover;
-    /* transform: scale(100%); */
-    transition: all 0.8s;
 }
 
-/* pridat mezeru za <p> */
-/* Nastajlovat <a> */
-
-.learn_img_small {
+.learn-img-small {
     max-height: 300px;
-    border-radius: 24px;
+    /* border-radius: 24px; */
     background-size: cover;
 }
 
-
-.image_descr {
-    padding-left: 40px;
+ /* pouzivam jen jednou */
+.image-descr {
     font-size: medium;
-    font-weight: 100;
+    /* font-weight: 100; */
     word-spacing: 0;
-    text-align: start;
+    /* text-align: start; */
 }
 
 ul {
@@ -464,39 +441,68 @@ hr {
 
 .quiz {
     position: relative;
+    /* width:fit-content */
+    max-width: 920px ;
 }
 
 /* .quiz #quiz-container {} */
 
-.quiz input:hover,
-.quiz label:hover {
+.quiz-container input:hover,
+.quiz-container label:hover {
     cursor: pointer;
-    color: #000;
+    /* color: var(--accent-color); */
+    font-weight: bold ;
+}
+
+/* when radiobtn is checked- his label changes color */
+/* !!! BUT !!!  kdyz submit, tak je porad zelenej, ale chci aby to přebylo že je wrong */
+/* ani to +label  do classy wrong nefunguje */
+
+/* tilda funguje, když mezi otázkami budou divy!! */
+/* https://www.w3.org/TR/selectors/#general-sibling-combinators  == co znamena tilda a plus */
+/* https://stackoverflow.com/questions/46901698/change-label-color-radio-when-checked */
+
+/* Vyřešeno = nebudu mu měnit barvu, dám ho bold */
+
+.quiz-answer:checked + label {
+    /* color: blue; */
+    /* text-decoration: underline; */
+    font-weight: bold;
+
+  }
+
+.quiz .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between 20px;
+    /* justify-content: left; */
 }
 
 .quiz button {
     /* width: auto; */
     /* height: 30px; */
     padding: 5px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-right: 20px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     border: 0;
     border-radius: 15px;
-    /* background-color: #f0f0f0; */
+    background-color: var(--accent-color-shade);
 }
 
 .quiz button:hover:enabled {
-    background-color: var(--background-color);
+    background-color: var(--accent-color);
     cursor: pointer;
 }
 
 .quiz button:active:enabled {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color-shade);
 }
 
 .quiz button:disabled {
-    background-color: rgba(239, 239, 239, 0.3)
+    /* background-color: rgba(239, 239, 239, 0.1); */
+    background-color: rgba(55, 171, 87, 0.3);
 }
 
 .quiz-container {
@@ -509,13 +515,14 @@ hr {
     /* margin-bottom: 10px; */
 }
 
-.quiz label {
+.quiz section label {
+     /* odsazení od radiobuttonu */
     margin-left: 5px;
 }
 
 .quiz .result {
-    /* background-color: var(--secondary-color);  */
-    background-color: #2196F3;
+    background-color: var(--accent-color); 
+    /* background-color: #2196F3; */
     width: 60px;
     height: 60px;
     border-radius: 50px;
@@ -528,40 +535,86 @@ hr {
     align-content: center;
     display: flex;
     justify-content: center;
+    cursor: default;
+
 }
 
 .quiz .result_label {
     cursor: default;
-    font-size: 30px;
+    font-size: 25px;
     margin: 0;
     color: var(--text-color);
     /* cerna */
-    color: var(--background-color);
+    /* color: #000; */
     /* bila */
-    /* color:#f0f0f0  same as button */
+    /* color:#f0f0f0  */
 }
 
 .quiz .correct {
-    color: greenyellow
+    color: var(--accent-color);
+    font-weight: 900;
+    text-decoration: none;
+
 }
 
 .quiz .correct::after {
-    content: url(/images/buttons/correct2.png);
+    content: url(/images/buttons/correct.svg);
     margin-left: 10px;
+    
 }
 
 .quiz .wrong {
     color: red;
+    font-weight: 900;
+    text-decoration: none;
 }
 
 .quiz .wrong::after {
-    content: url(/images/buttons/wrong2.png);
+    content: url(/images/buttons/wrong.svg);
     margin-left: 10px;
 }
+
 
 /* https://dev.to/melvin2016/how-to-put-an-image-inside-pseudo-elements-in-css-1io0 */
 
 /* ------------------------------------------------ */
+
+@media (width < 1050px) {
+    
+    .landing-image{
+        width: clamp(20rem, 60vmin, 60rem);   
+    }
+
+}
+
+@media (width < 700px) {
+    .landing .container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap:10vh;
+    }
+
+    .learn-text{
+        padding-inline: 16px;
+    }
+
+    #aside{
+        position: fixed;
+        width: 100%;
+    }
+    #aside.hidden{
+        display: none;
+    }
+
+    .toggle-aside-open{
+        /* on landing page:: !!!  */
+        /* display: none; */
+
+        display:block;
+    }
+}
+
+
 
 
 /* --------------- CLASSES like bootstrap ----------------- */

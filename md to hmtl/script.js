@@ -22,8 +22,10 @@ var customClassExt = {
     }
 };
 
-
-// ROZŠÍŘENÍ DO CONVERTORU showdown
+// -----------------------------------------
+// NUTNÉ pro používání showdown convertoru
+// + různé další nastavení (tables, emoji...)
+//  může být jen samotné bez nastavení: var converter = new showdown.Converter();
 
 var converter = new showdown.Converter(
     {
@@ -35,10 +37,14 @@ var converter = new showdown.Converter(
         customizedHeaderId: true,
         noHeaderId: true,
     }
-);
+    );
+    
+// přidaání custom class rozšíření do convertoru
 converter.addExtension(customClassExt);
 
+// predelá <text> na html
 var html = converter.makeHtml(text);
+
 
 
 // Přidá do určitého (main) elementu v HTML

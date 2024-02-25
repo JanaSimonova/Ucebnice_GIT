@@ -28,9 +28,9 @@ class QuizModule {
 
         const buttonsDiv = document.createElement("div");
         buttonsDiv.className = "buttons";
-        buttonsDiv.style.display = "flex";
-        buttonsDiv.style.justifyContent = "space-between";
-        buttonsDiv.style.width = "430px";
+        // buttonsDiv.style.display = "flex";
+        // buttonsDiv.style.justifyContent = "space-between";
+        // buttonsDiv.style.width = "430px";
 
         const submitButton = document.createElement("button");
         submitButton.textContent = "Vyhodnotit";
@@ -79,6 +79,7 @@ class QuizModule {
                 const label = document.createElement("label");
                 label.id = `l${index + 1}.${answerIndex + 1}`;
                 label.htmlFor = `${index + 1}.${answerIndex + 1}`;
+                label.className = "quiz-answer-label";
                 label.textContent = answer;
 
                 questionSection.appendChild(input);
@@ -136,14 +137,16 @@ class QuizModule {
         document.getElementById("submit").disabled = true;
         document.getElementById("reload").style.visibility = "visible";
         document.getElementById("show").style.visibility = "visible";
-
         // var slf = document.getElementById("result");
         // console.log(slf.parentElement);
 
         // disable all quiz answers
+        // disable hover on lables
         var inputs = document.getElementsByClassName("quiz-answer");
+        var labels = document.getElementsByClassName("quiz-answer-label");
         for (var i = 0; i < inputs.length; i++) {
             inputs[i].disabled = true;
+            // labels[i].style.pointerEvents = "none";   
         }
     }
 
@@ -184,6 +187,7 @@ class QuizModule {
             const labels = document.querySelectorAll(".quiz-answer + label"); 
             labels.forEach(label => {
                 label.classList.remove("correct", "wrong");
+                // labels[i].style.pointerEvents = "all";  
             });
         }
 

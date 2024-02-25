@@ -1,7 +1,16 @@
 
 function neco(item){
-    item.classList.toggle("active");
+    const pathString = window.location.pathname.substring(1)
+    console.log(pathString)
 
-    var aside = document.getElementById("aside");
-    aside.classList.toggle("hidden");
+    // if(pathString.includes("learn") || pathString.includes("kapitola") ){
+
+        item.classList.toggle("block")
+        item.style.display = "block"
+    
+        var aside = document.getElementById("aside");
+        aside.classList.toggle("hidden");
+
+    // }
+    
 }

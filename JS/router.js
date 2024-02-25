@@ -21,10 +21,12 @@ const routes = {
     "/kapitola4": pagesData.kap4,
     "/kapitola5": pagesData.kap5,
     "/kapitola6": pagesData.kap6,
+
+    // I can do it like  "/vehicles": "./pages/vehicles.html",
 };
 
 
-const handleLocation = () => {
+const handleLocation = async() => {
     const path = window.location.pathname;
     // const pathInt = parseInt(path.substring(1)); //removes slash and parses into int
     const pathString = path.substring(1)
@@ -59,7 +61,9 @@ const handleLocation = () => {
 
 
     const aside = `<div id="aside" class="hidden"></div>`
+
     const learnText = `<div id="learntext" class="learn-text"></div> `
+
     const page = routes[path] || routes["notFound"];
     const html = page.html;
     const kapitolaExists = routes[path] != null;
@@ -81,6 +85,8 @@ const handleLocation = () => {
     else {
         document.getElementById("main").innerHTML = html;
         // makes a title
+        // var toggle = document.getElementsByClassName("toggle-aside-open")
+        // toggle.style.display = "none";
 
     }
 
