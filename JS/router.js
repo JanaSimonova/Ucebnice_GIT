@@ -84,6 +84,7 @@ const handleLocation = async() => {
     }
     else {
         document.getElementById("main").innerHTML = html;
+        document.getElementById("header").classList.toggle("toggle-aside-hidden");
         // makes a title
         // var toggle = document.getElementsByClassName("toggle-aside-open")
         // toggle.style.display = "none";
