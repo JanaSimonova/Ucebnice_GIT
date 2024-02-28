@@ -1,11 +1,15 @@
 const pagesData = {
     notFound: {
         html: `
-        <h1>404 Not Found</h1>
-        <p>Oh no! It looks like the page you're trying to get to is missing!</p>
+        <div class="error">
+        <h1>Error 404: Stránka nebyla nalezena</h1>
+        <p>Ale ne! Vypadá to, že tato stránka neexistuje. </p>
+        <a href="/"> Zpět na hlavní stranu </a>
+        </div>
         <script>
             document.title = "Error"
         </script>
+
         `,
     },
     index: {
