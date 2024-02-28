@@ -269,10 +269,28 @@ header {
     display:none;
 }
 
+aside {
+    /* height:100%; */
+    padding: 20px 20px 20px 10px;
+    /* min-width: 90px;
+    max-width: 300px; */
+    
+    width: 250px;
+    position: sticky;
+    top: 66px;
+    /* margin-right: 20px; */
+    font-weight: 400;
+
+    /* justify-self: start; */
+}
+
+aside ul {
+    line-height: 25px;
+}
+
 #aside{
     background-color: var(--secondary-color);
-    position:relative;
-    z-index: 1000;
+    /* position:relative; */
 }
 
 #aside.hidden{
@@ -344,24 +362,7 @@ header {
     transform: rotate(-45deg);
 }
 
-aside {
-    /* height:100%; */
-    padding: 20px 20px 20px 10px;
-    /* min-width: 90px;
-    max-width: 300px; */
-    
-    width: 250px;
-    position: sticky;
-    top: 66px;
-    /* margin-right: 20px; */
-    font-weight: 400;
 
-    /* justify-self: start; */
-}
-
-aside ul {
-    line-height: 25px;
-}
 
 .learn-text {
     /* background-color: var(--primary-color); */
@@ -642,7 +643,7 @@ hr {
 
 /* https://dev.to/melvin2016/how-to-put-an-image-inside-pseudo-elements-in-css-1io0 */
 
-/* --------------------- media query --------------------------- */
+/* --------------------- MEDIA QUERY --------------------------- */
 
 @media (width < 1050px) {
     
@@ -666,6 +667,8 @@ hr {
     #aside{
         position: fixed;
         width: 100%;
+        z-index: 1000;
+
     }
     #aside.hidden{
         display: none;

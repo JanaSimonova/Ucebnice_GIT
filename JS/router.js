@@ -13,7 +13,6 @@ const routes = {
     "notFound": pagesData.notFound,
     "/": pagesData.index,
     "/index": pagesData.index,
-    "/learn": pagesData.uvod,
     "/uvod": pagesData.uvod,
     "/kapitola1": pagesData.kap1,
     "/kapitola2": pagesData.kap2,
@@ -36,7 +35,7 @@ const handleLocation = async() => {
         $("#aside").load("aside.html");
     });
 
-    // console.log(path)
+    console.log(pathString)
 
     // if url path is number in array kapitoly
     // if (pathInt > 0 && pathInt <= kapitoly.length) {
@@ -59,6 +58,7 @@ const handleLocation = async() => {
 
     // else = when its NOT A NUMBER, and the path MATCHES with ROUTE. OR it's NOT FOUND (not  number of kapitola or not defined path)
 
+    console.log(routes[path])
 
     const aside = `<div id="aside" class="hidden"></div>`
 
@@ -90,6 +90,8 @@ const handleLocation = async() => {
         // toggle.style.display = "none";
 
     }
+
+    document.title = page.title
 
 };
 

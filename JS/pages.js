@@ -11,6 +11,7 @@ const pagesData = {
         </script>
 
         `,
+        title: "Error 404"
     },
     index: {
         html: ` 
@@ -23,11 +24,12 @@ const pagesData = {
                 <div class="text-box">
                     <h1>GIT</h1>
                     <p>Nejpoužívanější verzovací systém na světě. </p> 
-                        <a href="/learn">Nauč se ho používat i ty!</a> 
+                        <a href="/uvod">Nauč se ho používat i ty!</a> 
                 </div>
             </div>
         </div>
         `,
+        title: "Učebnice GITu"
     },
     uvod: {
         html: `
@@ -98,6 +100,7 @@ const pagesData = {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, earum! Incidunt quos eum corrupti, rem architecto ipsum ducimus 
             consectetur sequi adipisci, beatae obcaecati debitis eaque qui atque eveniet dolores harum.</p>
         `,
+        title: "Git - Úvod"
     },
     kap1: {
         html: `   
@@ -156,7 +159,8 @@ const pagesData = {
                 answers: ["ls", "cat", "cd"],
                 correctAnswer: 1,
             }
-        ]
+        ],
+        title: "Git - Instalace"
 
     },
     kap2: {
@@ -237,7 +241,8 @@ const pagesData = {
                 answers: ["vytvoří soubor", "vypíše obsah souboru", "odstraní soubor"],
                 correctAnswer: 1,
             }
-        ]
+        ],
+        title: "Git - Základní příkazy"
 
     },
     kap3: {
@@ -283,7 +288,8 @@ const pagesData = {
                 answers: ["initialize git", "git init", "git --init"],
                 correctAnswer: 2,
             },
-        ]
+        ],
+        title: "Git - Inicializace"
     },
     kap4: {
         html: `
@@ -526,7 +532,8 @@ const pagesData = {
                 answers: ["mezerník a pak Q", "mezerník a pak X", "enter a pak Z "],
                 correctAnswer: 1,
             },
-        ]
+        ],
+        title: "Git - Commity",
     },
     kap5: {
         html:`
@@ -601,7 +608,8 @@ const pagesData = {
                 correctAnswer: 3
             }
 
-        ]
+        ],
+        title: "Git - Branches"
 
     },
     kap6: {
@@ -616,7 +624,8 @@ const pagesData = {
                 correctAnswer:1
             }
 
-        ]
+        ],
+        title: "Git - Mergování",
 
     }
 }
