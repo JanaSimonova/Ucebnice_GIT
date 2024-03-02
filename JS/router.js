@@ -1,6 +1,6 @@
 import { pagesData } from "./pages.js";
 // import { kapitoly } from "./kapitoly.js";
-import QuizModule from '../QuizModule.js';
+import QuizModule from './QuizModule.js';
 
 const route = (event) => {
     event = event || window.event;
