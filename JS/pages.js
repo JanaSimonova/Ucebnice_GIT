@@ -374,13 +374,12 @@ const pagesData = {
 
             <h3>Grafické zobrazení commitů</h3>
             <p>Abychom si lépe představili, jak vypadá náš repozitář s commity, můžeme si ho graficky znázornit. 
-            Jednotlivé commity se zobrazují jako <b>kroužky spojené linkou</b>. 
+            Jednotlivé commity se zobrazují jako <b>kolečka spojená linkou</b>. 
             Na těchto ilustracích se ukazuje, jak fungují různé příkazy, co se děje s commity atd.
-            Aktuální commit na kterém se právě nacházíme (poslední, co jsme provedli) se označuje <b>HEAD</b>, také ukazatel nebo pointer. 
-            Master (jindy třeba main) je hlavní větev, feature je druhá větev.</p>
+            Aktuální commit, na kterém se právě nacházíme (poslední, co jsme provedli) se označuje <b>HEAD</b>, také ukazatel nebo pointer. 
+            <b>Main</b> (v minulosti master) je hlavní větev, <b>Feature</b> je druhá větev.</p>
             <div class="parent">
-                <img src="/images/kap4/commits_ilustrated.png" class="learn-img-big">
-                upravit barvy a pruhlednost
+                <img src="/images/kap4/commits-ilustrated.png" class="learn-img-big">
             </div>
 
 

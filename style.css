@@ -1,7 +1,8 @@
 :root {
-    --primary-color: #0B2A50; /* */
-    --secondary-color: #000F22; /**/
-    --text-color: #f7f7f7;      /**/
+    --primary-color: #0B2A50; 
+    --secondary-color: #000F22; 
+    --text-color: #f7f7f7;     
+    --text-color: #e5e5e5;      
     --accent-color: #37ab57;
     --accent-color-shade: #238f42;
 }
@@ -13,13 +14,15 @@
     color: var(--text-color);
     box-sizing: border-box;
     font-weight: 100;
+    /* on mobile blue overlay */
+    -webkit-tap-highlight-color: transparent;
 }
 
 *::selection {
     background-color: var(--accent-color);
     color:var(--secondary-color);
-    font-weight: 800;  
-    /* nefunguje */
+    font-weight: 800;   /* nefunguje !!!! */
+   
 }
 
 
@@ -38,6 +41,8 @@ body {
 
     display: flex;
     flex-direction: column;
+    
+    background-color: var(--secondary-color);
 }
 
 main {
@@ -206,10 +211,6 @@ header {
     background-color: var(--accent-color-shade);
 }
 
-.learn-text a{
-    font-weight: bold;
-    text-decoration: underline;
-}
 
 
 /* -----------------ERROR ---------------------- */
@@ -279,7 +280,7 @@ aside {
     position: sticky;
     top: 66px;
     /* margin-right: 20px; */
-    font-weight: 400;
+    /* font-weight: 100; */
 
     /* justify-self: start; */
 }
@@ -395,6 +396,17 @@ h3::before {
     content: "→ ";
 }
 
+.learn-text a{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.learn-text b{
+    color: #37ab57;
+    font-weight: 800;
+}
+
 .text-info {
     background-color: var(--secondary-color);
     /* background-color: var(--accent-color); */
@@ -450,7 +462,7 @@ ul {
 
 .code{
     font-family: Consolas, 'courier new';
-    color: #f1f1f1;
+    color: var(--text-color);
     background-color: #303030;
     font-size: smaller;
     word-spacing: 0px;
@@ -465,13 +477,11 @@ ul {
 
     i {
         font-family: Consolas, 'courier new';
-        color: #f1f1f1;
-        word-spacing: 0px;
     }
 }
 
 .code::selection, .code *::selection{
-    color: var(--text-color);
+    
 }
 
 .code2 {
