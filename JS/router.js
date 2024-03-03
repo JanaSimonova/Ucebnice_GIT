@@ -49,7 +49,6 @@ const handleLocation = async() => {
         document.getElementById("main").innerHTML = container;
 
         document.getElementById("learn-container").innerHTML = aside;
-        document.getElementById("learn-container").innerHTML = aside;
         document.getElementById("learn-container").innerHTML += learnText
         document.getElementById("learntext").innerHTML += html // kapitola
 

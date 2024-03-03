@@ -81,6 +81,7 @@ const pagesData = {
                 <div class="parent">
                     <img src="images/uvod/VCS-centralized.png" class="learn-img-small"> </div>
                     <!-- https://www.researchgate.net/figure/Centralized-Version-Control-vs-Distributed-Version-Control_fig2_316553817 -->
+                    
             <h3>Distribuované (decentralizované, DVCS)</h3>
                 <p>Nemá centrální databázi, každý uživatel má celou kopii u sebe. Poté změny "pushne" do sítě, nebo centrálního repozitáře.</p>
                 <p class="text-info">Repozitář = úložiště s historií všech uložených změn, všechny soubory a složky, celý "projekt"</p>
@@ -116,7 +117,7 @@ const pagesData = {
         </div>
         <p>Pokud ještě nemáme, příkaz nebude rozpoznán:</p>
         <div class="parent">
-            <img src="/images/kap1/git--version_not_installed.jpg" class="learn-img-small">
+            <img src="/images/kap1/git--version_not_installed.jpg" class="learn-img-medium">
         </div>
 
         <h1>Instalace</h1>
@@ -126,26 +127,27 @@ const pagesData = {
         <div class="parent">
             <img src="/images/kap1/git_download2.jpg" class="learn-img-big">
         </div>
+        
         <h3>Průvodce instalací:</h3>
         <p><b>Který editor vybrat: </b>Nejlepší je asi VS Code editor, když programujete ve Visual Studio Code, konzoli máte přímo v aplikaci??REAL??. 
         HLAVNě: při některých příkazech se bude otevírat soubor ve VSCode, přehledný. Vim editor se otevírá přímo v konzoli a je složitější na práci.
         Na Macu možná Sublime text. Později to ale lze změnit.</p>
         <div class="parent">
-            <img src="/images/kap1/git_editor_choose.jpg" class="learn-img-small">
+            <img src="/images/kap1/git_editor_choose.jpg" class="learn-img-medium">
         </div>
         <p><b>Jak pojmenovat defaultní branch: </b>Můžete použít starý název Master nebo novější a více používaný Main. Nebo úplně vlastní, ale to se moc nedělá.</p>
         <div class="parent">
-            <img src="/images/kap1/git_branch_name.jpg" class="learn-img-small">
+            <img src="/images/kap1/git_branch_name.jpg" class="learn-img-medium">
         </div>
         <p><b>Ostatní: </b>Zbytek stačí už jen proklikat, nebo můžete případně vygooglit. A je to!</p>
         <div class="parent">
-            <img src="/images/kap1/git_setup_finish.jpg" class="learn-img-small">
+            <img src="/images/kap1/git_setup_finish.jpg" class="learn-img-medium">
         </div>
 
         <h2>Git na Linux Ubuntu</h2>
         <p>Do terminálu napište tyto příkazy:</p>
         <div class="parent">
-            <img src="/images/kap1/git_install_linux.jpg" class="learn-img-small">
+            <img src="/images/kap1/git_install_linux.jpg" class="learn-img-big">
         </div>
     `,
         quiz: [
@@ -154,11 +156,6 @@ const pagesData = {
                 answers: ["git --version", "git -v", "git --help"],
                 correctAnswer: 1,
             },
-            {
-                question: "Jaký příkaz vypíše obsah souboru?",
-                answers: ["ls", "cat", "cd"],
-                correctAnswer: 1,
-            }
         ],
         title: "Git - Instalace"
 
@@ -172,13 +169,13 @@ const pagesData = {
         <h3>ls</h3>
         <p><b>List files.</b> Tento příkaz nám vypíše složky a soubory ze složky ve které se nacházíme. Výchozí složkou je náš adresář, tedy C:/Users/&ltjméno&gt. </p>
         <div class="parent">
-            <img src="/images/kap2/ls.jpg" class="learn-img-small" >
+            <img src="/images/kap2/ls2.jpg" class="learn-img-big" >
         </div>
 
         <h3>pwd</h3>
         <p><b>Print Working Directory.</b> Vypíše cestu ke složce, kde se právě nacházíme.</p>
         <div class="parent">
-            <img src="/images/kap2/pwd.jpg" class="learn-img-small">
+            <img src="/images/kap2/pwd.jpg" class="learn-img-big">
         </div>
 
         <h3>cd</h3>
@@ -186,25 +183,25 @@ const pagesData = {
         <!-- Nebo se muze napsat Documents/test/ -->
         <p>Samotné <b>cd</b> nás odkudkoliv přepne do výchozí složky = domovská složka uživatele.</p>
         <div class="parent">
-            <img src="/images/kap2/cd.jpg" class="learn-img-small">
+            <img src="/images/kap2/cd.jpg" class="learn-img-big">
         </div>
 
         <h3>cd . .</h3>
         <p>Změní aktuální složku na nadřazenou.</p>
         <div class="parent">
-            <img src="/images/kap2/cd...jpg" class="learn-img-small">
+            <img src="/images/kap2/cd...jpg" class="learn-img-big">
         </div>
         
         <h3>mkdir</h3>
         <p><b>Make directory.</b> Vytvoří složku.  </p>
         <div class="parent">
-            <img src="/images/kap2/mkdir.jpg" class="learn-img-small">
+            <img src="/images/kap2/mkdir.jpg" class="learn-img-big">
         </div>
 
         <h3>rmdir</h3>
         <p><b>Remove directory.</b> Odstraní jen prázdnou složku.  </p>
         <div class="parent">
-            <img src="/images/kap2/rmdir.jpg" class="learn-img-small">
+            <img src="/images/kap2/rmdir.jpg" class="learn-img-big">
         </div>
 
         <h3>rm -r</h3>
@@ -213,20 +210,20 @@ const pagesData = {
         <h3>touch</h3>
         <p>Vytvoří soubor.  </p>
         <div class="parent">
-            <img src="/images/kap2/touch2.jpg" class="learn-img-small" > <br>
-            <img src="/images/kap2/touch(fileexp).jpg" class="learn-img-small" >
+            <img src="/images/kap2/touch2.jpg" class="learn-img-big" > <br>
+            <img src="/images/kap2/touch(fileexp).jpg" class="learn-img-big" >
         </div>
 
         <h3>rm</h3>
         <p>Odstraní soubor.  </p>
         <div class="parent">
-            <img src="/images/kap2/rm.jpg" class="learn-img-small" >
+            <img src="/images/kap2/rm.jpg" class="learn-img-big" >
         </div>
     
         <h3>cat</h3>
         <p>Vypíše obsah souboru</p>
         <div class="parent">
-            <img src="/images/kap2/cat.jpg" class="learn-img-small" ><br>
+            <img src="/images/kap2/cat.jpg" class="learn-img-big" ><br>
             <img src="/images/kap2/cat-file.jpg" class="learn-img-small" >
         </div>
         `,
@@ -254,7 +251,6 @@ const pagesData = {
             <p>Otevřeme si Git Bash, příkazový řádek (cmd) nebo Terminal ve VSCode. Do konzole napíšeme tento příkaz: </p>
 
             <p class="code"> git config --global user.name "vaše jméno" </p>
-            <!-- <p class="code2"> git config --global user.name "vaše jméno"</p> -->
 
             <p>Do uvozovek napíšeme jméno i příjmení, můžeme použít i mezery. Pokud po odentrování nedostaneme žádný eror, akce proběhla úspěšně. Zkontrolujeme pomocí: </p>
             <p class="code"> git config --global user.name </p>
@@ -270,7 +266,6 @@ const pagesData = {
             <p>Složka se inicializuje příkazem <b>git init:</b> </p>
             <div class="parent" style="color:red">
                 <img src="/images/kap3/init.jpg" class="learn-img-big" >
-                    
             </div>
             <p>Zde máme ukázku toho, jak v terminálu vypadá, když jsme v inicializované složce. Za cestou ke složce vidíme v závorce slovo <b>main</b>. To je náš název hlavní větve.</p>
             <div class="parent">
@@ -278,7 +273,7 @@ const pagesData = {
             </div>
             <p>Takto vypadá repozitář v průzkumníku souborů. Přibyla zde skrytá složka s názvem <b>.git</b>. V ní se bude ukládat všechna naše historie a různé soubory Gitu.</p>
             <div class="parent">
-                <img src="/images/kap3/git_initialized_pruzkumnik.jpg" class="learn-img-small" >
+                <img src="/images/kap3/git_initialized_pruzkumnik.jpg" class="learn-img-medium" >
             </div>
             <p>A můžeme se pustit do práce (s Gitem)!</p>
             `,
@@ -311,7 +306,7 @@ const pagesData = {
 
             Při commitování pracujeme ve třech fázích:
             <div class="parent">
-                <img src="/images/kap4/git_commit_scheme.png" class="learn-img-big">
+                <img src="/images/kap4/git_commit_scheme.png" class="learn-img-medium">
             </div>
 
             <!-- https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh -->
@@ -347,7 +342,7 @@ const pagesData = {
                 <li>Staged - připravený soubor na commit</li>
             </ul>
             <div class="parent no-border-radius">
-                <img src="images/kap4/git-lifecycle.png" class="learn-img-big ">
+                <img src="images/kap4/git-lifecycle.png" class="learn-img-wide-medium ">
             </div>
             <p>Když vytvoříme nebo přidáme <b>nový soubor</b>, je <b>Untracked</b> - nesledovaný. A to i když ho upravíme. Pro Git je to (prostě) nový soubor, který ještě nikdy nebyl zaznamenáván.
             Pak ho přidáme do Staging area (přípravná plocha) - soubor je <b>Staged</b>, připravený na commit. 
@@ -365,9 +360,9 @@ const pagesData = {
             Pokud žádné změny ještě neproběhly, konzole vypíše, že není nic ke commitování.</p>
             <p class="code">git status </p>
 
-            <p>Zdě můžeme vidět upravený a už také stagenutý soubor "test.txt" a nově vytvořený, nesledovaný soubor "new-file.txt":</p>
+            <p>Zdě můžeme vidět upravený a už také stagenutý soubor "test.txt" a nově vytvořený, nesledovaný, soubor "new-file.txt":</p>
             <div class="parent">
-                <img src="/images/kap4/git_status.jpg" class="learn-img-big">
+                <img src="/images/kap4/git_status.jpg" class="learn-img-wide-medium">
             </div>
 
             <!-- Grafická ukázka/ vyobrazení commitů -->
@@ -379,7 +374,7 @@ const pagesData = {
             Aktuální commit, na kterém se právě nacházíme (poslední, co jsme provedli) se označuje <b>HEAD</b>, také ukazatel nebo pointer. 
             <b>Main</b> (v minulosti master) je hlavní větev, <b>Feature</b> je druhá větev.</p>
             <div class="parent">
-                <img src="/images/kap4/commits-ilustrated.png" class="learn-img-big">
+                <img src="/images/kap4/commits-ilustrated.png" class="learn-img-medium">
             </div>
 
 
@@ -395,30 +390,30 @@ const pagesData = {
             <p style="color:grey;">JE to DULEzity?? Pokud jsme ještě žádný commit neprovedli a máme úplně nové repo, zobrazí se error: your current branch 'main' does not have any commits yet.</p>
 
             <div class="parent">
-                <img src="/images/kap4/git_log.jpg" class="learn-img-big ">
+                <img src="/images/kap4/git_log.jpg" class="learn-img-big">
             </div>
 
             <p>Můžeme také použít zkrácenou formu <b>git log --oneline</b>, která vypíše zkrácený 7 písmenný hash commitu a popisek, vše hezky na <b>jednom řádku</b>. 
             To usnadňuje procházení historie commitů, což se vyplatí, když už máme commitů hodně.</p>
 
             <div class="parent">
-                <img src="/images/kap4/git_log_oneline.jpg" class="learn-img-big">
+                <img src="/images/kap4/git_log_oneline.jpg" class="learn-img-wide-medium">
             </div>
 
             <p>Později se vám také určitě stane to, že konzole neukáže všechny řádky, ale na konci zůstane jen <b>dvojtečka</b>. 
             Není to žádná chyba, nebo zaseknutí, je to zcela normální. Znamená to, že výpis má více řádků než se vejde do okna konzole.
             Pokračování výpisu spustíte stiskem <b>mezerníku</b>, výpis jednoho dalšího řádku enterem. Poté ale stále nebudete pryč, tentokrát se zobrazuje <b>(END)</b>. 
-            Odsud vyjdete (zsae do normalni konzole) stiskem <b>klávesy Q</b>.</p>
+            Odsud vyjdete zase do normální konzole stiskem <b>klávesy Q</b>.</p>
             
             <div class="parent">
-                <img src="/images/kap4/git_log_notfull.jpg" class="learn-img-big ">
-                menšíííí
-                <img src="/images/kap4/git_log_end.jpg" class="learn-img-big ">
+                <img src="/images/kap4/git_log_notfull.jpg" class="learn-img-medium ">
+                <br>
+                <img src="/images/kap4/git_log_end.jpg" class="learn-img-medium ">
             </div>
             
             
-            <h3>Upravení posledního commitu  ( kam ho dát? sem nebo ke commitování?) </h3>
-            <p>Pokud se nám stane, že provedeme commit, ale <b>zapomněli</b> jsme do něj například přidat soubor, můžeme to ještě napravit.
+            <h3>Upravení posledního commitu</h3>
+            <p>Pokud se nám stane, že provedeme commit, ale <b>zapomněli</b> jsme do něj například přidat soubor, nebo jsme commit špatně pojmenovali, můžeme to ještě napravit.
             To lze ale <b>pouze s posledním</b> commitem.
             Pomůže nám příkaz: </p>
             <p class="code">git commit --amend</p>
@@ -426,15 +421,18 @@ const pagesData = {
             Napíšeme příkaz a otevře se soubor COMMIT_EDITMSG.
             Na <b>prvním řádku</b> je náš <b>popisek</b> posledního commitu. Ten můžeme také přepsat, pokud potřebujeme. 
             Kousek níže si zkontrolujeme, jestli v "Changes to be commited" máme ten soubor, který jsme zapomněli.
-            Pak křížkem soubor <b>zavřeme</b>, tím se <b>potvrdí</b> změny commitu. Můžeme zkontrolovat git log, že se commit provedl. </p>
+            Pak křížkem soubor <b>zavřeme</b>, tím se <b>potvrdí</b> změny commitu. Můžeme zkontrolovat git log, že se commit opravil. </p>
             
             <div class="parent">
-                <img src="/images/kap4/git_amend.jpg" class="learn-img-big ">
-                možná doma přefotit na lepší kvalitu
-                <img src="/images/kap4/git_amend2.jpg" class="learn-img-big ">
+                <i>Zde vidíme nepřidaný soubor soubor3.txt, ale poslední commit má v názvu, že se přidal</i> <br>
+                <img src="/images/kap4/git-amend1.jpg" class="learn-img-big "> <br>
+                <i>Přidali jsme soubor do StageArea a napsali amend. Otevřel se soubor COMMIT_EDITMSG, zkontrolovali jsme změny</i> <br>
+                <img src="/images/kap4/git-amend2.jpg" class="learn-img-big "> <br>
+                <i>Commit se opravil, název zůstal stejný</i> <br>
+                <img src="/images/kap4/git-amend3.jpg" class="learn-img-wide-medium ">
             </div>
 
-            <p class="margin_top">Jestli chceme změnit jen popisek commitu, nemusíme otevírat celý soubor. 
+            <p>Jestliže chceme změnit jen popisek commitu, nemusíme otevírat celý soubor. 
             Stačí příkaz napsat podobně, jako píšeme normální commit:</p>
             <p class="code">git commit --amend -m "novy popisek"</p>
 
@@ -459,7 +457,7 @@ const pagesData = {
 
             <h3>Info o commitu</h3>
             <p>V konzoli si můžeme příkazem ukázat informace o jednom commitu. 
-            Vypíše se info jako při git log a k tomu provedené změny v souborech.
+            Vypíše se info jako s git log a k tomu provedené změny v souborech.
             Není to ale moc přehledné, takže to nejspíš moc používat nebudete. Kdyby přeci jen, příkaz je následující:</p>
             <p class="code">git show "hash commitu"</p>
 
@@ -542,7 +540,7 @@ const pagesData = {
         Ten hlavní tok je ale také větev, a to <b>hlavní větev</b>, pojmenovaná <b>MAIN</b> (nebo master). </p> 
         
         <div class="parent">
-            <img src="/images/kap5/branch.png" class="learn-img-big ">
+            <img src="/images/kap5/branch.png" class="learn-img-wide-medium ">
         </div>
 
         <p> Další větve se používají například při <b>opravách chyb</b> ve starších commitech, nebo když chceme vyzkoušet nějakou <b>novou funkci</b>. 
@@ -563,7 +561,7 @@ const pagesData = {
 
         <p>Větev, na které se právě nacházíme je označena hvězdičkou a jinou barvou. Na jaké jsme větvi poznáme také podle názvu v závorce za cestou.</p>
         <div class="parent">
-            <img src="/images/kap5/branch_name.jpg" class="learn-img-big ">
+            <img src="/images/kap5/branch_name.jpg" class="learn-img-wide-medium ">
         </div>  
 
 

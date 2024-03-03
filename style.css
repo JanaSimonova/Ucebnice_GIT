@@ -1,5 +1,6 @@
 :root {
     --primary-color: #0B2A50; 
+    --primary-color-shade: #092343; 
     --secondary-color: #000F22; 
     --text-color: #f7f7f7;     
     --text-color: #e5e5e5;      
@@ -14,8 +15,11 @@
     color: var(--text-color);
     box-sizing: border-box;
     font-weight: 100;
-    /* on mobile blue overlay */
+
+    /* on mobile blue overla on click */
     -webkit-tap-highlight-color: transparent;
+
+    /* scrollbar-width: none; */
 }
 
 *::selection {
@@ -24,6 +28,41 @@
     font-weight: 800;   /* nefunguje !!!! */
    
 }
+
+
+
+/* 
+body {
+    --sb-size: 10px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+    border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--primary-color-shade);
+    border-radius: 10px;
+  }
+
+  body::-webkit-scrollbar-thumb:hover{
+
+    background-color: var(--primary-color);
+  }
+
+
+body::-webkit-scrollbar-corner {
+
+    background-color: var(--secondary-color);
+
+} */
+
+
 
 
 
@@ -143,7 +182,7 @@ header {
     
     /* height: calc(100vh - 65px); */
 
-    background-image: linear-gradient(135deg, var(--primary-color), var(--primary-color), var(--secondary-color));
+    /* background-image: linear-gradient(135deg, var(--primary-color), var(--primary-color), var(--secondary-color)); */
     flex:1;
     display: flex;
     flex-direction: column;
@@ -275,6 +314,7 @@ header {
     /* width: 100vw; */
 
     /* -- bude uprostřed ( aside ne vlevo, mezera od  kraje)  */
+    /* na celou šírku, ale max 1200px */
     width: min(100vw, 1200px);
 }
 
@@ -404,7 +444,8 @@ aside ul {
 
     /* omezení šířky textu */
     /* když container width 100vw */
-    max-width: 1600px;
+    /* max-width: 1600px; */
+    max-width: 100%;
 }
 
 
@@ -445,7 +486,7 @@ h3::before {
 /* IMAGES */
 .parent {
     width: auto;
-    min-width: 200px;
+    /* min-width: 200px; */
     height: fit-content;
     /* musi byt presne px, jinak pri hover se to hybe malinko -- POZDEJI*/
     /* min-height: ; */
@@ -456,18 +497,37 @@ h3::before {
 }
 
 .learn-img-big {
-    width: 100%;
-    max-width: 690px;
+    /* width: 100%; */
+    /* max-width: 690px; */
+    /* min-width: ; */
+    max-width: min(690px, 50vw);
     /* margin: 20px 0; */
     /* border-radius: 24px; */
     background-size: cover;
 }
 
-.learn-img-small {
-    max-height: 300px;
+.learn-img-medium {
+    /* max-height: 300px; */
+    /* width: 100%; */
+    max-width:400px;
+    /* max-width: min(400px, 50vw); */
     /* border-radius: 24px; */
     background-size: cover;
 }
+
+.learn-img-small {
+    /* max-height: 300px; */
+    /* width: 100%; */
+    max-width:300px;
+    /* border-radius: 24px; */
+    background-size: cover;
+}
+
+.learn-img-wide-medium{
+
+    max-width: min(500px, 50vw);
+}
+
 
  /* pouzivam jen jednou */
 .image-descr {
@@ -688,7 +748,8 @@ hr {
 
 }
 
-@media (width < 700px) {
+
+@media (width < 800px) {
     .landing .container{
         flex-direction: column-reverse;
         justify-content: center;
@@ -714,6 +775,20 @@ hr {
         /* display: none; */
 
         display:block;
+    }
+
+    /* -------- */
+
+    .learn-img-big{
+        max-width: 90vw;
+    }
+
+    .learn-img-medium{
+        max-width: 90vw;
+    }
+
+    .learn-img-wide-medium{
+        max-width: 90vw;
     }
 }
 
