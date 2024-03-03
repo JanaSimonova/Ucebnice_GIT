@@ -35,34 +35,9 @@ const handleLocation = async() => {
         $("#aside").load("aside.html");
     });
 
-    console.log(pathString)
-
-    // if url path is number in array kapitoly
-    // if (pathInt > 0 && pathInt <= kapitoly.length) {
-
-    //     // make dynamic page with number of page
-    //     // const html = `
-    //     // <div>
-    //     //     <h1>Vlastní strana</h1>
-    //     //     <p>Toto je stránka číslo ${pathInt}.</p>
-    //     // </div>`;
-    //     // document.getElementById("main").innerHTML = html;
-
-    //     // + add content of kapitola
-    //     const kapitola = kapitoly[pathInt - 1];
-    //     document.getElementById("main").innerHTML = kapitola.text;
-
-    //     // makes a title
-    //     document.title = kapitoly[pathInt - 1].title
-    // }
-
-    // else = when its NOT A NUMBER, and the path MATCHES with ROUTE. OR it's NOT FOUND (not  number of kapitola or not defined path)
-
-    console.log(routes[path])
-
     const aside = `<div id="aside" class="hidden"></div>`
-
     const learnText = `<div id="learntext" class="learn-text"></div> `
+    const container =  `<div id="learn-container" class="learn-container"></div>`
 
     const page = routes[path] || routes["notFound"];
     const html = page.html;
@@ -71,8 +46,11 @@ const handleLocation = async() => {
     if (kapitolaExists && (pathString.includes("kapitola") || pathString.includes("learn") || pathString.includes("uvod"))) {
         // možná neni potřeba ten uvod
 
-        document.getElementById("main").innerHTML = aside;
-        document.getElementById("main").innerHTML += learnText
+        document.getElementById("main").innerHTML = container;
+
+        document.getElementById("learn-container").innerHTML = aside;
+        document.getElementById("learn-container").innerHTML = aside;
+        document.getElementById("learn-container").innerHTML += learnText
         document.getElementById("learntext").innerHTML += html // kapitola
 
         if (page.quiz && page.quiz.length > 0) {

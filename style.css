@@ -91,7 +91,7 @@ header {
 .header-container{
     display: flex;
     align-items: center; 
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: .2rem .5rem
 }
@@ -266,6 +266,34 @@ header {
 
 /* ------------------ LEARN ------------------- */
 
+.learn-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto; 
+
+    /* -- bude vlevo */
+    /* width: 100vw; */
+
+    /* -- bude uprostřed ( aside ne vlevo, mezera od  kraje)  */
+    width: min(100vw, 1200px);
+}
+
+
+/* mezera od kraje není = je stejnou barvou */
+/* aside::before{
+    content: "";
+    height: 100%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    right:0;
+    top:0;
+    bottom: 0;
+    width: 50vw;
+    height: 100vh;
+    z-index: -1;
+} */
+
+
 .toggle-aside-open{
     display:none;
 }
@@ -290,8 +318,8 @@ aside ul {
 }
 
 #aside{
-    background-color: var(--secondary-color);
     /* position:relative; */
+    background-color: var(--secondary-color);
 }
 
 #aside.hidden{
@@ -364,22 +392,19 @@ aside ul {
 }
 
 
+/* ------------------------------- */
 
 .learn-text {
-    /* background-color: var(--primary-color); */
-    /* background-image: linear-gradient(135deg, var(--primary-color), var(--primary-color), var(--secondary-color)); */
-
     height: max-content;
-    /* width: 800px; */
     min-width: 365px;
-
     padding: 40px;
-    /* margin-left: auto; */
-    /* border-radius: 24px; */
-
-    /* justify-self: end; */
     font-size: medium;
     word-spacing: 4px;
+    flex:1;
+
+    /* omezení šířky textu */
+    /* když container width 100vw */
+    max-width: 1600px;
 }
 
 
