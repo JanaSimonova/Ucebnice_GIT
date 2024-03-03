@@ -52,6 +52,8 @@ const handleLocation = async() => {
         document.getElementById("learn-container").innerHTML += learnText
         document.getElementById("learntext").innerHTML += html // kapitola
 
+        window.scrollTo(0, 0);
+        
         if (page.quiz && page.quiz.length > 0) {
             const quiz = new QuizModule(page.quiz, "learntext");
             quiz.generate();
