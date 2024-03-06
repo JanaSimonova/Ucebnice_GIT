@@ -342,7 +342,7 @@ header {
 
 aside {
     /* height:100%; */
-    padding: 20px 20px 20px 10px;
+    padding: 20px;
     /* min-width: 90px;
     max-width: 300px; */
     
@@ -775,7 +775,20 @@ hr {
         width: 100%;
         z-index: 1000;
 
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        max-height: 100vh;
     }
+
+    #aside ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        line-height:35px ;
+
+    }
+
     #aside.hidden{
         display: none;
     }
