@@ -12,16 +12,13 @@ const route = (event) => {
 const routes = {
     "notFound": pagesData.notFound,
     "/": pagesData.index,
-    "/index": pagesData.index,
     "/uvod": pagesData.uvod,
-    "/kapitola1": pagesData.kap1,
-    "/kapitola2": pagesData.kap2,
-    "/kapitola3": pagesData.kap3,  // udělat dynamicky do pole
-    "/kapitola4": pagesData.kap4,
-    "/kapitola5": pagesData.kap5,
-    "/kapitola6": pagesData.kap6,
-
-    // I can do it like  "/vehicles": "./pages/vehicles.html",
+    "/kapitola-1-instalace": pagesData.kap1,
+    "/kapitola-2-zakladni-prikazy": pagesData.kap2,
+    "/kapitola-3-inicializace": pagesData.kap3,  // udělat dynamicky do pole
+    "/kapitola-4-commity": pagesData.kap4,
+    "/kapitola-5-branches": pagesData.kap5,
+    "/kapitola-6-mergovani": pagesData.kap6,
 };
 
 

@@ -275,11 +275,13 @@ header {
     /* min-width: min-content;
     width: max-content; */
     max-width: 100%;
+    margin-bottom: 10px;
     
     line-height:50px;
-    margin-bottom: 10px;
+    text-align: center;
 }
 .error p{
+    text-align: center;
     font-size: x-large;
 
 }
