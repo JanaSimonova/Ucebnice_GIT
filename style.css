@@ -756,6 +756,14 @@ hr {
         gap:10vh;
     }
 
+    .logo-img {
+        height: 50px;
+    }
+
+    .headbuts{
+        display:none;
+    }
+
     .learn-text{
         padding-inline: 16px;
     }
@@ -775,6 +783,11 @@ hr {
         /* display: none; */
 
         display:block;
+        
+    }
+
+    .spacer{
+        flex:1;
     }
 
     /* -------- */

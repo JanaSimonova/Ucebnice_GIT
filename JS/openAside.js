@@ -1,6 +1,5 @@
 
 function toggleAside(item){
-        item.style.display = "block";
         var aside = document.getElementById("aside");
         aside.classList.toggle("hidden");
         item.classList.toggle("active");
