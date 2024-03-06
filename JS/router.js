@@ -50,7 +50,7 @@ const handleLocation = () => {
         document.getElementById("learn-container").innerHTML += learnText
         document.getElementById("learntext").innerHTML += html // kapitola
 
-        generateAside(document.getElementById("aside"));
+        generateAside(document.getElementById("aside"),path);
 
         if (page.quiz && page.quiz.length > 0) {
             const quiz = new QuizModule(page.quiz, "learntext");
@@ -67,7 +67,8 @@ const handleLocation = () => {
         // toggle.style.display = "none";
         
     }
-    // document.title = page.title
+    document.title = page.title
+    window.scrollTo(0,0)
 };
 
 
@@ -84,7 +85,7 @@ handleLocation();
 
 
 
-function generateAside(asideContainer) {
+function generateAside(asideContainer, url) {
 
     const aside = document.createElement("aside");
     const ul = document.createElement("ul");
@@ -96,6 +97,9 @@ function generateAside(asideContainer) {
             a.href = page.url;
             a.textContent = page.aside;
             a.onclick = route;
+            if(page.url == url){
+                a.classList.add("current")
+            }
 
             const li = document.createElement("li");
             li.appendChild(a);

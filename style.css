@@ -357,6 +357,36 @@ aside {
 
 aside ul {
     line-height: 25px;
+    list-style-type: none;
+}
+#aside ul li a{
+    position:relative;
+}
+#aside ul li a:not(.current)::before{
+
+    content: "";
+    width:5px;
+    height:5px;
+    background-color: white;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left:-20px;
+    border-radius: 50%;
+}
+
+#aside ul li a.current{
+    color: var(--accent-color);
+    position: relative;
+    margin-left:10px;
+}
+
+#aside ul li a.current::before{
+    content: "→";
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left:-20px;
 }
 
 #aside{
@@ -786,7 +816,10 @@ hr {
         margin: 0;
         padding: 0;
         line-height:35px ;
+    }
 
+    #aside ul li a:not(.current)::before{
+        display: none;
     }
 
     #aside.hidden{
