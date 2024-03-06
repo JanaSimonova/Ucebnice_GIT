@@ -11,7 +11,8 @@ const pagesData = {
         </script>
 
         `,
-        title: "Error 404"
+        title: "Error 404",
+        url: null,
     },
     index: {
         html: ` 
@@ -29,7 +30,8 @@ const pagesData = {
             </div>
         </div>
         `,
-        title: "Učebnice GITu"
+        title: "Učebnice GITu",
+        url: "/",
     },
     uvod: {
         html: `
@@ -101,7 +103,9 @@ const pagesData = {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, earum! Incidunt quos eum corrupti, rem architecto ipsum ducimus 
             consectetur sequi adipisci, beatae obcaecati debitis eaque qui atque eveniet dolores harum.</p>
         `,
-        title: "Git - Úvod"
+        title: "Git - Úvod",
+        url: "/uvod",
+        aside:"Úvod"
     },
     kap1: {
         html: `   
@@ -157,7 +161,9 @@ const pagesData = {
                 correctAnswer: 1,
             },
         ],
-        title: "Git - Instalace"
+        title: "Git - Instalace",
+        url:"/kapitola-1-instalace",
+        aside:"Instalace"
 
     },
     kap2: {
@@ -239,7 +245,9 @@ const pagesData = {
                 correctAnswer: 1,
             }
         ],
-        title: "Git - Základní příkazy"
+        title: "Git - Základní příkazy",
+        url:"/kapitola-2-zakladni-prikazy",
+        aside:"Základní příkazy"
 
     },
     kap3: {
@@ -284,7 +292,9 @@ const pagesData = {
                 correctAnswer: 2,
             },
         ],
-        title: "Git - Inicializace"
+        title: "Git - Inicializace",
+        url:"/kapitola-3-inicializace",
+        aside:"Inicializace"
     },
     kap4: {
         html: `
@@ -531,6 +541,8 @@ const pagesData = {
             },
         ],
         title: "Git - Commity",
+        url:"/kapitola-4-commity",
+        aside:"Commity"
     },
     kap5: {
         html:`
@@ -606,7 +618,9 @@ const pagesData = {
             }
 
         ],
-        title: "Git - Branches"
+        title: "Git - Branches",
+        url:"/kapitola-5-branches",
+        aside:"Branches"
 
     },
     kap6: {
@@ -623,6 +637,8 @@ const pagesData = {
 
         ],
         title: "Git - Mergování",
+        url:"/kapitola-6-mergovani",
+        aside:"Mergování"
 
     }
 }

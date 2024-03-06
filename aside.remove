@@ -1,8 +1,8 @@
 <aside>
     <ul>
-        <li> <a href="/uvod" onclick="route()">Úvod</a></li>
-        <li> <a href="/kapitola-1-instalace" onclick="route()">Instalace</a></li>
-        <li> <a href="/kapitola-2-zakladni-prikazy" >Základní příkazy</a></li>
+        <li id="uvod"> <a href="/uvod" onclick="route()">Úvod</a></li>
+        <li id="k1"> <a href="/kapitola-1-instalace" onclick="route()">Instalace</a></li>
+        <li id="k2"> <a href="/kapitola-2-zakladni-prikazy" >Základní příkazy</a></li>
         <li> <a href="/kapitola-3-inicializace">Inicializace</a></li>
         <li> <a href="/kapitola-4-commity">Commity</a></li>
         <li> <a href="/kapitola-5-branches">Branches</a></li>
