@@ -598,7 +598,7 @@ const pagesData = {
         <p class="code"> git branch -d <i>nazev-vetve</i> </p>
 
         <p>Pokud už máme ve větvi commity, tímto příkazem se nám to nepodaří. Git nám sám poradí napsat velké D a důvod "The branch '<i>nazev-vetve</i>' is not fully merged".
-        To znamená právě to, že v ní jsou commity. A co je to to mergování, to se dozvíme v <a href=/kapitola6>příští kapitole</a>.</p>
+        To znamená právě to, že v ní jsou commity. A co je to to mergování, to se dozvíme v <a href=/kapitola-6-mergovani>příští kapitole</a>.</p>
         <p class="code"> git branch -D <i>nazev-vetve</i> </p>
 
         
@@ -625,12 +625,44 @@ const pagesData = {
     },
     kap6: {
         html: `
-            <h1>udelast swsitch na dark a light rezim</h1>
+            <h1>udelast swsitch na dark a light rezim</h1> <br><br>
             <h1>Mergování</h1>
-            <p>Mergování je <b>slučování větví</b> do jedné. </p>
-            <p>obrazek merge</p>
+            <p>Mergování je <b>spojování větví</b> k sobě. 
+            Spojujeme k sobě vždy 2 větve a musíme být přepnutí na té, ke které chceme připojovat druhou. <br><u>Například:</u><br>
+            Pracujeme na hlavní větvi, máme na ní commity. Poté vytvoříme novou větev, třeba kvůli nějaké chybě. Tu postupně opravíme. 
+            A pak tu větev chceme spojit s hlavní, abychom mohli pracovat dál, s opravenou chybou. Přepneme se tedy na hlavní větev, mergneme je, a je to.</p>
+            <div class="parent">
+                <img src="/images/kap6/merging.png" class="learn-img-wide-medium ">
+            </div> 
 
+            <p>Ne vždy je to ale takhle jednoduché, občas se nám mohou objevit konflikty. Existuje několik typů mergování:</p>
+            
+
+            <h3>Fast forward</h3>
+            <p>Tento typ se použije, pokud na větvi, ke které chceme mergovat, nemáme žádné commity. 
+            Vedlejší větev se jakoby přesune na hlavní a je z nich jedna na stejné úrovni.</p>
+            <div class="parent">
+                <img src="/images/kap6/merging-FF.png" class="learn-img-small ">
+            </div> 
+
+            <h3>Non-fast forward (three way)</h3>
+            <p>Toto je základní typ mergování. Provede se, pokud jsme na hlavní větvi už udělali nějaké commity poté, co se vedlejší větev vytvořila. 
+            V tomto typu merge se zachová větev na druhé úrovni a sám se vytoří prázdný commit, který větve spojuje. </p>
+            <div class="parent">
+                <img src="/images/kap6/merging-nonFF.png" class="learn-img-small ">
+            </div> 
+            <p>Non Fast Forward můžeme použít sami, i když commity v hlavní branchi nemáme. Stačí do příkazu připsat:</p>
+            <p class="code"> git merge  </p>
+
+
+
+            <h3>Konflikt</h3>
+            
+            
+            <h3>Rebase</h3>
         
+            <!-- https://lukemerrett.com/different-merge-types-in-git/ -->
+            <!-- https://xdg.me/git-merge-no-ff/  -->
         `,
         quiz: [
             {
