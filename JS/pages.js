@@ -626,6 +626,10 @@ const pagesData = {
     kap6: {
         html: `
             <h1>udelast swsitch na dark a light rezim</h1>
+            <h1>Mergování</h1>
+            <p>Mergování je <b>slučování větví</b> do jedné. </p>
+            <p>obrazek merge</p>
+
         
         `,
         quiz: [
