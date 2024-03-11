@@ -622,44 +622,79 @@ const pagesData = {
     },
     kap6: {
         html: `
-            <h1>udelast swsitch na dark a light rezim</h1> <br><br>
             <h1>Mergování</h1>
             <p>Mergování je <b>spojování větví</b> k sobě. 
-            Spojujeme k sobě vždy 2 větve a musíme být přepnutí na té, ke které chceme připojovat druhou. <br><u>Například:</u><br>
+            Spojujeme k sobě 2 větve (i více) a musíme být přepnutí na té, ke které chceme připojovat druhou. <br><u>Například:</u><br>
             Pracujeme na hlavní větvi, máme na ní commity. Poté vytvoříme novou větev, třeba kvůli nějaké chybě. Tu postupně opravíme. 
             A pak tu větev chceme spojit s hlavní, abychom mohli pracovat dál, s opravenou chybou. Přepneme se tedy na hlavní větev, mergneme je, a je to.</p>
             <div class="parent">
                 <img src="/images/kap6/merging.png" class="learn-img-wide-medium ">
             </div> 
 
-            <p>Ne vždy je to ale takhle jednoduché, občas se nám mohou objevit konflikty. Existuje několik typů mergování:</p>
-            
+            <p>Základní příkaz pro mergování je:</p>
+            <p class="code">git merge <i>vedlejsi-vetev</i></p>
 
-            <h3>Fast forward</h3>
-            <p>Tento typ se použije, pokud na větvi, ke které chceme mergovat, nemáme žádné commity. 
+            <p>Existuje více typů mergování, zde je jen pár nejznámějších a nejpoužívanějších:</p>
+            
+            <h3>Fast-forward</h3>
+            <p>Tento typ se použije sám automaticky, pokud na větvi, ke které chceme mergovat, nemáme žádné nové commity od doby, co jsme vytvořili druhou větev. 
             Vedlejší větev se jakoby přesune na hlavní a je z nich jedna na stejné úrovni.</p>
             <div class="parent">
                 <img src="/images/kap6/merging-FF.png" class="learn-img-small ">
             </div> 
 
-            <h3>Non-fast forward (three way)</h3>
+            <h3>Non-fast-forward (three way)</h3>
             <p>Toto je základní typ mergování. Provede se, pokud jsme na hlavní větvi už udělali nějaké commity poté, co se vedlejší větev vytvořila. 
-            V tomto typu merge se zachová větev na druhé úrovni a sám se vytoří prázdný commit, který větve spojuje. </p>
+            V tomto typu merge se zachová větev na druhé úrovni a automaticky se vytvoří prázdný commit, který větve spojuje = mergovací commit. </p>
             <div class="parent">
-                <img src="/images/kap6/merging-nonFF.png" class="learn-img-small ">
+                <img src="/images/kap6/merging-nonFF.png" class="learn-img-medium ">
             </div> 
-            <p>Non Fast Forward můžeme použít sami, i když commity v hlavní branchi nemáme. Stačí do příkazu připsat:</p>
-            <p class="code"> git merge  </p>
-
-
+            <p>Non-fast-forward můžeme použít sami, i když commity v hlavní branchi nemáme. Stačí do příkazu připsat:</p>
+            <p class="code"> git merge --no-ff <i>vedlejsi-vetev</i> </p>
+            <p>Zde se také vytvoří mergovací commit. Schéma by vypadalo takto:</p>
+            <div class="parent">
+                <img src="/images/kap6/merging-noFF.png" class="learn-img-medium ">
+            </div> 
 
             <h3>Konflikt</h3>
-            
-            
+            <p>Konflikty nastanou, když chceme mergovat k větvi, ve které máme nové commity, a v nějakém tom commitu jsme upravili ve stejném souboru a stejný řádek jako na druhé větvi.
+            Git tedy neví, kterou verzi má uložit. To si musíme určit sami. Chybová hláška vypadá takto:</p>
+            <div class="parent">
+                <img src="/images/kap6/merging-conflict-error.png" class="learn-img-wide-medium ">
+            </div> 
+            <p>Ve VSCode se otevře daný soubor a ukáže se nám, kde přesně nastal konflikt. </p>
+            <div class="parent">
+                <img src="/images/kap6/merging-conflict-edit.png" class="learn-img-wide-medium ">
+            </div> 
+            <p>Zde si určíme, jaký text chceme zachovat. Buď klikneme na jednu z nabízených možností: 
+            <ul>
+                <li>Accept <b>Current</b> Change = přijme verzi na aktuální větvi,</li>
+                <li>Accept <b>Incoming</b> Change = přijme verzi na vedlejší větve,</li>
+                <li>Accept <b>Both</b> Changes = přijme obě verze, každá na jednom řádku,</li>
+                <li><b>Compare</b> Changes = zobrazí konflikt přehledněji, oba soubory dá vedle sebe.</li>
+            </ul>
+            Nebo si sami odmažeme řádky, které tam nechceme. Nebo můžeme klidně napsat úplně nový text, prostě jak je to potřeba. </p>
+            <p>Soubor poté zavřeme, přidáme do StageArea a commitneme. </p>
+
             <h3>Rebase</h3>
+            <p>Tento typ funguje tak, že vezme všechny commity z vedlejší větve a přesune je za nejnovější commit v hlavní větvi.</p>
+            <div class="parent">
+                <img src="/images/kap6/merging-rebase.png" class="learn-img-medium ">
+            </div> 
+            <p>Zde je přepínání větví naopak. Nejdříve musíme být na vedlejší větvi. Z ní napíšeme příkaz:</p>
+            <p class="code">git rebase <i>hlavni-vetev</i></p>
+            <p>Má to své výhody i nevýhody. Výhodou je, že zachovává čistou historii commitů, ale nevýhodou, že není vidět, kdy byla vedlejší větev vytvořena, nebo ke které větvi commity vůbec patří.</p>
+
+
+            <h3>Octopus</h3>
+            <p>Tento typ merge se použije <b>automaticky</b> při mergování 3 a více větví k sobě. Všechny větve se spojí v jednom commitu. </p>
+            <div class="parent">
+                <img src="/images/kap6/merging-octopus.png" class="learn-img-medium ">
+            </div> 
         
             <!-- https://lukemerrett.com/different-merge-types-in-git/ -->
             <!-- https://xdg.me/git-merge-no-ff/  -->
+            <!-- https://www.freblogg.com/git-octopus-merge -->
         `,
         quiz: [
             {
