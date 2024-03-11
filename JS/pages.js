@@ -643,7 +643,7 @@ const pagesData = {
                 <img src="/images/kap6/merging-FF.png" class="learn-img-small ">
             </div> 
 
-            <h3>Non-fast-forward (three way)</h3>
+            <h3>Non-fast-forward (three-way)</h3>
             <p>Toto je základní typ mergování. Provede se, pokud jsme na hlavní větvi už udělali nějaké commity poté, co se vedlejší větev vytvořila. 
             V tomto typu merge se zachová větev na druhé úrovni a automaticky se vytvoří prázdný commit, který větve spojuje = mergovací commit. </p>
             <div class="parent">
@@ -677,11 +677,11 @@ const pagesData = {
             <p>Soubor poté zavřeme, přidáme do StageArea a commitneme. </p>
 
             <h3>Rebase</h3>
-            <p>Tento typ funguje tak, že vezme všechny commity z vedlejší větve a přesune je za nejnovější commit v hlavní větvi.</p>
+            <p>Tento typ není úplně normální mergování, ale dá se tak také použít. Funguje tak, že vezme všechny commity z vedlejší větve a přesune je za nejnovější commit v hlavní větvi.</p>
             <div class="parent">
                 <img src="/images/kap6/merging-rebase.png" class="learn-img-medium ">
             </div> 
-            <p>Zde je přepínání větví naopak. Nejdříve musíme být na vedlejší větvi. Z ní napíšeme příkaz:</p>
+            <p>Pozor, zde je přepínání větví naopak. Nejdříve musíme být na vedlejší větvi. Z ní napíšeme příkaz:</p>
             <p class="code">git rebase <i>hlavni-vetev</i></p>
             <p>Má to své výhody i nevýhody. Výhodou je, že zachovává čistou historii commitů, ale nevýhodou, že není vidět, kdy byla vedlejší větev vytvořena, nebo ke které větvi commity vůbec patří.</p>
 
@@ -698,9 +698,19 @@ const pagesData = {
         `,
         quiz: [
             {
-                question: "a,fndf",
-                answers: ["Sdfsdf", "Sdfdf","ysgf"],
+                question: "Jaký je základní příkaz pro mergování?",
+                answers: ["git merging 'nazev-vetve'", "git merge 'nazev-vetve'","ysgf"],
+                correctAnswer:2
+            },
+            {
+                question: "Na jaké větvi musíme být, abychom správně mergovali?",
+                answers: ["Na té, ke které chceme mergovat druhou", "Na té, kterou chceme mergovat k jiné","Je to jedno"],
                 correctAnswer:1
+            },
+            {
+                question: "Jaký je rozdíl mezi Fast-forward a Non-fast-forward?",
+                answers: ["Fast-forward se provede rychleji", "Non-fast-forward je bezpečnější","Fast-forward nemá mergovací commit"],
+                correctAnswer:3
             }
 
         ],
