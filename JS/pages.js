@@ -640,7 +640,7 @@ const pagesData = {
             <p>Tento typ se použije sám automaticky, pokud na větvi, ke které chceme mergovat, nemáme žádné nové commity od doby, co jsme vytvořili druhou větev. 
             Vedlejší větev se jakoby přesune na hlavní a je z nich jedna na stejné úrovni.</p>
             <div class="parent">
-                <img src="/images/kap6/merging-FF.png" class="learn-img-small ">
+                <img src="/images/kap6/merging-FF.png" class="learn-img-medium ">
             </div> 
 
             <h3>Non-fast-forward (three-way)</h3>
@@ -699,7 +699,7 @@ const pagesData = {
         quiz: [
             {
                 question: "Jaký je základní příkaz pro mergování?",
-                answers: ["git merging 'nazev-vetve'", "git merge 'nazev-vetve'","ysgf"],
+                answers: ["git merging 'nazev-vetve'", "git merge 'nazev-vetve'","git mrg 'nazev-vetve'"],
                 correctAnswer:2
             },
             {
