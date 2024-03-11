@@ -6,9 +6,6 @@ const pagesData = {
         <p>Ale ne! Vypadá to, že tato stránka neexistuje. </p>
         <a href="/"> Zpět na hlavní stranu </a>
         </div>
-        <script>
-            document.title = "Error"
-        </script>
 
         `,
         title: "Error 404",
