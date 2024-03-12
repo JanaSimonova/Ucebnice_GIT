@@ -783,7 +783,7 @@ hr {
     /* position:relative; */
     /* top: -40px; */
     /* left: 35%; */
-    width: 120px;
+    width: 100px;
 }
 
 
@@ -818,50 +818,50 @@ hr {
         display:none;
     }
 
-    .learn-text{
-        padding-inline: 16px;
-    }
-
+    
     #aside{
         position: fixed;
         width: 100%;
         z-index: 1000;
-
+        
         text-align: center;
         display: flex;
         justify-content: center;
         max-height: 100vh;
     }
-
+    
     #aside ul{
         list-style-type: none;
         margin: 0;
         padding: 0;
         line-height:35px ;
     }
-
+    
     #aside ul li a:not(.current)::before{
         display: none;
     }
-
+    
     #aside.hidden{
         display: none;
     }
-
+    
     .toggle-aside-open{
         /* on landing page:: !!!  */
         /* display: none; */
-
+        
         display:block;
         
     }
-
+    
     .spacer{
         flex:1;
     }
-
+    
     /* -------- */
-
+    .learn-text{
+        padding-inline: 16px;
+    }
+    
     .learn-img-big{
         max-width: 90vw;
     }
@@ -878,12 +878,21 @@ hr {
         max-width: min(50vw, 300px); 
     }
 
+    .quiz button {
+        padding: 6px 12px;
+        /* margin-right: 20px; */
+        font-size: small;
+        border: 0;
+        border-radius:50px;
+        background-color: var(--accent-color-shade);
+    }
+
     /* ----- */
-    .gitkraken{
-        position:relative;
+    .gui-logo{
+        /* position:relative; */
         /* top: -40px; */
         /* left: 35%; */
-        width: 100px;
+        width: 80px;
     }
 }
 
