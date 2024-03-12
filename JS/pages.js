@@ -94,11 +94,6 @@ const pagesData = {
                 </ul>
                 <div class="parent">
                     <img src="images/uvod/VCS-decentralized.png" class="learn-img-small"> </div>
-
-        <h2>Další verzovací systémy</h2>
-        <h3>Kdjfkl</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, earum! Incidunt quos eum corrupti, rem architecto ipsum ducimus 
-            consectetur sequi adipisci, beatae obcaecati debitis eaque qui atque eveniet dolores harum.</p>
         `,
         title: "Git - Úvod",
         url: "/uvod",
@@ -339,8 +334,8 @@ const pagesData = {
             <p>Pokud už máme připravené všechny soubory, které chceme <b>commitnout</b>, napíšeme tento příkaz:</p>
             <p class="code">git commit -m "popisek" </p>
 
-            <br>
-            <h3>Cyklus stavu souboru </h3>
+            
+            <h3 >Cyklus stavu souboru </h3>
             Máme 4 stavy souboru:
             <ul>
                 <li>Untracked - nesledovaný soubor</li>
@@ -360,7 +355,6 @@ const pagesData = {
             <p class="code">git rm --cached "název souboru"</p>
 
             
-            <br>
             <h3>Stav souborů</h3>
             <p> Pro zobrazení stavu souborů v našem repozitáři existuje chytrý příkaz <b>git status</b>. 
             Ten nám ukáže, jaké soubory jsme od posledního commitu přidali, upravili, smazali, nebo jaké soubory máme ve Staging Area. 
@@ -577,8 +571,8 @@ const pagesData = {
         <h3>Přepínání mezi větvemi</h3>
         <p>Na jinou větev přepneme pomocí příkazu:</p>
         <p class="code"> git switch <i>nazev-vetve</i> </p>
+        <p>Toto je novější příkaz, někde můžete najít i starší příkaz <i><b>git checkout</b></i>.</p>
         <p>Pozor! Pokud uděláme nějaké změny, necommitneme a chceme se přepnout do jiné větve, git nám to nedovolí, protože by se změny mohly odstranit.<p/>
-        <p>Pozor! Pokud uděláme nějaké změny, necommitneme a chceme se přepnout do jiné větve, změny se přepnou i s námi. <p/>
 
         <p class="margin_top">Příkazem git switch také můžeme vytvořit novou větev a rovnou se do ní přepnout. Jen příkaz trochu upravíme:</p>
         <p class="code"> git switch -c <i>nazev-vetve</i> </p>
@@ -718,6 +712,103 @@ const pagesData = {
         url:"/kapitola-6-mergovani",
         aside:"Mergování"
 
+    },
+    kap7: {
+        html: `
+        <h1>GUI</h1>
+        <p>Git <b>není</b> pouze příkazový řádek a VSCode. Existují programy, které nám graficky a v reálném čase zobrazují, jak náš repozitář vypadá. 
+        Můžeme přes ně <b>spouštět</b> i různé <b>příkazy</b>, přepínat mezi větvemi, nebo se <b>podívat na změny</b> v souborech u commitů. 
+        Grafické rozhraní nám celkově může <b>pomoct</b> a usnadnit práci. </p>
+        <h3>Git GUI</h3>
+        <p>Přímo s Gitem se nainstaloval tento program s hodně jednoduchým GUI. Po otevření vypadá úvodní strana takto:</p>
+        <div class="parent">
+            <img src="/images/kap7/GitGUI.png" class="learn-img-medium ">
+        </div>
+        <p>Otevřeme si náš repozitář a zobrazí se v tomto okně:</p>
+        <div class="parent">
+            <img src="/images/kap7/GitGUI2.png" class="learn-img-big ">
+        </div>
+
+        <u class="margin-bottom">Popis jednotlivých částí:</u> <br>
+        <ul>
+            <li> <b>Unstaged Changes (oranžová)</b> = Zde se zobrazují soubory, které jsme upravili, nejsou ve Staging Area.</li>
+            
+            <li><b>Staged Changes (zelená)</b> = Soubory ve Staging Area, budou v commitu.</li>
+            
+            <li><b>Žluté pole</b> = Když klikneme na soubor, tady se ukážou informace o něm. Jeho obsah, změny od posledního commitu, název... Soubor se zde nedá upravovat.</li>
+            
+            <li> <b>Dolní pole Commit Message</b> = Sem se píše zpráva pro commit.</li>
+        </ul>
+
+        <u class="margin_top">5 tlačítek vedle Commit Message:</u>
+        <ul>
+            <li> <b>Rescan</b> = aktualizuje informace, soubory. Program se neaktualizuje sám, vždy musíme zmáčknout toto tlačítko pro nové změny</li>
+            <li> <b>Stage Changed</b> = všechny upravené soubory přesune do Staged Changes (Staging area)</li>
+            <li> <b>Sign Off</b> = podepíše commit jménem a emailem. Lze změnit v nastavení (Edit➙Options...)</li>
+            <li> <b>Commit</b> = vytvoří commit</li>
+            <li> <b>Push</b> = pushne vybranou branch</li>
+        </ul>
+        
+        <u class="margin_top">Horní lišta:</u>
+        <ul>
+            <li> <b>Repository</b> = odsud můžeme například otevřít GitBash nebo průzkumník souborů</li>
+            <li> <b>Edit </b> = zpět, znovu, vložit, vyjmout... a nastavení</li>
+            <li> <b>Branch</b> = vytvořit novou větev, přepnout se na větev (checkout), přejmenovat...</li>
+            <li> <b>Commit</b> = amend, stage, unstage, commit</li>
+            <li> <b>Merge</b> = mergovat větve</li>
+            <li> <b>Remote</b> = přidat remote, pushnout...</li>
+        </ul>
+        <!-- Není toho popsanýho až moc?? -->
+
+        <h3>GitKraken</h3>
+        <div class="parent">
+            <img src="/images/kap7/GitKraken-logo.svg" class="gui-logo">
+        </div>
+        <p>GitKraken je jedním z <b>nejznámějších</b> GUI pro Git. Má moderní a velice přehledný vzhled a k tomu <b>širokou</b> nabídku funkcí pro práci s Gitem. 
+        Názorně zobrazuje commity a větve v našem repozitáři v <b>reálném čase</b> bez potřeby manuálně refreshovat.
+        Velice <b>snadno</b> se zde vytváří, přepínají a mazají větve, lze provádět commity, zapisovat do souborů, porovnávat změny v souborech, pushovat, pullovat... 
+        Je vhodný i pro práci v týmech, umožňuje přímé propojení s <b>GitHubem</b>, GitBucketem nebo nástroji jako Jira a Trello. Také kompatibilní s Linuxem i macOS.
+        Má verze zdarma i placené, pro domácí použití ale bohatě stačí jen ty <b>bezplatné</b>.
+        </p>
+        <div class="parent">
+            <img src="/images/kap7/GitKraken-app.png" class="learn-img-big-big">
+        </div>
+
+        <h3>Tower</h3>
+        <div class="parent">
+            <img src="/images/kap7/Tower-logo.svg" class="gui-logo">
+        </div>
+        <p>Velice podobný program jako GitKraken, má stejně tak plno funkcí ke Gitu. Chybí mu ale kompatibilita s Linuxem a není zdarma, pouze 30denní zkušební doba.
+        Používají ho například společnosti: Apple, Google, Amazon, Twitter, Facebook... </p>
+        <div class="parent">
+            <img src="/images/kap7/Tower-app.png" class="learn-img-big-big">
+            <!-- zdroj: https://www.git-tower.com/windows -->
+        </div>
+
+        <h3>Fork</h3>
+        <div class="parent">
+            <img src="/images/kap7/Fork-logo.png" class="gui-logo">
+            <!-- zdroj: https://www.pikpng.com/pngvi/hhxowiR_appicon-fork-git-logo-clipart/  -->
+        </div>
+        <p>Má bezplatnou i placenou verzi. Má základní funkce jako správa více repozitářů, řešení konfliktů při mergování a porovnání souborů, ale chybí mu nějaké pokročilejší.
+        I tak ale pro základy postačí.</p>
+
+
+
+        <h3>Sourcetree</h3>
+        <div class="parent">
+            <img src="/images/kap7/Sourcetree-logo.png" class="gui-logo">
+        </div>
+        <p>Toto GUI je zcela zdarma, vytvořila ho firma Atlassian. Je také dobrou volbou pro grafické rozhraní. Podporuje jak Git, tak i Mercurial. 
+        Nevýhodou je ne moc přehledné prostředí.</p>
+
+        <!-- https://www.trustradius.com/products/sourcetree/reviews?qs=pros-and-cons#reviews -->
+        <!-- https://www.gitkraken.com/blog/best-git-gui-client -->
+        
+        `,
+        title:"Git - GUI",
+        url:"/kapitola-7-gui",
+        aside:"GUI"
     }
 }
 
