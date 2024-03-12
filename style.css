@@ -907,6 +907,10 @@ hr {
 .margin_top {
     margin-top: 5px;
 }
+.margin_top_bigger {
+    margin-top: 10px;
+}
+
 .margin-bottom{
     margin-bottom: 5px;
 }

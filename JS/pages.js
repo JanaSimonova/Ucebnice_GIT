@@ -44,7 +44,7 @@ const pagesData = {
         <p>S Gitem velmi často také pracují týmy více lidí.
             Možnost větvení je proto skvělé řešení, protože každý člen má jen svou větev a tvoří si vlastní změny.</p>
         <div class="parent">
-            <img src="images/uvod/git_branch.webp" class="learn-img-big">  <!-- dole https://www.g2.com/compare/phpstorm-vs-gitkraken-client -->
+            <img src="images/uvod/git_branch.webp" class="learn-img-big-big">  <!-- dole https://www.g2.com/compare/phpstorm-vs-gitkraken-client -->
             <div class="image-descr">Příklad větvení v aplikaci GitKraken</div>
         </div>
 
@@ -798,6 +798,7 @@ const pagesData = {
         <h3>Sourcetree</h3>
         <div class="parent">
             <img src="/images/kap7/Sourcetree-logo.png" class="gui-logo">
+            <!-- zdroj: https://icon-icons.com/icon/Sourcetree-macOS-BigSur/189711  -->
         </div>
         <p>Toto GUI je zcela zdarma, vytvořila ho firma Atlassian. Je také dobrou volbou pro grafické rozhraní. Podporuje jak Git, tak i Mercurial. 
         Nevýhodou je ne moc přehledné prostředí.</p>
@@ -809,7 +810,72 @@ const pagesData = {
         title:"Git - GUI",
         url:"/kapitola-7-gui",
         aside:"GUI"
+    },
+    kap8: {
+        html: `
+        <h1>GitHub</h1>
+        <p>GitHub je <b>webová</b> služba pro Gitové repozitáře. Spolupracuje s lokálním Gitem a slouží jako <b>cloudová záloha</b> ale i jako <b>sociální</b> síť nebo platforma pro spolupráci ve firmě. 
+        Můžeme sem nahrát svůj vlastní repozitář, ale zároveň vidět i veřejná repa jiných lidí a oni můžou vidět naše. </p>
+        <p class="margin_top_bigger">Jsou tedy 2 druhy repozitářů: <b>veřejný</b> (public) a <b>soukromý</b> (private). Veřejný vidí kdokoliv a může si ho "stáhnout" k sobě, soukromý vidíme pouze my a lidé, kterým dáme přístup.</p>
+        <p class="margin_top_bigger"> Jelikož je GitHub cloudový, používá se právě při spolupráci mezi lidmi a ve firmách. Ostatní mají k repozitáři přístup a mohou ho upravovat a společně v něm pracovat.</p>
+        <p class="margin_top_bigger">GitHub je v základu zdarma, má sice placené verze, ale ty mají hodně pokročilejší vlastnosti a jsou spíše pro firmy. 
+        Důležité je, že i ve verzi zdarma máme <b>neomezený počet</b> soukromých i veřejných repozitářů.</p>
+        <p class="margin_top_bigger"> Další využití GitHubu může být jako takové <b>portfolio</b> k životopisu. 
+        Je dobré nějaké lepší projekty dát veřejně, aby třeba náš budoucí zaměstnavatel mohl vidět, co umíme a s čím pracujeme.</p>
+        <div class="parent">
+            <img src="/images/kap8/github-profile.png" class="learn-img-big-big">
+            <p class="image-descr">ukázka profilu na GitHubu</p>
+        </div>
+        
+        <h3>Založení účtu</h3>
+        <p> Na stránce <a href="https://github.com">github.com</a> si založíte účet. K registraci není potřeba nic speciálního, pouze email. Na ten přijde ověřovací kód. Ten zadáte a je to!
+        Měli byste být na hlavní stránce GitHubu. V pravém horním rohu je ikonka s obrázkem, to je váš profilový obrázek. Přes něj se dostanete na svůj profil a tam si můžete upravit jméno, profilový obrázek, bio, atd.
+        <div class="parent">
+            <img src="/images/kap8/github-to-profile.png" class="learn-img-medium">
+        </div>
+        
+        <h3>Lokální a vzdálené repo</h3>
+        <p>Když jsme doteď pracovali pouze na našem počítači, pracovali jsme v <b>lokálním</b> repozitáři. Na GitHubu si můžeme vytvořit <b>vzdálený repozitář</b>, anglicky <b>remote</b>
+        A tyto dva repozitáře na sebe můžeme napojit. Pak jen jediným příkazem pošleme změny z lokálního na vzdálené repo a máme na GitHubu aktuální verzi projektu. 
+        Nebo naopak, z GitHubu příkazem stáhnout změny do lokálního repa.</p>
+
+        <h3>SSH klíč</h3>
+        <p>Abychom si mohli posílat změny na GitHub na naše repo, potřebujeme k tomu SSH klíč. SSH = Secure Shell Protocol. Slouží k ověření, že náš počítač má oprávnění upravovat naše repo na GitHubu a ne kdokoliv jiný.
+        Klíč se generuje v našem počítači a zapisuje se do GitHubu. Tím se zajistí bezpečné ověření našeho zařízení.</p>
+        <p class="margin_top">Příkaz pro ověření, jestli už máme nějaké klíče vygenerované nebo ne, se píše do aplikace GitBash nebo do terminálu VSCode s GitBash, a je to:</p>
+        <p class="code">ls -al ~/.ssh </p>
+        <p> Pokud už klíč máme, zobrazí se aspoň jeden z těchto názvů: </p>
+        <ul>
+            <li>id_rsa.pub</li>
+            <li>id_ecdsa.pub</li>
+            <li>id_ed25519.pub</li>
+        </ul>
+
+        <p class="margin_top"> Pokud ne a dostaneme error, musíme si klíč vygenerovat. Nový klíč si můžeme vygenerovat i když ho už máme.</p>
+        <p class="margin_top"> SSH klíč se vygeneruje tímto příkazem, zase v GitBash: (dosaďte svůj email)</p>
+        <p class="code">ssh-keygen -t ed25519 -C "your_email@example.com" </p>
+
+        
+
+
+
+
+        <br><br><br>
+        <h3>Push</h3>
+
+        <h3>Pull</h3>
+        
+        
+        `,
+        title: "Git-Github",
+        url:"/kapitola-8-github",
+        aside:"GitHub"
+
+
     }
+
+
+
 }
 
 export { pagesData };
