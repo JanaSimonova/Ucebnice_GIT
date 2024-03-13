@@ -919,6 +919,10 @@ hr {
     padding-left: 30px;
 }
 
+.padding-bottom{
+    padding-bottom: 15px;
+}
+
 .underline {
     text-decoration: underline;
 }
@@ -926,6 +930,16 @@ hr {
 .no-border-radius{
     border-radius: 0;
 }
+
+.display-inline{
+    display:inline;
+}
+
+.align-center{
+    display: flex;
+    align-items: center;
+    
+}   
 
 u{
     text-underline-offset: 3px;

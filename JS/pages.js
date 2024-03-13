@@ -813,7 +813,10 @@ const pagesData = {
     },
     kap8: {
         html: `
-        <h1>GitHub</h1>
+        <div class="align-center"> 
+            <h1 class="display-inline">GitHub</h1> 
+            <img src="/images/kap8/github-logo-black.svg" class="padding_left padding-bottom">
+        </div
         <p>GitHub je <b>webová</b> služba pro Gitové repozitáře. Spolupracuje s lokálním Gitem a slouží jako <b>cloudová záloha</b> ale i jako <b>sociální</b> síť nebo platforma pro spolupráci ve firmě. 
         Můžeme sem nahrát svůj vlastní repozitář, ale zároveň vidět i veřejná repa jiných lidí a oni můžou vidět naše. </p>
         <p class="margin_top_bigger">Jsou tedy 2 druhy repozitářů: <b>veřejný</b> (public) a <b>soukromý</b> (private). Veřejný vidí kdokoliv a může si ho "stáhnout" k sobě, soukromý vidíme pouze my a lidé, kterým dáme přístup.</p>
@@ -828,8 +831,8 @@ const pagesData = {
         </div>
         
         <h3>Založení účtu</h3>
-        <p> Na stránce <a href="https://github.com">github.com</a> si založíte účet. K registraci není potřeba nic speciálního, pouze email. Na ten přijde ověřovací kód. Ten zadáte a je to!
-        Měli byste být na hlavní stránce GitHubu. V pravém horním rohu je ikonka s obrázkem, to je váš profilový obrázek. Přes něj se dostanete na svůj profil a tam si můžete upravit jméno, profilový obrázek, bio, atd.
+        <p> Na stránce <a href="https://github.com">github.com</a> si založíme účet. K registraci není potřeba nic speciálního, pouze <b>email</b>. Na ten přijde ověřovací kód, zadáme ho, a je to!</p>
+        <p>Měli bychom být na hlavní stránce GitHubu. V pravém horním rohu je ikonka s obrázkem, to je náš profilový obrázek. Přes něj se dostaneme na <b>profil</b> a tam si můžeme upravit jméno, profilový obrázek, bio, atd.
         <div class="parent">
             <img src="/images/kap8/github-to-profile.png" class="learn-img-medium">
         </div>
@@ -840,31 +843,43 @@ const pagesData = {
         Nebo naopak, z GitHubu příkazem stáhnout změny do lokálního repa.</p>
 
         <h3>SSH klíč</h3>
-        <p>Abychom si mohli posílat změny na GitHub na naše repo, potřebujeme k tomu SSH klíč. SSH = Secure Shell Protocol. Slouží k ověření, že náš počítač má oprávnění upravovat naše repo na GitHubu a ne kdokoliv jiný.
-        Klíč se generuje v našem počítači a zapisuje se do GitHubu. Tím se zajistí bezpečné ověření našeho zařízení.</p>
-        <p class="margin_top">Příkaz pro ověření, jestli už máme nějaké klíče vygenerované nebo ne, se píše do aplikace GitBash nebo do terminálu VSCode s GitBash, a je to:</p>
+        <p>Abychom si mohli posílat změny na GitHub na naše repo, potřebujeme k tomu SSH klíč. SSH = Secure Shell Protocol. Slouží k ověření, že náš počítač má <b>oprávnění</b> upravovat naše repo na GitHubu a ne kdokoliv jiný.
+        V našem počítači se vygenerují 2 klíče, jeden private a jeden public. Ten public se zapisuje do GitHubu. Při připojení se porovná klíč na GitHubu a klíč na počítači, a pokud jsou stejné, spojíme se s GitHubem.</p>
+        <p class="margin_top">Příkaz pro ověření, jestli už máme nějaké klíče vygenerované nebo ne, se píše do aplikace GitBash nebo do terminálu VSCode s GitBashem, a je to:</p>
         <p class="code">ls -al ~/.ssh </p>
-        <p> Pokud už klíč máme, zobrazí se aspoň jeden z těchto názvů: </p>
+        <p> Pokud už nějaký klíč máme, zobrazí se aspoň jeden z těchto názvů: </p>
         <ul>
             <li>id_rsa.pub</li>
             <li>id_ecdsa.pub</li>
             <li>id_ed25519.pub</li>
         </ul>
 
-        <p class="margin_top"> Pokud ne a dostaneme error, musíme si klíč vygenerovat. Nový klíč si můžeme vygenerovat i když ho už máme.</p>
-        <p class="margin_top"> SSH klíč se vygeneruje tímto příkazem, zase v GitBash: (dosaďte svůj email)</p>
+        <p class="margin_top"> Pokud ne a dostaneme error, musíme si klíče vygenerovat. Nové klíče si můžeme vygenerovat i když je už máme.</p>
+        <p class="margin_top"> SSH klíče se vygenerují tímto příkazem, zase v GitBash: (dosaďte svůj email)</p>
         <p class="code">ssh-keygen -t ed25519 -C "your_email@example.com" </p>
-
-        
-
-
-
-
-        <br><br><br>
-        <h3>Push</h3>
-
-        <h3>Pull</h3>
-        
+        <p>Klíče se tímto vygenerují.<br> Příkaz ale pokračuje dál, chce abychom napsali soubor, kam klíče uložit. Stačí pouze stisknout enter, uloží se sami.
+        Dále je potřeba zadat heslo (passphrase). Můžeme si vymyslet jakékoliv. <b>Pozor!</b> Když budeme psát, neukáže se, že píšeme, ale heslo se normálně zadává. Pak ho ještě musíme napsat znovu. </p>
+        <p>Potom si musíme zapnout <b>ssh-agenta</b>. To je program, který běží na pozadí a uchovává dešifrované klíče v paměti pro použití. </p>
+        <p class="code">eval "$(ssh-agent -s)"</p>
+        <p>Po zadání příkazu by se mělo vypsat něco podobného, jen s jiným číslem: </p>
+        <div class="parent">
+            <img src="/images/kap8/ssh-agent.png" class="learn-img-small">
+        </div>
+        <p>Do ssh-agenta přidáme náš privátní klíč: </p>
+        <p class="code">ssh-add ~/.ssh/id_ed25519 </p>
+        <p>Teď už zbývá vložit klíč do našeho GitHub účtu. Public klíč si zkopírujeme do schránky příkazem: </p>
+        <p class="code">clip < ~/.ssh/id_ed25519.pub </p>
+        <p>Místo, kam na GitHubu vložit klíč, najdeme po kliknutí na ikonku v pravém horním rohu, dáme <b>Settings</b> a vlevo v nabidce nejdeme <b>SSH and GPG keys</b>. 
+        Klikneme na tlačítko <b>New SSH key</b>.</p>
+        <div class="parent">
+            <img src="/images/kap8/github-to-ssh.png" class="learn-img-medium">
+            <img src="/images/kap8/github-new-ssh.png" class="learn-img-big-big">
+        </div>
+        <p>Jako <b>Title</b> si dáme nějaký název toho klíče, je to jen informace pro nás, např. Můj počítač doma. <b>Typ</b> klíče necháme Authentication. A do pole <b>Key</b> vložíme náš zkopírovaný klíč. 
+        Pak potvrdíme tlačítkem <b>Add SSH key</b>, zadáme heslo máme hotovo.</p>
+        <div class="parent">
+            <img src="/images/kap8/github-add-ssh.png" class="learn-img-big">
+        </div>
         
         `,
         title: "Git-Github",
