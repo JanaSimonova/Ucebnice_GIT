@@ -577,6 +577,11 @@ h3::before {
     /* text-align: start; */
 }
 
+.image-source{
+    font-size:small;
+    margin-top: 10px;
+}
+
 ul {
     margin-left: 40px;
     margin-top: 5px;

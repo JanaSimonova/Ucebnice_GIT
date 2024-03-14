@@ -41,7 +41,7 @@ const handleLocation = () => {
     const kapitolaExists = Object.values(pagesData).find(page => page.url === path);
 
 
-    if (kapitolaExists && (pathString.includes("kapitola") || pathString.includes("learn") || pathString.includes("uvod"))) {
+    if (kapitolaExists && (pathString.includes("kapitola"))) {
         // možná neni potřeba ten uvod
 
         document.getElementById("main").innerHTML = container;

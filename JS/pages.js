@@ -15,14 +15,14 @@ const pagesData = {
         html: ` 
         <div class="landing">
             <div class="container">
-                <img src="images/miscellaneous/landing-image.svg" class="landing-image" />
+                <img src="images/misc/landing-image.svg" class="landing-image" />
             
         
             
                 <div class="text-box">
                     <h1>GIT</h1>
                     <p>Nejpoužívanější verzovací systém na světě. </p> 
-                        <a href="/uvod">Nauč se ho používat i ty!</a> 
+                        <a href="/kapitola-1-uvod">Nauč se ho používat i ty!</a> 
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@ const pagesData = {
         title: "Učebnice GITu",
         url: "/",
     },
-    uvod: {
+    kap1: {
         html: `
 
         <h1>Úvod</h1>
@@ -44,7 +44,7 @@ const pagesData = {
         <p>S Gitem velmi často také pracují týmy více lidí.
             Možnost větvení je proto skvělé řešení, protože každý člen má jen svou větev a tvoří si vlastní změny.</p>
         <div class="parent">
-            <img src="images/uvod/git_branch.webp" class="learn-img-big-big">  <!-- dole https://www.g2.com/compare/phpstorm-vs-gitkraken-client -->
+            <img src="images/kap1/git_branch.webp" class="learn-img-big-big">  <!-- dole https://www.g2.com/compare/phpstorm-vs-gitkraken-client -->
             <div class="image-descr">Příklad větvení v aplikaci GitKraken</div>
         </div>
 
@@ -78,7 +78,7 @@ const pagesData = {
                     <li>Perforce</li>
                 </ul>
                 <div class="parent">
-                    <img src="images/uvod/VCS-centralized.png" class="learn-img-small"> </div>
+                    <img src="images/kap1/VCS-centralized.png" class="learn-img-small"> </div>
                     <!-- https://www.researchgate.net/figure/Centralized-Version-Control-vs-Distributed-Version-Control_fig2_316553817 -->
                     
             <h3>Distribuované (decentralizované, DVCS)</h3>
@@ -93,13 +93,14 @@ const pagesData = {
                     <li>Bazaar</li>
                 </ul>
                 <div class="parent">
-                    <img src="images/uvod/VCS-decentralized.png" class="learn-img-small"> </div>
+                    <img src="images/kap1/VCS-decentralized.png" class="learn-img-small"> 
+                </div>
         `,
         title: "Git - Úvod",
-        url: "/uvod",
+        url: "/kapitola-1-uvod",
         aside:"Úvod"
     },
-    kap1: {
+    kap2: {
         html: `   
         <h1>Ověření instalace</h1>
         
@@ -109,11 +110,11 @@ const pagesData = {
 
         <p>Pokud máme Git už nainstalovaný, zobrazí se vaše aktuální verze:</p>
         <div class="parent">
-            <img src="/images/kap1/git--version_installed.jpg" class="learn-img-small">
+            <img src="/images/kap2/git--version_installed.jpg" class="learn-img-small">
         </div>
         <p>Pokud ještě nemáme, příkaz nebude rozpoznán:</p>
         <div class="parent">
-            <img src="/images/kap1/git--version_not_installed.jpg" class="learn-img-medium">
+            <img src="/images/kap2/git--version_not_installed.jpg" class="learn-img-medium">
         </div>
 
         <h1>Instalace</h1>
@@ -121,7 +122,7 @@ const pagesData = {
         <h2 style="margin-top:5px;">Git na Windows</h2>
         <h3>Stáhněte si nejnovější verzi Gitu na <a href="https://git-scm.com" class="underline" >git-scm.com</a> </h3>
         <div class="parent">
-            <img src="/images/kap1/git_download2.jpg" class="learn-img-big">
+            <img src="/images/kap2/git_download2.jpg" class="learn-img-big">
         </div>
         
         <h3>Průvodce instalací:</h3>
@@ -129,21 +130,21 @@ const pagesData = {
         HLAVNě: při některých příkazech se bude otevírat soubor ve VSCode, přehledný. Vim editor se otevírá přímo v konzoli a je složitější na práci.
         Na Macu možná Sublime text. Později to ale lze změnit.</p>
         <div class="parent">
-            <img src="/images/kap1/git_editor_choose.jpg" class="learn-img-medium">
+            <img src="/images/kap2/git_editor_choose.jpg" class="learn-img-medium">
         </div>
         <p><b>Jak pojmenovat defaultní branch: </b>Můžete použít starý název Master nebo novější a více používaný Main. Nebo úplně vlastní, ale to se moc nedělá.</p>
         <div class="parent">
-            <img src="/images/kap1/git_branch_name.jpg" class="learn-img-medium">
+            <img src="/images/kap2/git_branch_name.jpg" class="learn-img-medium">
         </div>
         <p><b>Ostatní: </b>Zbytek stačí už jen proklikat, nebo můžete případně vygooglit. A je to!</p>
         <div class="parent">
-            <img src="/images/kap1/git_setup_finish.jpg" class="learn-img-medium">
+            <img src="/images/kap2/git_setup_finish.jpg" class="learn-img-medium">
         </div>
 
         <h2>Git na Linux Ubuntu</h2>
         <p>Do terminálu napište tyto příkazy:</p>
         <div class="parent">
-            <img src="/images/kap1/git_install_linux.jpg" class="learn-img-big">
+            <img src="/images/kap2/git_install_linux.jpg" class="learn-img-big">
         </div>
     `,
         quiz: [
@@ -154,11 +155,11 @@ const pagesData = {
             },
         ],
         title: "Git - Instalace",
-        url:"/kapitola-1-instalace",
+        url:"/kapitola-2-instalace",
         aside:"Instalace"
 
     },
-    kap2: {
+    kap3: {
         html: `
         
         <h1>Základní příkazy</h1>
@@ -167,13 +168,13 @@ const pagesData = {
         <h3>ls</h3>
         <p><b>List files.</b> Tento příkaz nám vypíše složky a soubory ze složky ve které se nacházíme. Výchozí složkou je náš adresář, tedy C:/Users/&ltjméno&gt. </p>
         <div class="parent">
-            <img src="/images/kap2/ls2.jpg" class="learn-img-big" >
+            <img src="/images/kap3/ls2.jpg" class="learn-img-big" >
         </div>
 
         <h3>pwd</h3>
         <p><b>Print Working Directory.</b> Vypíše cestu ke složce, kde se právě nacházíme.</p>
         <div class="parent">
-            <img src="/images/kap2/pwd.jpg" class="learn-img-big">
+            <img src="/images/kap3/pwd.jpg" class="learn-img-big">
         </div>
 
         <h3>cd</h3>
@@ -181,25 +182,25 @@ const pagesData = {
         <!-- Nebo se muze napsat Documents/test/ -->
         <p>Samotné <b>cd</b> nás odkudkoliv přepne do výchozí složky = domovská složka uživatele.</p>
         <div class="parent">
-            <img src="/images/kap2/cd.jpg" class="learn-img-big">
+            <img src="/images/kap3/cd.jpg" class="learn-img-big">
         </div>
 
         <h3>cd . .</h3>
         <p>Změní aktuální složku na nadřazenou.</p>
         <div class="parent">
-            <img src="/images/kap2/cd...jpg" class="learn-img-big">
+            <img src="/images/kap3/cd...jpg" class="learn-img-big">
         </div>
         
         <h3>mkdir</h3>
         <p><b>Make directory.</b> Vytvoří složku.  </p>
         <div class="parent">
-            <img src="/images/kap2/mkdir.jpg" class="learn-img-big">
+            <img src="/images/kap3/mkdir.jpg" class="learn-img-big">
         </div>
 
         <h3>rmdir</h3>
         <p><b>Remove directory.</b> Odstraní jen prázdnou složku.  </p>
         <div class="parent">
-            <img src="/images/kap2/rmdir.jpg" class="learn-img-big">
+            <img src="/images/kap3/rmdir.jpg" class="learn-img-big">
         </div>
 
         <h3>rm -r</h3>
@@ -208,21 +209,21 @@ const pagesData = {
         <h3>touch</h3>
         <p>Vytvoří soubor.  </p>
         <div class="parent">
-            <img src="/images/kap2/touch2.jpg" class="learn-img-big" > <br>
-            <img src="/images/kap2/touch(fileexp).jpg" class="learn-img-big" >
+            <img src="/images/kap3/touch2.jpg" class="learn-img-big" > <br>
+            <img src="/images/kap3/touch(fileexp).jpg" class="learn-img-big" >
         </div>
 
         <h3>rm</h3>
         <p>Odstraní soubor.  </p>
         <div class="parent">
-            <img src="/images/kap2/rm.jpg" class="learn-img-big" >
+            <img src="/images/kap3/rm.jpg" class="learn-img-big" >
         </div>
     
         <h3>cat</h3>
         <p>Vypíše obsah souboru</p>
         <div class="parent">
-            <img src="/images/kap2/cat.jpg" class="learn-img-big" ><br>
-            <img src="/images/kap2/cat-file.jpg" class="learn-img-small" >
+            <img src="/images/kap3/cat.jpg" class="learn-img-big" ><br>
+            <img src="/images/kap3/cat-file.jpg" class="learn-img-small" >
         </div>
         `,
         quiz: [
@@ -238,11 +239,11 @@ const pagesData = {
             }
         ],
         title: "Git - Základní příkazy",
-        url:"/kapitola-2-zakladni-prikazy",
+        url:"/kapitola-3-zakladni-prikazy",
         aside:"Základní příkazy"
 
     },
-    kap3: {
+    kap4: {
         html: `
 
             <h1>Založení jména a emailu</h1>
@@ -265,15 +266,15 @@ const pagesData = {
             <div class=text-info> Repozitář = inicializovaná složka, ve které <i>funguje/je/běží/ <b>pracujeme s </b></i> Gitem </div>
             <p>Složka se inicializuje příkazem <b>git init:</b> </p>
             <div class="parent" style="color:red">
-                <img src="/images/kap3/init.jpg" class="learn-img-big" >
+                <img src="/images/kap4/init.jpg" class="learn-img-big" >
             </div>
             <p>Zde máme ukázku toho, jak v terminálu vypadá, když jsme v inicializované složce. Za cestou ke složce vidíme v závorce slovo <b>main</b>. To je náš název hlavní větve.</p>
             <div class="parent">
-                <img src="/images/kap3/git_initialized.jpg" class="learn-img-big" >
+                <img src="/images/kap4/git_initialized.jpg" class="learn-img-big" >
             </div>
             <p>Takto vypadá repozitář v průzkumníku souborů. Přibyla zde skrytá složka s názvem <b>.git</b>. V ní se bude ukládat všechna naše historie a různé soubory Gitu.</p>
             <div class="parent">
-                <img src="/images/kap3/git_initialized_pruzkumnik.jpg" class="learn-img-medium" >
+                <img src="/images/kap4/git_initialized_pruzkumnik.jpg" class="learn-img-medium" >
             </div>
             <p>A můžeme se pustit do práce (s Gitem)!</p>
             `,
@@ -285,17 +286,11 @@ const pagesData = {
             },
         ],
         title: "Git - Inicializace",
-        url:"/kapitola-3-inicializace",
+        url:"/kapitola-4-inicializace",
         aside:"Inicializace"
     },
-    kap4: {
+    kap5: {
         html: `
-
-            <h2 style="color: red";> ROZPOZNÁVAT KDY JE V PŘÍKAZU "" A KDY JEN SLOVO, píšu to stejně. 
-            Změna=např. \< nazev souboru \>  == nwbo neřešit. <br><br>
-            UDělat barevně h3?? <br><br> Dořešit label result u kvizu - position a cursor
-            </h2>
-
             <h1>Commit</h1>
             <h3>Co je to commit?</h3>
             <p>Commit je základní prvek verzovacího systému. Je to záznam (snapshot) o změnách, které jsme provedli.
@@ -308,10 +303,9 @@ const pagesData = {
 
             Při commitování pracujeme ve třech fázích:
             <div class="parent">
-                <img src="/images/kap4/git_commit_scheme.png" class="learn-img-medium">
+                <img src="/images/kap5/git_commit_scheme.png" class="learn-img-medium">
+                <p class="image-source">Zdroj obrázku: <a href="https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh" target="_blank"> dev.to </a> </p>
             </div>
-
-            <!-- https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh -->
 
             <p> <b>Working directory </b> je složka, ve které pracujeme. Vytváříme soubory, upravujeme obsah, atd. 
             Poté se rozhodneme, že chceme nějaké změny uložit. Nejdříve je musíme přidat do tzv. <b>Staging Area </b>. 
@@ -344,7 +338,8 @@ const pagesData = {
                 <li>Staged - připravený soubor na commit</li>
             </ul>
             <div class="parent no-border-radius">
-                <img src="images/kap4/git-lifecycle.png" class="learn-img-wide-medium ">
+                <img src="images/kap5/git-lifecycle.png" class="learn-img-wide-medium ">
+                <p class="image-source">Zdroj obrázku: <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository" target="_blank"> git-scm.com </a> </p>
             </div>
             <p>Když vytvoříme nebo přidáme <b>nový soubor</b>, je <b>Untracked</b> - nesledovaný. A to i když ho upravíme. Pro Git je to (prostě) nový soubor, který ještě nikdy nebyl zaznamenáván.
             Pak ho přidáme do Staging area (přípravná plocha) - soubor je <b>Staged</b>, připravený na commit. 
@@ -363,7 +358,7 @@ const pagesData = {
 
             <p>Zdě můžeme vidět upravený a už také stagenutý soubor "test.txt" a nově vytvořený, nesledovaný, soubor "new-file.txt":</p>
             <div class="parent">
-                <img src="/images/kap4/git_status.jpg" class="learn-img-wide-medium">
+                <img src="/images/kap5/git_status.jpg" class="learn-img-wide-medium">
             </div>
 
             <!-- Grafická ukázka/ vyobrazení commitů -->
@@ -375,7 +370,7 @@ const pagesData = {
             Aktuální commit, na kterém se právě nacházíme (poslední, co jsme provedli) se označuje <b>HEAD</b>, také ukazatel nebo pointer. 
             <b>Main</b> (v minulosti master) je hlavní větev, <b>Feature</b> je druhá větev.</p>
             <div class="parent">
-                <img src="/images/kap4/commits-ilustrated.png" class="learn-img-medium">
+                <img src="/images/kap5/commits-ilustrated.png" class="learn-img-medium">
             </div>
 
 
@@ -385,20 +380,20 @@ const pagesData = {
 
             Příkaz <b>git&nbsplog</b> nám umožňuje <b>prohlížet historii</b> commitů v repozitáři. 
             Každý výpis commitu obsahuje jeho unikátní, 40 písmenný hash. Je to něco jako jeho ID, poznávací číslo. 
-            Dále obsahuje jméno a email autora (které jsme zadávali v kapitole <a href="/kapitola3" >Inicializace</a>), 
+            Dále obsahuje jméno a email autora (které jsme zadávali v kapitole <a href="/kapitola-3-inicializace" >Inicializace</a>), 
             datum vytvoření a popisek. Nejnovější, poslední, commit je uplně nahoře, první uplně dole.</p>
 
             <p style="color:grey;">JE to DULEzity?? Pokud jsme ještě žádný commit neprovedli a máme úplně nové repo, zobrazí se error: your current branch 'main' does not have any commits yet.</p>
 
             <div class="parent">
-                <img src="/images/kap4/git_log.jpg" class="learn-img-big">
+                <img src="/images/kap5/git_log.jpg" class="learn-img-big">
             </div>
 
             <p>Můžeme také použít zkrácenou formu <b>git log --oneline</b>, která vypíše zkrácený 7 písmenný hash commitu a popisek, vše hezky na <b>jednom řádku</b>. 
             To usnadňuje procházení historie commitů, což se vyplatí, když už máme commitů hodně.</p>
 
             <div class="parent">
-                <img src="/images/kap4/git_log_oneline.jpg" class="learn-img-wide-medium">
+                <img src="/images/kap5/git_log_oneline.jpg" class="learn-img-wide-medium">
             </div>
 
             <p>Později se vám také určitě stane to, že konzole neukáže všechny řádky, ale na konci zůstane jen <b>dvojtečka</b>. 
@@ -407,9 +402,9 @@ const pagesData = {
             Odsud vyjdete zase do normální konzole stiskem <b>klávesy Q</b>.</p>
             
             <div class="parent">
-                <img src="/images/kap4/git_log_notfull.jpg" class="learn-img-medium ">
+                <img src="/images/kap5/git_log_notfull.jpg" class="learn-img-medium ">
                 <br>
-                <img src="/images/kap4/git_log_end.jpg" class="learn-img-medium ">
+                <img src="/images/kap5/git_log_end.jpg" class="learn-img-medium ">
             </div>
             
             
@@ -425,12 +420,12 @@ const pagesData = {
             Pak křížkem soubor <b>zavřeme</b>, tím se <b>potvrdí</b> změny commitu. Můžeme zkontrolovat git log, že se commit opravil. </p>
             
             <div class="parent">
-                <i>Zde vidíme nepřidaný soubor soubor3.txt, ale poslední commit má v názvu, že se přidal</i> <br>
-                <img src="/images/kap4/git-amend1.jpg" class="learn-img-big "> <br>
-                <i>Přidali jsme soubor do StageArea a napsali amend. Otevřel se soubor COMMIT_EDITMSG, zkontrolovali jsme změny</i> <br>
-                <img src="/images/kap4/git-amend2.jpg" class="learn-img-big "> <br>
-                <i>Commit se opravil, název zůstal stejný</i> <br>
-                <img src="/images/kap4/git-amend3.jpg" class="learn-img-wide-medium ">
+            <img src="/images/kap5/git-amend1.jpg" class="learn-img-big "> <br>
+            <i class="image-descr">Zde vidíme nepřidaný soubor soubor3.txt, ale poslední commit má v názvu, že se přidal</i> <br>
+            <img src="/images/kap5/git-amend2.jpg" class="learn-img-big "> <br>
+            <i class="image-descr">Přidali jsme soubor do StageArea a napsali amend. Otevřel se soubor COMMIT_EDITMSG, zkontrolovali jsme změny</i> <br>
+            <img src="/images/kap5/git-amend3.jpg" class="learn-img-wide-medium "><br>
+            <i class="image-descr">Soubor jsme zavřeli, commit se tím opravil a název zůstal stejný</i> <br>
             </div>
 
             <p>Jestliže chceme změnit jen popisek commitu, nemusíme otevírat celý soubor. 
@@ -510,9 +505,6 @@ const pagesData = {
 
             -->
 
-
-            
-            
             `,
             quiz: [
             {
@@ -532,10 +524,10 @@ const pagesData = {
             },
         ],
         title: "Git - Commity",
-        url:"/kapitola-4-commity",
+        url:"/kapitola-5-commity",
         aside:"Commity"
     },
-    kap5: {
+    kap6: {
         html:`
         
         <h1>Branches</h1>
@@ -543,7 +535,7 @@ const pagesData = {
         Ten hlavní tok je ale také větev, a to <b>hlavní větev</b>, pojmenovaná <b>MAIN</b> (nebo master). </p> 
         
         <div class="parent">
-            <img src="/images/kap5/branch.png" class="learn-img-wide-medium ">
+            <img src="/images/kap6/branch.png" class="learn-img-wide-medium ">
         </div>
 
         <p> Další větve se používají například při <b>opravách chyb</b> ve starších commitech, nebo když chceme vyzkoušet nějakou <b>novou funkci</b>. 
@@ -564,7 +556,7 @@ const pagesData = {
 
         <p>Větev, na které se právě nacházíme je označena hvězdičkou a jinou barvou. Na jaké jsme větvi poznáme také podle názvu v závorce za cestou.</p>
         <div class="parent">
-            <img src="/images/kap5/branch_name.jpg" class="learn-img-wide-medium ">
+            <img src="/images/kap6/branch_name.jpg" class="learn-img-wide-medium ">
         </div>  
 
 
@@ -610,11 +602,11 @@ const pagesData = {
 
         ],
         title: "Git - Branches",
-        url:"/kapitola-5-branches",
+        url:"/kapitola-6-branches",
         aside:"Branches"
 
     },
-    kap6: {
+    kap7: {
         html: `
             <h1>Mergování</h1>
             <p>Mergování je <b>spojování větví</b> k sobě. 
@@ -622,7 +614,7 @@ const pagesData = {
             Pracujeme na hlavní větvi, máme na ní commity. Poté vytvoříme novou větev, třeba kvůli nějaké chybě. Tu postupně opravíme. 
             A pak tu větev chceme spojit s hlavní, abychom mohli pracovat dál, s opravenou chybou. Přepneme se tedy na hlavní větev, mergneme je, a je to.</p>
             <div class="parent">
-                <img src="/images/kap6/merging.png" class="learn-img-wide-medium ">
+                <img src="/images/kap7/merging.png" class="learn-img-wide-medium ">
             </div> 
 
             <p>Základní příkaz pro mergování je:</p>
@@ -634,31 +626,31 @@ const pagesData = {
             <p>Tento typ se použije sám automaticky, pokud na větvi, ke které chceme mergovat, nemáme žádné nové commity od doby, co jsme vytvořili druhou větev. 
             Vedlejší větev se jakoby přesune na hlavní a je z nich jedna na stejné úrovni.</p>
             <div class="parent">
-                <img src="/images/kap6/merging-FF.png" class="learn-img-medium ">
+                <img src="/images/kap7/merging-FF.png" class="learn-img-medium ">
             </div> 
 
             <h3>Non-fast-forward (three-way)</h3>
             <p>Toto je základní typ mergování. Provede se, pokud jsme na hlavní větvi už udělali nějaké commity poté, co se vedlejší větev vytvořila. 
             V tomto typu merge se zachová větev na druhé úrovni a automaticky se vytvoří prázdný commit, který větve spojuje = mergovací commit. </p>
             <div class="parent">
-                <img src="/images/kap6/merging-nonFF.png" class="learn-img-medium ">
+                <img src="/images/kap7/merging-nonFF.png" class="learn-img-medium ">
             </div> 
             <p>Non-fast-forward můžeme použít sami, i když commity v hlavní branchi nemáme. Stačí do příkazu připsat:</p>
             <p class="code"> git merge --no-ff <i>vedlejsi-vetev</i> </p>
             <p>Zde se také vytvoří mergovací commit. Schéma by vypadalo takto:</p>
             <div class="parent">
-                <img src="/images/kap6/merging-noFF.png" class="learn-img-medium ">
+                <img src="/images/kap7/merging-noFF.png" class="learn-img-medium ">
             </div> 
 
             <h3>Konflikt</h3>
             <p>Konflikty nastanou, když chceme mergovat k větvi, ve které máme nové commity, a v nějakém tom commitu jsme upravili ve stejném souboru a stejný řádek jako na druhé větvi.
             Git tedy neví, kterou verzi má uložit. To si musíme určit sami. Chybová hláška vypadá takto:</p>
             <div class="parent">
-                <img src="/images/kap6/merging-conflict-error.png" class="learn-img-wide-medium ">
+                <img src="/images/kap7/merging-conflict-error.png" class="learn-img-wide-medium ">
             </div> 
             <p>Ve VSCode se otevře daný soubor a ukáže se nám, kde přesně nastal konflikt. </p>
             <div class="parent">
-                <img src="/images/kap6/merging-conflict-edit.png" class="learn-img-wide-medium ">
+                <img src="/images/kap7/merging-conflict-edit.png" class="learn-img-wide-medium ">
             </div> 
             <p>Zde si určíme, jaký text chceme zachovat. Buď klikneme na jednu z nabízených možností: 
             <ul>
@@ -673,7 +665,7 @@ const pagesData = {
             <h3>Rebase</h3>
             <p>Tento typ není úplně normální mergování, ale dá se tak také použít. Funguje tak, že vezme všechny commity z vedlejší větve a přesune je za nejnovější commit v hlavní větvi.</p>
             <div class="parent">
-                <img src="/images/kap6/merging-rebase.png" class="learn-img-medium ">
+                <img src="/images/kap7/merging-rebase.png" class="learn-img-medium ">
             </div> 
             <p>Pozor, zde je přepínání větví naopak. Nejdříve musíme být na vedlejší větvi. Z ní napíšeme příkaz:</p>
             <p class="code">git rebase <i>hlavni-vetev</i></p>
@@ -683,7 +675,7 @@ const pagesData = {
             <h3>Octopus</h3>
             <p>Tento typ merge se použije <b>automaticky</b> při mergování 3 a více větví k sobě. Všechny větve se spojí v jednom commitu. </p>
             <div class="parent">
-                <img src="/images/kap6/merging-octopus.png" class="learn-img-medium ">
+                <img src="/images/kap7/merging-octopus.png" class="learn-img-medium ">
             </div> 
         
             <!-- https://lukemerrett.com/different-merge-types-in-git/ -->
@@ -709,11 +701,11 @@ const pagesData = {
 
         ],
         title: "Git - Mergování",
-        url:"/kapitola-6-mergovani",
+        url:"/kapitola-7-mergovani",
         aside:"Mergování"
 
     },
-    kap7: {
+    kap8: {
         html: `
         <h1>GUI</h1>
         <p>Git <b>není</b> pouze příkazový řádek a VSCode. Existují programy, které nám graficky a v reálném čase zobrazují, jak náš repozitář vypadá. 
@@ -722,11 +714,11 @@ const pagesData = {
         <h3>Git GUI</h3>
         <p>Přímo s Gitem se nainstaloval tento program s hodně jednoduchým GUI. Po otevření vypadá úvodní strana takto:</p>
         <div class="parent">
-            <img src="/images/kap7/GitGUI.png" class="learn-img-medium ">
+            <img src="/images/kap8/GitGUI.png" class="learn-img-medium ">
         </div>
         <p>Otevřeme si náš repozitář a zobrazí se v tomto okně:</p>
         <div class="parent">
-            <img src="/images/kap7/GitGUI2.png" class="learn-img-big ">
+            <img src="/images/kap8/GitGUI2.png" class="learn-img-big ">
         </div>
 
         <u class="margin-bottom">Popis jednotlivých částí:</u> <br>
@@ -762,7 +754,7 @@ const pagesData = {
 
         <h3>GitKraken</h3>
         <div class="parent">
-            <img src="/images/kap7/GitKraken-logo.svg" class="gui-logo">
+            <img src="/images/kap8/GitKraken-logo.svg" class="gui-logo">
         </div>
         <p>GitKraken je jedním z <b>nejznámějších</b> GUI pro Git. Má moderní a velice přehledný vzhled a k tomu <b>širokou</b> nabídku funkcí pro práci s Gitem. 
         Názorně zobrazuje commity a větve v našem repozitáři v <b>reálném čase</b> bez potřeby manuálně refreshovat.
@@ -771,23 +763,23 @@ const pagesData = {
         Má verze zdarma i placené, pro domácí použití ale bohatě stačí jen ty <b>bezplatné</b>.
         </p>
         <div class="parent">
-            <img src="/images/kap7/GitKraken-app.png" class="learn-img-big-big">
+            <img src="/images/kap8/GitKraken-app.png" class="learn-img-big-big">
         </div>
 
         <h3>Tower</h3>
         <div class="parent">
-            <img src="/images/kap7/Tower-logo.svg" class="gui-logo">
+            <img src="/images/kap8/Tower-logo.svg" class="gui-logo">
         </div>
         <p>Velice podobný program jako GitKraken, má stejně tak plno funkcí ke Gitu. Chybí mu ale kompatibilita s Linuxem a není zdarma, pouze 30denní zkušební doba.
         Používají ho například společnosti: Apple, Google, Amazon, Twitter, Facebook... </p>
         <div class="parent">
-            <img src="/images/kap7/Tower-app.png" class="learn-img-big-big">
+            <img src="/images/kap8/Tower-app.png" class="learn-img-big-big">
             <!-- zdroj: https://www.git-tower.com/windows -->
         </div>
 
         <h3>Fork</h3>
         <div class="parent">
-            <img src="/images/kap7/Fork-logo.png" class="gui-logo">
+            <img src="/images/kap8/Fork-logo.png" class="gui-logo">
             <!-- zdroj: https://www.pikpng.com/pngvi/hhxowiR_appicon-fork-git-logo-clipart/  -->
         </div>
         <p>Má bezplatnou i placenou verzi. Má základní funkce jako správa více repozitářů, řešení konfliktů při mergování a porovnání souborů, ale chybí mu nějaké pokročilejší.
@@ -797,7 +789,7 @@ const pagesData = {
 
         <h3>Sourcetree</h3>
         <div class="parent">
-            <img src="/images/kap7/Sourcetree-logo.png" class="gui-logo">
+            <img src="/images/kap8/Sourcetree-logo.png" class="gui-logo">
             <!-- zdroj: https://icon-icons.com/icon/Sourcetree-macOS-BigSur/189711  -->
         </div>
         <p>Toto GUI je zcela zdarma, vytvořila ho firma Atlassian. Je také dobrou volbou pro grafické rozhraní. Podporuje jak Git, tak i Mercurial. 
@@ -808,14 +800,14 @@ const pagesData = {
         
         `,
         title:"Git - GUI",
-        url:"/kapitola-7-gui",
+        url:"/kapitola-8-gui",
         aside:"GUI"
     },
-    kap8: {
+    kap9: {
         html: `
         <div class="align-center"> 
             <h1 class="display-inline">GitHub</h1> 
-            <img src="/images/kap8/github-logo-black.svg" class="padding_left padding-bottom">
+            <img src="/images/kap9/github-logo-black.svg" class="padding_left padding-bottom">
         </div
         <p>GitHub je <b>webová</b> služba pro Gitové repozitáře. Spolupracuje s lokálním Gitem a slouží jako <b>cloudová záloha</b> ale i jako <b>sociální</b> síť nebo platforma pro spolupráci ve firmě. 
         Můžeme sem nahrát svůj vlastní repozitář, ale zároveň vidět i veřejná repa jiných lidí a oni můžou vidět naše. </p>
@@ -826,7 +818,7 @@ const pagesData = {
         <p class="margin_top_bigger"> Další využití GitHubu může být jako takové <b>portfolio</b> k životopisu. 
         Je dobré nějaké lepší projekty dát veřejně, aby třeba náš budoucí zaměstnavatel mohl vidět, co umíme a s čím pracujeme.</p>
         <div class="parent">
-            <img src="/images/kap8/github-profile.png" class="learn-img-big-big">
+            <img src="/images/kap9/github-profile.png" class="learn-img-big-big">
             <p class="image-descr">ukázka profilu na GitHubu</p>
         </div>
         
@@ -834,7 +826,7 @@ const pagesData = {
         <p> Na stránce <a href="https://github.com">github.com</a> si založíme účet. K registraci není potřeba nic speciálního, pouze <b>email</b>. Na ten přijde ověřovací kód, zadáme ho, a je to!</p>
         <p>Měli bychom být na hlavní stránce GitHubu. V pravém horním rohu je ikonka s obrázkem, to je náš profilový obrázek. Přes něj se dostaneme na <b>profil</b> a tam si můžeme upravit jméno, profilový obrázek, bio, atd.
         <div class="parent">
-            <img src="/images/kap8/github-to-profile.png" class="learn-img-medium">
+            <img src="/images/kap9/github-to-profile.png" class="learn-img-medium">
         </div>
         
         <h3>Lokální a vzdálené repo</h3>
@@ -863,7 +855,7 @@ const pagesData = {
         <p class="code">eval "$(ssh-agent -s)"</p>
         <p>Po zadání příkazu by se mělo vypsat něco podobného, jen s jiným číslem: </p>
         <div class="parent">
-            <img src="/images/kap8/ssh-agent.png" class="learn-img-small">
+            <img src="/images/kap9/ssh-agent.png" class="learn-img-small">
         </div>
         <p>Do ssh-agenta přidáme náš privátní klíč: </p>
         <p class="code">ssh-add ~/.ssh/id_ed25519 </p>
@@ -872,21 +864,44 @@ const pagesData = {
         <p>Místo, kam na GitHubu vložit klíč, najdeme po kliknutí na ikonku v pravém horním rohu, dáme <b>Settings</b> a vlevo v nabidce nejdeme <b>SSH and GPG keys</b>. 
         Klikneme na tlačítko <b>New SSH key</b>.</p>
         <div class="parent">
-            <img src="/images/kap8/github-to-ssh.png" class="learn-img-medium">
-            <img src="/images/kap8/github-new-ssh.png" class="learn-img-big-big">
+            <img src="/images/kap9/github-to-ssh.png" class="learn-img-medium">
+            <img src="/images/kap9/github-new-ssh.png" class="learn-img-big-big">
         </div>
         <p>Jako <b>Title</b> si dáme nějaký název toho klíče, je to jen informace pro nás, např. Můj počítač doma. <b>Typ</b> klíče necháme Authentication. A do pole <b>Key</b> vložíme náš zkopírovaný klíč. 
         Pak potvrdíme tlačítkem <b>Add SSH key</b>, zadáme heslo máme hotovo.</p>
         <div class="parent">
-            <img src="/images/kap8/github-add-ssh.png" class="learn-img-big">
+            <img src="/images/kap9/github-add-ssh.png" class="learn-img-big">
         </div>
         
         `,
-        title: "Git-Github",
-        url:"/kapitola-8-github",
+        title: "Git - Github",
+        url:"/kapitola-9-github",
         aside:"GitHub"
+    },
+    kap10: {
+        html: `
+        <h1></h1>
 
+        `,
+        title:"Git - Push, Pull",
+        url: "/kapitola-10-push-pull",
+        aside:"Push & Pull"
+    },
+    prikazy: {
+        html: `
+        <h1>Příkazy</h1>
 
+        `,
+        title:"Příkazy",
+        url: "/prikazy"
+    },
+    about: {
+        html: `
+        <h1>Abozt thus web</h1>
+
+        `,
+        title:"O webu",
+        url: "/o-webu"
     }
 
 
