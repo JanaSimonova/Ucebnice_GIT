@@ -63,15 +63,6 @@ body::-webkit-scrollbar-corner {
 } */
 
 
-
-
-
-html {
-    /* height: calc(100% - 157px);     */
-    /* idk why this */
-    /* maybe something with the right scrolling? */
-}
-
 body {
     /* margin: 0 200px; */
     /* background-color: var(--secondary-color); */
@@ -382,7 +373,7 @@ aside ul {
 }
 
 #aside ul li a.current::before{
-    content: "→";
+    content: "➙";
     position:absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -609,25 +600,6 @@ ul {
         font-family: Consolas, 'courier new';
     }
 }
-
-.code::selection, .code *::selection{
-    
-}
-
-.code2 {
-    font-family: Consolas, 'courier new';
-    color: crimson;
-    background-color: #f1f1f1;
-    font-size: smaller;
-    border-radius: 50px;
-    height: 30px;
-    padding-left: 15px;
-    display: flex;
-    align-items: center;
-    word-spacing: 0px;
-}
-
-
 
 /* -------------------- QUIZ ---------------------- */
 
