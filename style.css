@@ -394,11 +394,7 @@ aside ul {
     text-decoration: underline;
 }
 
-<<<<<<< HEAD
 b{
-=======
-.learn-text b {
->>>>>>> b4ffcb1a4775f8d52a64b95940c8ffec5c3c7434
     color: #37ab57;
     font-weight: 800;
 }
@@ -603,25 +599,15 @@ hr {
 
 /* --------------- SEZNAM PŘÍKAZŮ a ABOUT -------------------- */
 
-<<<<<<< HEAD
 .misc-div{
-=======
-.table-container {
->>>>>>> b4ffcb1a4775f8d52a64b95940c8ffec5c3c7434
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-<<<<<<< HEAD
 .misc-container {
     margin: 15px 5% ;
     
-=======
-.table-div {
-    margin: 15px 5%;
-
->>>>>>> b4ffcb1a4775f8d52a64b95940c8ffec5c3c7434
     display: flex;
     flex-direction: column;
     align-self: center;
