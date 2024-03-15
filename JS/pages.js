@@ -47,21 +47,19 @@ const pagesData = {
                 </colgroup>
                 <tr>
                     <td>ls</td>
-                    <td>vypíše obsah složky</td>
+                    <td>Vypíše obsah složky</td>
                 </tr>
                 <tr>
                     <td>pwd</td>
-                    <td>vypise cestu ke slozce</td>
+                    <td>Vypíše cestu ke složce</td>
                 </tr>
                 <tr>
                     <td>cd</td>
-                    <td>Zmeni aktualni slozku na jinou</td>
+                    <td>Změní aktuálni složku na jinou</td>
                 </tr>
                 <tr>
-                    <td>cd ..</td>
-                    <td>
-                        Změní aktuální složku na nadřazenou
-                    </td>
+                    <td> cd ..</td>
+                    <td> Změní aktuální složku na nadřazenou </td>
                 </tr>
                 <tr>
                     <td>mkdir</td>
@@ -103,11 +101,11 @@ const pagesData = {
                 </tr>
                 <tr>
                     <td>git config --global user.name "vaše jméno"</td>
-                    <td>nastaví jméno</td>
+                    <td>Nastaví jméno</td>
                 </tr>
                 <tr>
                     <td>git config --global user.email "váš email"</td>
-                    <td>nastaví email</td>
+                    <td>Nastaví email</td>
                 </tr>
                 <tr>
                     <td>git init</td>
@@ -125,35 +123,35 @@ const pagesData = {
 
                 <tr>
                     <td>git add "název souboru"</td>
-                    <td>prida soubor do stage area</td>
+                    <td>Přidá soubor do Stage Area</td>
                 </tr>
                 <tr>
                     <td>git add .</td>
-                    <td>prida vsechny soubory do stage area</td>
+                    <td>Přidá všechny soubory do Stage Area</td>
                 </tr>
                 <tr>
                     <td>git restore --staged "nazev souboru"</td>
-                    <td>odebere soubor ze Stage Area</td>
+                    <td>Odebere soubor ze Stage Area</td>
                 </tr>
                 <tr>
                     <td>git commit -m "popisek"</td>
-                    <td>vytvoří commit</td>
+                    <td>Vytvoří commit</td>
                 </tr>
                 <tr>
                     <td>git status</td>
-                    <td>zobrazí stav souborů</td>
+                    <td>Zobrazí stav souborů</td>
                 </tr>
                 <tr>
                     <td>git commit --amend</td>
-                    <td>upravi poslední commit</td>
+                    <td>Upraví poslední commit</td>
                 </tr>
                 <tr>
                     <td>git reset ...</td>
-                    <td>smaze commit</td>
+                    <td>Smaže commit</td>
                 </tr>
                 <tr>
                     <td>git checkout "hash commitu"</td>
-                    <td>přepne na commit</td>
+                    <td>Přepne na commit</td>
                 </tr>
             </table>
 
@@ -167,27 +165,27 @@ const pagesData = {
 
                 <tr>
                     <td>git branch</td>
-                    <td>seznam vetvi</td>
+                    <td>Vypíše seznam větví</td>
                 </tr>
                 <tr>
                     <td>git branch "nova-vetev"</td>
-                    <td>vytvori novou vetev</td>
+                    <td>Vytvoří novou větev</td>
                 </tr>
                 <tr>
                     <td>git switch nazev-vetve</td>
-                    <td>prepne do vetve</td>
+                    <td>Přepne do větve</td>
                 </tr>
                 <tr>
                     <td>git branch -m novy-nazev</td>
-                    <td>prejmenuje vetev</td>
+                    <td>Přejmenuje větev</td>
                 </tr>
                 <tr>
                     <td>git branch -d nazev-vetve</td>
-                    <td>smaze prazdnou vetev</td>
+                    <td>Smaže prázdnou větev</td>
                 </tr>
                 <tr>
                     <td>git branch -D nazev-vetve</td>
-                    <td>smaze vetev s commity</td>
+                    <td>Smaže větev i s commity</td>
                 </tr>
             </table>
 
@@ -201,15 +199,15 @@ const pagesData = {
 
                 <tr>
                     <td>git merge vedlejsi-vetev</td>
-                    <td>merguje vedlejsi vetev do te ve ktere jsme</td>
+                    <td>Merguje vedlejší větev do té, ve které jsme</td>
                 </tr>
                 <tr>
                     <td>git merge --no-ff vedlejsi-vetev</td>
-                    <td>mergne Non-fast-forward</td>
+                    <td>Mergne stylem Non-fast-forward</td>
                 </tr>
                 <tr>
                     <td>git rebase hlavni-vetev</td>
-                    <td>speciální typ merge</td>
+                    <td>Speciální typ merge</td>
                 </tr>
             </table>
 
@@ -223,35 +221,35 @@ const pagesData = {
 
                 <tr>
                     <td>git remote add origin url-adresa</td>
-                    <td>vytvori napojeni na repo na githubu</td>
+                    <td>Vytvoří napojení na repo na GitHubu</td>
                 </tr>
                 <tr>
                     <td>git remote -v</td>
-                    <td>vypíše napojení</td>
+                    <td>Vypíše napojení</td>
                 </tr>
                 <tr>
                     <td>git remote remove origin</td>
-                    <td>smaze napojeni</td>
+                    <td>Smaže napojení</td>
                 </tr>
                 <tr>
                     <td>git push</td>
-                    <td>posle změny do vzdáleného repozitáře</td>
+                    <td>Pošle změny do vzdáleného repozitáře</td>
                 </tr>
                 <tr>
                     <td>git push --set-upstream origin main</td>
-                    <td>umožní pushovat bez specifikace napojeni a vetve</td>
+                    <td>Umožní pushovat bez specifikace napojení a větve</td>
                 </tr>
                 <tr>
                     <td>git pull</td>
-                    <td>stahne zmeny z GitHubu do lokálního repozitáře</td>
+                    <td>Stáhne změny z GitHubu do lokálního repozitáře</td>
                 </tr>
                 <tr>
                     <td>git fetch</td>
-                    <td>stahne informace o zmenach z GitHubu do lokálního repozitáře</td>
+                    <td>Stáhne informace o změnách z GitHubu do lokálního repozitáře</td>
                 </tr>
                 <tr>
                     <td>git clone url-adresa</td>
-                    <td>naklonuje repozitář z GitHubu</td>
+                    <td>Naklonuje repozitář z GitHubu</td>
                 </tr>
             </table>
 
