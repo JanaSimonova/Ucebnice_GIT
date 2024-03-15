@@ -15,7 +15,7 @@ const handleLocation = () => {
 
     const aside = `<div id="aside" class="hidden"></div>`
     const learnText = `<div id="learntext" class="learn-text"></div> `
-    const container =  `<div id="learn-container" class="learn-container"></div>`
+    const container = `<div id="learn-container" class="learn-container"></div>`
 
     const page = Object.values(pagesData).find(page => page.url === path) || pagesData.notFound;
 
@@ -36,23 +36,23 @@ const handleLocation = () => {
         document.getElementById("learntext").innerHTML += html // kapitola
 
         // function ↓ (div id=aside, path=url)
-        generateAside(document.getElementById("aside"),path);
+        generateAside(document.getElementById("aside"), path);
 
         // if 
         if (page.quiz && page.quiz.length > 0) {
             const quiz = new QuizModule(page.quiz, "learntext");
             quiz.generate();
         }
-        
-        
+
+
     }
     else {
         document.getElementById("main").innerHTML = html;
-        document.getElementById("header").classList.toggle("toggle-aside-hidden");
-        
+        // document.getElementById("header").classList.toggle("toggle-aside-hidden");
+
     }
     document.title = page.title
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
 };
 
 
@@ -77,8 +77,11 @@ function generateAside(asideContainer, url) {
             a.href = page.url;
             a.textContent = page.aside;
             a.onclick = route;
-            if(page.url == url){
+            if (page.url == url) {
                 a.classList.add("current")
+
+                const header = document.getElementById("header");
+                header.classList.remove("active");
             }
 
             const li = document.createElement("li");

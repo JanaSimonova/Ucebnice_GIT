@@ -1,10 +1,15 @@
 
-function toggleAside(item){
-        var aside = document.getElementById("aside");
+function toggleAside(item) {
+    var aside = document.getElementById("aside");
+    if (aside) {
         aside.classList.toggle("hidden");
         item.classList.toggle("active");
+    }
 
-// if item has active class, the header dropdown menu on mobile is open
+    var header = document.getElementById("header");
+    header.classList.toggle("active");
+
+    // if item has active class, the header dropdown menu on mobile is open
     // start listener on click outside to close it
     if (item.classList.contains("active")) {
         // Add event listener to the document
