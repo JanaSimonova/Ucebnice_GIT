@@ -1,8 +1,7 @@
 :root {
     --primary-color: #0B2A50; 
     --primary-color-shade: #092343; 
-    --secondary-color: #000F22; 
-    --text-color: #f7f7f7;     
+    --secondary-color: #000F22;    
     --text-color: #e5e5e5;      
     --accent-color: #37ab57;
     --accent-color-shade: #238f42;
@@ -478,7 +477,7 @@ aside ul {
 }
 
 .learn-text h3 {
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 5px;
 }
 
@@ -882,7 +881,7 @@ hr {
 /* --------------- CLASSES like bootstrap ----------------- */
 
 .margin_top {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .margin_top_bigger {
     margin-top: 10px;

@@ -336,13 +336,15 @@ const chaptersData = {
             </div>
 
             <h3>Soubor .gitignore</h3>
-            <p>Gitignore je soubor, do kterého se píšou názvy jiných souborům, které <b>nechceme</b> aby se <b>trackovali</b>. 
+            <p>Gitignore je soubor, do kterého se píšou názvy jiných souborů, které <b>nechceme</b> aby se <b>trackovali</b>. 
             Často jde o nějaké soubory s <b>nastavením</b> nebo moduly, např. konfigurační soubor <i>settings.json</i> pro VS Code Live Server, složka s moduly Node.js, nebo soubory s hesly a citlivými údaji.</p>
             <p>Soubor <b>vytváříme my</b> sami a dává se přímo do inicializované složky, ne do žádné podsložky. Soubor je tedy normálně <b>viditelný</b>, není skrytý jako složka .git. 
             Není povinné vytvářet gitignore, používá se, když ho potřebujeme.</p>
             <div class="parent">
                 <img src="/images/kap5/gitignore.png" class="learn-img-big-big">
             </div>
+            <p>Do souboru můžeme napsat  i více než jen název souboru. Existují pravidla např. pro přidání všech souborů s určitou příponou, složky, nebo když název obsahuje určený text. 
+            Seznam těchto pravidel najdete na <a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore" target="_blank">Atlassian.com</a></p>
 
             <h3>Grafické zobrazení commitů</h3>
             <p>Abychom si lépe představili, jak vypadá náš repozitář s commity, můžeme si ho graficky znázornit. 
@@ -789,14 +791,15 @@ const chaptersData = {
         <div class="align-center"> 
             <h1 class="display-inline">GitHub</h1> 
             <img src="/images/kap9/github-logo-black.svg" class="padding_left padding-bottom">
-        </div
-        <p>GitHub je <b>webová</b> služba pro Gitové repozitáře. Spolupracuje s lokálním Gitem a slouží jako <b>cloudová záloha</b> ale i jako <b>sociální</b> síť nebo platforma pro spolupráci ve firmě. 
+        </div>
+        <p> GitHub je <b>webová</b> služba pro Gitové repozitáře. Spolupracuje s lokálním Gitem a slouží jako <b>cloudová záloha</b> ale i jako <b>sociální</b> síť nebo platforma pro spolupráci ve firmě. 
         Můžeme sem nahrát svůj vlastní repozitář, ale zároveň vidět i veřejná repa jiných lidí a oni můžou vidět naše. </p>
-        <p class="margin_top_bigger">Jsou tedy 2 druhy repozitářů: <b>veřejný</b> (public) a <b>soukromý</b> (private). Veřejný vidí kdokoliv a může si ho "stáhnout" k sobě, soukromý vidíme pouze my a lidé, kterým dáme přístup.</p>
-        <p class="margin_top_bigger"> Jelikož je GitHub cloudový, používá se právě při spolupráci mezi lidmi a ve firmách. Ostatní mají k repozitáři přístup a mohou ho upravovat a společně v něm pracovat.</p>
-        <p class="margin_top_bigger">GitHub je v základu zdarma, má sice placené verze, ale ty mají hodně pokročilejší vlastnosti a jsou spíše pro firmy. 
+
+        <p class="margin_top">Jsou tedy 2 druhy repozitářů: <b>veřejný</b> (public) a <b>soukromý</b> (private). Veřejný vidí kdokoliv a může si ho "stáhnout" k sobě, soukromý vidíme pouze my a lidé, kterým dáme přístup.</p>
+        <p class="margin_top"> Jelikož je GitHub cloudový, používá se právě při spolupráci mezi lidmi a ve firmách. Ostatní mají k repozitáři přístup a mohou ho upravovat a společně v něm pracovat.</p>
+        <p class="margin_top">GitHub je v základu zdarma, má sice placené verze, ale ty mají hodně pokročilejší vlastnosti a jsou spíše pro firmy. 
         Důležité je, že i ve verzi zdarma máme <b>neomezený počet</b> soukromých i veřejných repozitářů.</p>
-        <p class="margin_top_bigger"> Další využití GitHubu může být jako takové <b>portfolio</b> k životopisu. 
+        <p class="margin_top"> Další využití GitHubu může být jako takové <b>portfolio</b> k životopisu. 
         Je dobré nějaké lepší projekty dát veřejně, aby třeba náš budoucí zaměstnavatel mohl vidět, co umíme a s čím pracujeme.</p>
         <div class="parent">
             <img src="/images/kap9/github-profile.png" class="learn-img-big-big">
@@ -866,17 +869,82 @@ const chaptersData = {
         <div class="parent">
             <img src="/images/kap10/github-repo.png" class="learn-img-big-big">
         </div>
+        <p>Zde vyplníme <b>jméno</b> našeho repository, to je jako název složky. Repozitáře se pojmenovávají <b>bez mezer</b> a jiných znaků, můžeme použít pouze tečky, pomlčky, podtržítka a čísla.
+        Pokud to neuděláme, GitHub si jiné znaky převede sám na pomlčky. <br>
+        Dále můžeme vyplnit <b>Popis</b> = Description, bližší popis repozitáře. Není povinný.<br>
+        Také zvolíme, jestli chceme naše repo public nebo private (rozdíly jsou v <a href="/kapitola-9-github#:~:text=Jsou%20tedy%202%20druhy%20repozit%C3%A1%C5%99%C5%AF">kapitole 9</a>). <br>
+        S repozitářem můžeme založit zároveň i <b>README</b> nebo .gitignore soubor. 
+        README soubor se v GitHubu zobrazí při otevření repozitáře a obvykle se v něm projekt popisuje více, nebo jsou v něm instrukce, jak s projektem pracovat. <br>
+        Pokud máme určené vše co potřebujeme, vytvoříme repozitář.</p>
+        <div class="parent">
+            <img src="/images/kap10/github-repo2.png" class="learn-img-wide-medium">
+        </div>
         
         <h1>Propojení lokálního repa s Githubem</h1>
-        
-        Push 
-        
-        pull        
+        <p>Po vytvoření repozitáře se ocitneme na této stránce: </p>
+        <div class="parent">
+            <img src="/images/kap10/github-repo3.png" class="learn-img-big-big">
+        </div>
+        <p>Šipka ukazuje na URL adresu našeho repozitáře. Tu budeme potřebovat pro napojení lokálního repozitáře na tento vzdálený. To se dělá příkazem:</p>
+        <p class="code">git remote add origin <i>url-adresa</i></p>
+        <p>Origin je název připojení, můžeme si dát vlastní, ale používá se tento. Za URL adresu dosadíme zkopírovanou adresu repozitáře. </p>
+        <p>Zkontrolovat můžeme příkazy:</p>
+        <p class="code">git remote </p>
+        <p class="code">git remote -v</p>
+        <p> První příkaz vypíše název napojení, druhý zobrazí i adresu.</p>
+        <div class="parent">
+            <img src="/images/kap10/git-remote.png" class="learn-img-wide-medium">
+        </div>
+        <p>Pokud bychom chtěli napojení smazat, nebo přejmenovat, jsou na to příkazy: </p>
+        <p class="code">git remote remove origin </p>
+        <p class="code">git remote rename origin <i>novy-nazev</i></p>
 
-        fetch
-        
-        clone
+        <h3>Push</h3>
+        <p><b>Git push</b> je příkaz pro poslání změn do vzdáleného repozitáře. </p>
+        <p class="code">git push</p>
+        <p>Když příkaz napíšeme poprvé, tak se nám zobrazí error:</p>
+        <div class="parent">
+            <img src="/images/kap10/git-push-error.png" class="learn-img-wide-medium">
+        </div>
+        <p>Jak nám radí, musíme vytvořit tzv. Upstream. Je to takový odkaz na vzdálené napojení, aby git věděl, kam má pushovat. 
+        Vytvoří se zmíněným příkazem:</p>
+        <p class="code">git push --set-upstream origin main</p>
+        <p>Poté už není potřeba ho zadávat znovu a stačí psát pouze git push.<br>
+        Někde se totiž používá zápis:</p>
+        <p class="code">git push origin main</p>
+        <p> Zde pokaždé musíte napsat název napojení a větve, což je zdlouhavé. Proto se nastavuje Upstream.</p>
+        <p class="margin_top">Pro každou větev se musí nastavit Push zvlášť, po pushnutí se větev na GitHubu vytvoří sama.</p>
 
+
+        <h3>Pull</h3>
+        <p><b>Git pull</b> je naopak stažení změn z GitHubu do lokálního repozitáře. Nejdříve otestuje, jestli na vzdáleném repozitáři jsou změny, pokud ano, tak je stáhne a rovnou aktualizuje soubory v pracovní složce.</p>
+        <p class="code">git pull</p>
+
+
+        <h3>Fetch</h3>
+        <p><b>Git fetch</b> je podobný git pull, také otestuje a stáhne změny z GitHubu, ale neaktualizuje pracovní složku. Je tím pádem bezpečnější.
+        <p class="code">git fetch</p>
+        
+        Na změny (commity) ze vzdáleného repa se můžeme podívat příkazem:  </p>
+        <p class="code"> git log origin/main </p>
+        <p> Aktuální pozice je označena HEAD -> main, pozice remote je označena origin/main.</p>
+        
+        <p class="margin_top"> Pokud chceme změny nahrát do pracovní složky, mergneme origin/main do naší lokální větve main: </p>
+        <p class="code"> git merge origin/main </p>
+
+        <p class="margin_top">Jestliže ale pracujeme sami, a přesně víme, jaké změny se staly, nemusíme se pullování bát. </p>
+
+
+        <h3>Clone</h3>
+        <p> <b>Git clone</b> se používá k nakopírování repozitáře z GitHubu k nám na počítač. Takto si můžeme naklonovat vlastní repozitář ale i cizí.</p>
+        <p> Potřebujeme k tomu být ve složce, která <b>není inicializovaná</b>. A také URL adresu GitHubového repa, které chceme klonovat. Tu získáme na stránce s repozitářem zde:
+        <div class="parent">
+            <img src="/images/kap10/git-clone.png" class="learn-img-big-big">
+        </div>
+        <p> Pak napíšeme příkaz: </p>
+        <p class="code"> git clone <i>url-adresa</i> </p>
+        <p> V neinicializované složce se vytvoří složka s repozitářem, inicializovaná. A repozitář je u nás!
+         Pokud je náš, nebo na něj máme oprávnění, můžeme do něj pushovat změny.</p>
         `,
         title:"Git - Push, Pull",
         url: "/kapitola-10-push-pull",
