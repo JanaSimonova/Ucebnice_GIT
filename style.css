@@ -576,15 +576,15 @@ hr {
     margin-left: 10px;
 }
 
-/* --------------- SEZNAM PŘÍKAZŮ  -------------------- */
+/* --------------- SEZNAM PŘÍKAZŮ a ABOUT -------------------- */
 
-.table-container{
+.misc-div{
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.table-div {
+.misc-container {
     margin: 15px 5% ;
     
     display: flex;
@@ -619,6 +619,7 @@ caption {
 .col2 {
     width: 20%;
 }
+
 
 
 /* --------------------- MEDIA QUERY --------------------------- */

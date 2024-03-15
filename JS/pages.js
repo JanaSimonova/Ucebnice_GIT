@@ -31,8 +31,8 @@ const pagesData = {
     },
     prikazy: {
         html: `
-        <div class="table-container">
-        <div class="table-div">
+        <div class="misc-div">
+        <div class="misc-container">
 
             <h1>Příkazy</h1>
             <p>Zde je tabulka nejpoužívanějších příkazů a jejich popis.<br>
@@ -263,7 +263,20 @@ const pagesData = {
     },
     about: {
         html: `
-        <h1>Abozt thus web</h1>
+        <div class="misc-div">
+        
+        <div class="misc-container">
+        
+            <h1>O webu</h1>
+            <p class="margin_top" >Tento web vznikl jako Individuální maturitní práce. <br>
+                Slouží jako učebnice Gitu a GitHubu pro žáky. Jejím cílem je žáky seznámit s verzovacími systémy, seznámit je s Gitem a naučit je s ním pracovat.</p>
+                
+                <p class="margin_top"> <b>Autor:</b> Jana Šimonová</p>
+                <p class="margin_top"> <b>Škola:</b> <a href="https://prumyslovkajicin.cz/" target="_blank">Vyšší odborná škola a Střední průmyslová škola, Jičín &nbsp;<img src="/images/misc/link.svg" style="width: 10px;" > </a></p>
+                <p class="margin_top"> <b>Rok vytvoření:</b> 2023/2024</p>
+                <p class="margin_top"> <b>Poskytovatel hostingu</b>: <a href="https://www.endora.cz/" target="_blank">Endora.cz &nbsp;<img src="/images/misc/link.svg" style="width: 10px;" > </a></p>
+        </div>
+        </div>
 
         `,
         title:"O webu",
