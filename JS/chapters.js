@@ -1,7 +1,6 @@
 const chaptersData = {
     kap1: {
         html: `
-
         <h1>Úvod</h1>
         <p>Git je nejrozšířenější verzovací systém, pomáhá miliónům programátorů při jejich práci. Snadno se používá, je lehký na pochopení a je zdarma. </p>
         <p class="text-info">Verzovací systém = systém správy historie souborů, verzí</p>
@@ -9,17 +8,12 @@ const chaptersData = {
         <p>Tento systém ukládá všechny změny do speciální databáze a můžeme se kdykoliv podívat a vrátit se do starší verze projektu/souboru.</p>
         <p>Také můžeme vytvářet tzv. větve, což jsou takové "odchylky" od hlavní cesty práce. 
         To se dá využít například když zkoušíme nový design a nechceme ztratit předchozí verzi.</p>
-        <p>S Gitem velmi často také pracují týmy více lidí.
-            Možnost větvení je proto skvělé řešení, protože každý člen má jen svou větev a tvoří si vlastní změny.</p>
+        <p>S Gitem velmi často také pracují týmy více lidí. Možnost větvení je proto skvělé řešení, protože každý člen má jen svou větev a tvoří si vlastní změny.</p>
         <div class="parent">
             <img src="images/kap1/git_branch.webp" class="learn-img-big-big">  <!-- dole https://www.g2.com/compare/phpstorm-vs-gitkraken-client -->
-            <div class="image-descr">Příklad větvení v aplikaci GitKraken</div>
+            <p class="image-descr">Příklad větvení v aplikaci GitKraken</p> 
+            <p class="image-source">Zdroj obrázku: <a href="https://www.g2.com/compare/phpstorm-vs-gitkraken-client">g2.com</a></p>
         </div>
-
-        <!-- <h2>Verzovací systém</h2>
-        <p>neco o VCS </p>
-        <a href="https://www.atlassian.com/git/tutorials/what-is-version-control#:~:text=Version%20Control%20Systems%20(VCS,control%20are%20as%20follows.">
-            odkaz</a> -->
 
         <h2>Výhody VCS</h2>
         <h3>Kompletní historie změn každého souboru</h3>
@@ -34,7 +28,6 @@ const chaptersData = {
         <h3>Větvení</h3>
         <p>Větvení je skvělé při práci v týmech, ale může se hodit i samostatnému vývojáři. Provedené změny jsou pouze na jedné větvi.
         Větve se dají zase spojovat dohromady. Každý pracovník tak může pracovat na svojí větvi, a ty se pak spojí do jedné, výsledné.</p>
-
 
         <h2>Druhy VCS</h2>
         <h3>Centralizované (CVCS)</h3>
@@ -52,21 +45,21 @@ const chaptersData = {
         </div>
         <!-- https://www.researchgate.net/figure/Centralized-Version-Control-vs-Distributed-Version-Control_fig2_316553817 -->
                     
-            <h3>Distribuované (decentralizované, DVCS)</h3>
-                <p>Nemá centrální databázi, každý uživatel má celou kopii u sebe. Poté změny "pushne" do sítě, nebo centrálního repozitáře.</p>
-                <p class="text-info">Repozitář = úložiště s historií všech uložených změn, všechny soubory a složky, celý "projekt"</p>
-                <p class="margin_top">Hlavními výhodami je možnost pracovat offline, protože každý uživatel má celý repozitář na svém počítači, což urychluje proces. 
-                    Snadnější přepínání mezi větvemi a verzemi, řešení konfliktů. Větší bezpečnost.</p>
-                <p class="margin_top">Nevýhodou je pak trochu složitější fungování, stále ale určitě pochopitelné.</p>
-                <ul>
-                    <li><b><u>Git</u></b></li>
-                    <li>Mercurial</li>
-                    <li>Bazaar</li>
-                </ul>
-                <div class="parent">
-                    <img src="images/kap1/VCS-decentralized.png" class="learn-img-small"> 
-                    <p class="image-source">Zdroj obrázku: <a href="https://www.researchgate.net/figure/Centralized-Version-Control-vs-Distributed-Version-Control_fig2_316553817" target="_blank">ResearchGate</a></p>
-                </div>
+        <h3>Distribuované (decentralizované, DVCS)</h3>
+        <p>Nemá centrální databázi, každý uživatel má celou kopii u sebe. Poté změny "pushne" do sítě, nebo centrálního repozitáře.</p>
+        <p class="text-info">Repozitář = úložiště s historií všech uložených změn, všechny soubory a složky, celý "projekt"</p>
+        <p class="margin_top">Hlavními výhodami je možnost pracovat offline, protože každý uživatel má celý repozitář na svém počítači, což urychluje proces. 
+        Snadnější přepínání mezi větvemi a verzemi, řešení konfliktů. Větší bezpečnost.</p>
+        <p class="margin_top">Nevýhodou je pak trochu složitější fungování, stále ale určitě pochopitelné.</p>
+        <ul>
+            <li><b><u>Git</u></b></li>
+            <li>Mercurial</li>
+            <li>Bazaar</li>
+        </ul>
+        <div class="parent">
+            <img src="images/kap1/VCS-decentralized.png" class="learn-img-small"> 
+            <p class="image-source">Zdroj obrázku: <a href="https://www.researchgate.net/figure/Centralized-Version-Control-vs-Distributed-Version-Control_fig2_316553817" target="_blank">ResearchGate</a></p>
+        </div>
         `,
         title: "Git - Úvod",
         url: "/kapitola-1-uvod",
@@ -78,7 +71,6 @@ const chaptersData = {
         
         <p class="margin_top">Pro ověření, zda Git nemáme už nainstalovaný, do Příkazového řádku (Command prompt) napíšeme tento příkaz: </p>
         <p class="code">git --version </p>
-        <!-- <br>Nebo zkráceně: <br> git -v -->
 
         <p>Pokud máme Git už nainstalovaný, zobrazí se vaše aktuální verze:</p>
         <div class="parent">
@@ -118,7 +110,7 @@ const chaptersData = {
         <div class="parent">
             <img src="/images/kap2/git_install_linux.jpg" class="learn-img-big">
         </div>
-    `,
+        `,
         quiz: [
             {
                 question: "Jak ověříme, zda máme Git nainstalovaný?",
@@ -133,7 +125,6 @@ const chaptersData = {
     },
     kap3: {
         html: `
-        
         <h1>Základní příkazy</h1>
         <p>Tyto příkazy nejsou spojené s Gitem. Jsou to základní příkazy pro manipulaci se soubory a složkami: vytváření, čtení, procházení...
         <br>
@@ -156,7 +147,6 @@ const chaptersData = {
 
         <h3>cd</h3>
         <p><b>Change directory.</b> Změní aktuální složku na jinou. Musí to být ale složka, která je v té, ve které se právě nacházíme.</p>
-        <!-- Nebo se muze napsat Documents/test/ -->
         <p>Samotné <b>cd</b> nás odkudkoliv přepne do výchozí složky = domovská složka uživatele.</p>
         <div class="parent">
             <img src="/images/kap3/cd.jpg" class="learn-img-big">
@@ -222,39 +212,38 @@ const chaptersData = {
     },
     kap4: {
         html: `
+        <h1>Nastavení jména a emailu</h1>
+        <p>Pokud chceme používat Git, musíme si nejdříve nastavit <b>jméno a email</b>. Jméno se zobrazuje u každé provedené změny, aby bylo vidět, kdo změnu provedl, stejně tak email.
+        Ten slouží ještě k pozdějšímu propojení s GitHubem.</p>
+        <p class="margin_top">Otevřeme si Git Bash, příkazový řádek (cmd) nebo Terminal ve VSCode. Do konzole napíšeme tento příkaz: </p>
 
-            <h1>Nastavení jména a emailu</h1>
-            <p>Pokud chceme používat Git, musíme si nejdříve nastavit <b>jméno a email</b>. Jméno se zobrazuje u každé provedené změny, aby bylo vidět, kdo změnu provedl, stejně tak email.
-            Ten slouží ještě k pozdějšímu propojení s GitHubem.</p>
-            <p class="margin_top">Otevřeme si Git Bash, příkazový řádek (cmd) nebo Terminal ve VSCode. Do konzole napíšeme tento příkaz: </p>
+        <p class="code"> git config --global user.name "vaše jméno" </p>
 
-            <p class="code"> git config --global user.name "vaše jméno" </p>
+        <p>Do uvozovek napíšeme jméno i příjmení, můžeme použít i mezery. Pokud po odentrování nedostaneme žádný eror, akce proběhla úspěšně. Zkontrolujeme pomocí: </p>
+        <p class="code"> git config --global user.name </p>
 
-            <p>Do uvozovek napíšeme jméno i příjmení, můžeme použít i mezery. Pokud po odentrování nedostaneme žádný eror, akce proběhla úspěšně. Zkontrolujeme pomocí: </p>
-            <p class="code"> git config --global user.name </p>
+        <p>Stejným způsobem teď nastavíme email:</p>
+        <p class="code"> git config --global user.email "váš email" </p>
 
-            <p>Stejným způsobem teď nastavíme email:</p>
-            <p class="code"> git config --global user.email "váš email" </p>
-
-            <br>
-            <h1>První inicializace</h1>
-            <p>Abychom mohli používat Git, zaznamenávat změny a ukládat historii, potřebujeme <b>inicializovat složku.</b>
-                Inicializovaná složka se nazývá <b>repozitář</b>.</p>
-            <div class=text-info> Repozitář = inicializovaná složka, ve které <i>funguje/je/běží/ <b>pracujeme s </b></i> Gitem </div>
-            <p>Složka se inicializuje příkazem <b>git init:</b> </p>
-            <div class="parent" style="color:red">
-                <img src="/images/kap4/init.jpg" class="learn-img-big" >
-            </div>
-            <p>Zde máme ukázku toho, jak v terminálu vypadá, když jsme v inicializované složce. Za cestou ke složce vidíme v závorce slovo <b>main</b>. To je náš název hlavní větve.</p>
-            <div class="parent">
-                <img src="/images/kap4/git_initialized.jpg" class="learn-img-big" >
-            </div>
-            <p>Takto vypadá repozitář v průzkumníku souborů. Přibyla zde skrytá složka s názvem <b>.git</b>. V ní se bude ukládat všechna naše historie a různé soubory Gitu.</p>
-            <div class="parent">
-                <img src="/images/kap4/git_initialized_pruzkumnik.jpg" class="learn-img-medium" >
-            </div>
-            <p>A můžeme se pustit do práce (s Gitem)!</p>
-            `,
+        <br>
+        <h1>První inicializace</h1>
+        <p>Abychom mohli používat Git, zaznamenávat změny a ukládat historii, potřebujeme <b>inicializovat složku.</b>
+        Inicializovaná složka se nazývá <b>repozitář</b>.</p>
+        <div class="text-info"> Repozitář = inicializovaná složka, ve které <b>pracujeme s</b> Gitem </div>
+        <p>Složka se inicializuje příkazem <b>git init:</b> </p>
+        <div class="parent" style="color:red">
+            <img src="/images/kap4/init.jpg" class="learn-img-big" >
+        </div>
+        <p>Zde máme ukázku toho, jak v terminálu vypadá, když jsme v inicializované složce. Za cestou ke složce vidíme v závorce slovo <b>main</b>. To je náš název hlavní větve.</p>
+        <div class="parent">
+            <img src="/images/kap4/git_initialized.jpg" class="learn-img-big" >
+        </div>
+        <p>Takto vypadá repozitář v průzkumníku souborů. Přibyla zde skrytá složka s názvem <b>.git</b>. V ní se bude ukládat všechna naše historie a různé soubory Gitu.</p>
+        <div class="parent">
+            <img src="/images/kap4/git_initialized_pruzkumnik.jpg" class="learn-img-medium" >
+        </div>
+        <p>A můžeme se pustit do práce (s Gitem)!</p>
+        `,
         quiz: [
             {
                 question: "Čím se inicializuje složka?",
@@ -268,188 +257,188 @@ const chaptersData = {
     },
     kap5: {
         html: `
-            <h1>Commit</h1>
-            <h3>Co je to commit?</h3>
-            <p>Commit je základní prvek verzovacího systému. Je to <b>záznam</b> (snapshot) o změnách, které jsme provedli.
-            Každý commit má <b>popisek</b>, který by měl být krátký a výstižný. Pro přehlednost se udává maximální počet <b>50 znaků</b>, jinak omezen není. <br>
-            Všechny commity se ukládají do historie projektu.
-            Díky tomu se můžeme kdykoliv vrátit zpět a podívat se, jak projekt vypadal v minulosti. 
-            Je dobré dělat commity celkem často nebo po logických částech, aby bylo snadnější se vyznat ve změnách a vrátit se k nim.</p>
-            <div class=text-info> Commit = záznam o změnách uložený do historie projektu </div>
+        <h1>Commit</h1>
+        <h3>Co je to commit?</h3>
+        <p>Commit je základní prvek verzovacího systému. Je to <b>záznam</b> (snapshot) o změnách, které jsme provedli.
+        Každý commit má <b>popisek</b>, který by měl být krátký a výstižný. Pro přehlednost se udává maximální počet <b>50 znaků</b>, jinak omezen není. <br>
+        Všechny commity se ukládají do historie projektu.
+        Díky tomu se můžeme kdykoliv vrátit zpět a podívat se, jak projekt vypadal v minulosti. 
+        Je dobré dělat commity celkem často nebo po logických částech, aby bylo snadnější se vyznat ve změnách a vrátit se k nim.</p>
+        <div class="text-info"> Commit = záznam o změnách uložený do historie projektu </div>
 
 
-            Při commitování pracujeme ve třech fázích:
-            <div class="parent">
-                <img src="/images/kap5/git_commit_scheme.png" class="learn-img-medium">
-                <p class="image-source">Zdroj obrázku: <a href="https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh" target="_blank"> dev.to </a> </p>
-            </div>
+        Při commitování pracujeme ve třech fázích:
+        <div class="parent">
+            <img src="/images/kap5/git_commit_scheme.png" class="learn-img-medium">
+            <p class="image-source">Zdroj obrázku: <a href="https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh" target="_blank"> dev.to </a> </p>
+        </div>
 
-            <p> <b>Working directory </b> je složka, ve které pracujeme. Vytváříme soubory, upravujeme obsah, atd. 
-            Poté se rozhodneme, že chceme nějaké změny uložit. Nejdříve je musíme přidat do tzv. <b>Staging Area </b>. 
-            To je taková přípravná plocha, kam se dávají soubory připravené na commit. Můžeme tam přidat všechny upravené soubory najednou, nebo jen některé.
-            Když máme všechny soubory, které chceme uložit, provedeme <b>commit</b> a vytvoří se záznam do historie. </p>
-            
-            <p class="margin_top">Do Staging Area přidáme <b>soubor</b> tímto příkazem: </p>
-            <p class="code">git add <i>nazev-souboru</i> </p>
-            
-            <p> Můžeme také přidat <b>více souborů</b> najednou, stačí napsat názvy souborů oddělené mezerou, např.: </p>
-            <p class="code">git add soubor1.txt soubor2.txt soubor3.txt</p>
+        <p> <b>Working directory </b> je složka, ve které pracujeme. Vytváříme soubory, upravujeme obsah, atd. 
+        Poté se rozhodneme, že chceme nějaké změny uložit. Nejdříve je musíme přidat do tzv. <b>Staging Area </b>. 
+        To je taková přípravná plocha, kam se dávají soubory připravené na commit. Můžeme tam přidat všechny upravené soubory najednou, nebo jen některé.
+        Když máme všechny soubory, které chceme uložit, provedeme <b>commit</b> a vytvoří se záznam do historie. </p>
+        
+        <p class="margin_top">Do Staging Area přidáme <b>soubor</b> tímto příkazem: </p>
+        <p class="code">git add <i>nazev-souboru</i> </p>
+        
+        <p> Můžeme také přidat <b>více souborů</b> najednou, stačí napsat názvy souborů oddělené mezerou, např.: </p>
+        <p class="code">git add soubor1.txt soubor2.txt soubor3.txt</p>
 
-            <p>Pro přidání <b>všech změněných souborů</b> najednou použijeme příkaz: </p>
-            <p class="code">git add . </p>
+        <p>Pro přidání <b>všech změněných souborů</b> najednou použijeme příkaz: </p>
+        <p class="code">git add . </p>
 
-            <p>Jestliže jsme omylem do Staging Area přidali soubor, který nechceme teď commitovat, <b>odebereme</b> ho příkazem: </p>
-            <p class="code">git restore --staged <i>nazev-souboru</i> </p>
+        <p>Jestliže jsme omylem do Staging Area přidali soubor, který nechceme teď commitovat, <b>odebereme</b> ho příkazem: </p>
+        <p class="code">git restore --staged <i>nazev-souboru</i> </p>
 
+        <br>
+        <p>Pokud už máme připravené všechny soubory, které chceme <b>commitnout</b>, napíšeme tento příkaz, do uvozovek patří popisek commitu:</p>
+        <p class="code">git commit -m "popisek" </p>
+
+        
+        <h3 >Cyklus stavu souboru </h3>
+        <p>Máme 4 stavy souboru:</p>
+        <ul>
+            <li>Untracked - nesledovaný soubor </li>
+            <li>Unmodified/Commited - nezměněný = commitnutý </li> 
+            <li>Modified - změněný, upravený soubor </li>
+            <li>Staged - připravený soubor na commit </li>
+        </ul>
+        <div class="parent no-border-radius">
+            <img src="images/kap5/git-lifecycle.png" class="learn-img-wide-medium ">
+            <p class="image-source">Zdroj obrázku: <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository" target="_blank"> git-scm.com </a> </p>
+        </div>
+        <p>Když vytvoříme nebo přidáme <b>nový soubor</b>, je <b>Untracked</b> - nesledovaný. A to i když ho upravíme. Pro Git je to (prostě) nový soubor, který ještě nikdy nebyl zaznamenáván.
+        Pak ho přidáme do Staging area (přípravná plocha) - soubor je <b>Staged</b>, připravený na commit. 
+        Provedeme <b>commit</b> a soubor je <b>Unmodified/Commited</b> - neupravený, commitnutý. Když ho znovu <b>upravíme</b>, stane se už <b>Modified</b> - upravený.
+        A ten zase dáme do Staging Area a commitneme, a tak stále dokola.</p>
+        <p>Soubor můžeme také <b>přestat sledovat</b> (šipka "Remove the file"). Soubor se nám neodstraní ze složky, pouze se přestane sledovat, jako kdyby byl nový.
+        To se dělá příkazem: </p>
+        <p class="code">git rm --cached <i>nazev-souboru</i></p>
+
+        
+        <h3>Stav souborů</h3>
+        <p> Pro zobrazení stavu souborů v našem repozitáři existuje chytrý příkaz <b>git status</b>. 
+        Ten nám ukáže, jaké soubory jsme od posledního commitu přidali, upravili, smazali, nebo jaké soubory máme ve Staging Area. 
+        Pokud žádné změny ještě neproběhly, konzole vypíše, že není nic ke commitování.</p>
+        <p class="code">git status </p>
+
+        <p>Zde můžeme vidět upravený a už také stagenutý soubor "test.txt" a nově vytvořený, nesledovaný, soubor "new-file.txt":</p>
+        <div class="parent">
+            <img src="/images/kap5/git_status.jpg" class="learn-img-wide-medium">
+        </div>
+
+        <h3>Soubor .gitignore</h3>
+        <p>Gitignore je soubor, do kterého se píšou názvy jiných souborů, které <b>nechceme</b> aby se <b>trackovali</b>. 
+        Často jde o nějaké soubory s <b>nastavením</b> nebo moduly, např. konfigurační soubor <i>settings.json</i> pro VS Code Live Server, složka s moduly Node.js, nebo soubory s hesly a citlivými údaji.</p>
+        <p>Soubor <b>vytváříme my</b> sami a dává se přímo do inicializované složky, ne do žádné podsložky. Soubor je tedy normálně <b>viditelný</b>, není skrytý jako složka .git. 
+        Není povinné vytvářet gitignore, používá se, když ho potřebujeme.</p>
+        <div class="parent">
+            <img src="/images/kap5/gitignore.png" class="learn-img-big-big">
+        </div>
+        <p>Do souboru můžeme napsat  i více než jen název souboru. Existují pravidla např. pro přidání všech souborů s určitou příponou, složky, nebo když název obsahuje určený text. 
+        Seznam těchto pravidel najdete na <a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore" target="_blank">Atlassian.com</a></p>
+
+        <h3>Grafické zobrazení commitů</h3>
+        <p>Abychom si lépe představili, jak vypadá náš repozitář s commity, můžeme si ho graficky znázornit. 
+        Jednotlivé commity se zobrazují jako <b>kolečka spojená linkou</b>. 
+        Na těchto ilustracích se ukazuje, jak fungují různé příkazy, co se děje s commity atd.
+        Aktuální commit, na kterém se právě nacházíme (poslední, co jsme provedli) se označuje <b>HEAD</b>, také ukazatel nebo pointer. 
+        <b>Main</b> (v minulosti master) je hlavní větev, <b>Feature</b> je druhá větev.</p>
+        <div class="parent">
+            <img src="/images/kap5/commits-ilustrated.png" class="learn-img-medium">
+        </div>
+
+        <h3>Historie commitů</h3>
+        <p>Všechny commity se ukládají v našem repu a proto se můžeme kdykoliv podívat na jejich seznam.
+
+        Příkaz <b>git&nbsplog</b> nám umožňuje <b>prohlížet historii</b> commitů v repozitáři. 
+        Každý výpis commitu obsahuje jeho unikátní, 40 písmenný hash. Je to něco jako jeho ID, poznávací číslo. 
+        Dále obsahuje jméno a email autora (které jsme zadávali v kapitole <a href="/kapitola-4-inicializace" >Inicializace</a>), 
+        datum vytvoření a popisek. Nejnovější, poslední, commit je úplně nahoře, první úplně dole.</p>
+
+        <p class="code"> git log </p>
+
+        <div class="parent">
+            <img src="/images/kap5/git_log.jpg" class="learn-img-big">
+        </div>
+
+        <p>Můžeme také použít zkrácenou formu <b>git log --oneline</b>, která vypíše zkrácený 7 písmenný hash commitu a popisek, vše hezky na <b>jednom řádku</b>. 
+        To usnadňuje procházení historie commitů, což se vyplatí, když už máme commitů hodně.</p>
+        <p class="code"> git log --oneline </p>
+        <div class="parent">
+            <img src="/images/kap5/git_log_oneline.jpg" class="learn-img-wide-medium">
+        </div>
+
+        <p>Později se nám také určitě stane to, že konzole neukáže všechny řádky, ale na konci zůstane jen <b>dvojtečka</b>. 
+        Není to žádná chyba, nebo zaseknutí, je to zcela normální. Znamená to, že výpis má více řádků, než se vejde do okna konzole.
+        Pokračování výpisu spustíme stiskem <b>mezerníku</b>, výpis jednoho dalšího řádku enterem. Poté ale stále nebudeme pryč, tentokrát se zobrazuje <b>(END)</b>. 
+        Odsud vyjdeme zase do normální konzole stiskem <b>klávesy Q</b>.</p>
+        
+        <div class="parent">
+            <img src="/images/kap5/git_log_notfull.jpg" class="learn-img-medium ">
             <br>
-            <p>Pokud už máme připravené všechny soubory, které chceme <b>commitnout</b>, napíšeme tento příkaz, do uvozovek patří popisek commitu:</p>
-            <p class="code">git commit -m "popisek" </p>
+            <img src="/images/kap5/git_log_end.jpg" class="learn-img-medium ">
+        </div>
+        
+        
+        <h3>Upravení posledního commitu</h3>
+        <p>Pokud se nám stane, že provedeme commit, ale <b>zapomněli</b> jsme do něj například přidat soubor, nebo jsme commit špatně pojmenovali, můžeme to ještě napravit.
+        To lze ale <b>pouze s posledním</b> commitem.
+        Pomůže nám příkaz: </p>
+        <p class="code">git commit --amend</p>
+        <p>Zapomenutý <b>soubor</b> nejdříve přidáme do <b>StageArea</b> jako kdybychom dělali normální commit. 
+        Napíšeme příkaz a otevře se soubor COMMIT_EDITMSG.
+        Na <b>prvním řádku</b> je náš <b>popisek</b> posledního commitu. Ten můžeme také přepsat, pokud potřebujeme. 
+        Kousek níže si zkontrolujeme, jestli v "Changes to be commited" máme ten soubor, který jsme zapomněli.
+        Pak křížkem soubor <b>zavřeme</b>, tím se <b>potvrdí</b> změny commitu. Můžeme zkontrolovat git log, že se commit opravil. </p>
+        
+        <div class="parent">
+            <img src="/images/kap5/git-amend1.jpg" class="learn-img-big "> <br>
+            <p class="image-descr">Zde vidíme nepřidaný soubor soubor3.txt, ale poslední commit má v názvu, že se přidal</p> <br><br>
+            <img src="/images/kap5/git-amend2.jpg" class="learn-img-big "> <br>
+            <p class="image-descr">Přidali jsme soubor do StageArea a napsali amend. Otevřel se soubor COMMIT_EDITMSG, zkontrolovali jsme změny</p> <br><br>
+            <img src="/images/kap5/git-amend3.jpg" class="learn-img-wide-medium "><br>
+            <p class="image-descr">Soubor jsme zavřeli, commit se tím opravil a název zůstal stejný</p> <br>
+        </div>
 
-            
-            <h3 >Cyklus stavu souboru </h3>
-            <p>Máme 4 stavy souboru:</p>
-            <ul>
-                <li>Untracked - nesledovaný soubor </li>
-                <li>Unmodified/Commited - nezměněný = commitnutý </li> 
-                <li>Modified - změněný, upravený soubor </li>
-                <li>Staged - připravený soubor na commit </li>
-            </ul>
-            <div class="parent no-border-radius">
-                <img src="images/kap5/git-lifecycle.png" class="learn-img-wide-medium ">
-                <p class="image-source">Zdroj obrázku: <a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository" target="_blank"> git-scm.com </a> </p>
-            </div>
-            <p>Když vytvoříme nebo přidáme <b>nový soubor</b>, je <b>Untracked</b> - nesledovaný. A to i když ho upravíme. Pro Git je to (prostě) nový soubor, který ještě nikdy nebyl zaznamenáván.
-            Pak ho přidáme do Staging area (přípravná plocha) - soubor je <b>Staged</b>, připravený na commit. 
-            Provedeme <b>commit</b> a soubor je <b>Unmodified/Commited</b> - neupravený, commitnutý. Když ho znovu <b>upravíme</b>, stane se už <b>Modified</b> - upravený.
-            A ten zase dáme do Staging Area a commitneme, a tak stále dokola.</p>
-            <p>Soubor můžeme také <b>přestat sledovat</b> (šipka "Remove the file"). Soubor se nám neodstraní ze složky, pouze se přestane sledovat, jako kdyby byl nový.
-            To se dělá příkazem: </p>
-            <p class="code">git rm --cached <i>nazev-souboru</i></p>
+        <p>Jestliže chceme změnit jen popisek commitu, nemusíme otevírat celý soubor. 
+        Stačí příkaz napsat podobně, jako píšeme normální commit:</p>
+        <p class="code">git commit --amend -m "novy popisek"</p>
 
-            
-            <h3>Stav souborů</h3>
-            <p> Pro zobrazení stavu souborů v našem repozitáři existuje chytrý příkaz <b>git status</b>. 
-            Ten nám ukáže, jaké soubory jsme od posledního commitu přidali, upravili, smazali, nebo jaké soubory máme ve Staging Area. 
-            Pokud žádné změny ještě neproběhly, konzole vypíše, že není nic ke commitování.</p>
-            <p class="code">git status </p>
+        
+        <h3>Smazání commitu</h3>
+        <p>Pro smazání commitu existují <b>3 možnosti</b>: soft, mixed a hard.
+        Tyto možnosti určují, jaké změny jsou zachovány v pracovní složce po provedení příkazu <b>git reset</b>. 
+        K němu se připisuje, který typ chceme a na který commit se chceme přesunout. 
+        Můžeme napsat zkrácený hash commitu, nebo "HEAD~1", což znamená předchozí commit.</p>
 
-            <p>Zde můžeme vidět upravený a už také stagenutý soubor "test.txt" a nově vytvořený, nesledovaný, soubor "new-file.txt":</p>
-            <div class="parent">
-                <img src="/images/kap5/git_status.jpg" class="learn-img-wide-medium">
-            </div>
+            <li> <b>Soft</b> = přesune aktuální pozici (head) na zadaný commit a zároveň zachová provedené změny ve StagingArea </li> 
+            <li> <b>Mixed</b> = přesune head na zadaný commit, změny zachová, ale ne ve StagingArea. Výchozí možnost </li> 
+            <li> <b>Hard</b> = úplně smaže poslední commit i se všemi provedenými změnami = nebezpečné, nedá se vrátit </li> 
 
-            <h3>Soubor .gitignore</h3>
-            <p>Gitignore je soubor, do kterého se píšou názvy jiných souborů, které <b>nechceme</b> aby se <b>trackovali</b>. 
-            Často jde o nějaké soubory s <b>nastavením</b> nebo moduly, např. konfigurační soubor <i>settings.json</i> pro VS Code Live Server, složka s moduly Node.js, nebo soubory s hesly a citlivými údaji.</p>
-            <p>Soubor <b>vytváříme my</b> sami a dává se přímo do inicializované složky, ne do žádné podsložky. Soubor je tedy normálně <b>viditelný</b>, není skrytý jako složka .git. 
-            Není povinné vytvářet gitignore, používá se, když ho potřebujeme.</p>
-            <div class="parent">
-                <img src="/images/kap5/gitignore.png" class="learn-img-big-big">
-            </div>
-            <p>Do souboru můžeme napsat  i více než jen název souboru. Existují pravidla např. pro přidání všech souborů s určitou příponou, složky, nebo když název obsahuje určený text. 
-            Seznam těchto pravidel najdete na <a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore" target="_blank">Atlassian.com</a></p>
+        <p class="margin_top">Příkaz, který se používá je tento: </p>
+        <p class="code"> git reset --soft  <i>hash-commitu</i> </p>
+        <p> Jiný způsob může být: </p>
+        <p class="code"> git reset --hard HEAD~1 </p>
+        
+        <h3>Info o commitu</h3>
+        <p>V konzoli si můžeme příkazem ukázat informace o jednom commitu. 
+        Vypíše se info jako s git log a k tomu provedené změny v souborech.
+        Není to ale moc přehledné, takže to nejspíš moc používat nebudete. Kdyby přeci jen, příkaz je následující:</p>
+        <p class="code">git show <i>hash-commitu</i></p>
 
-            <h3>Grafické zobrazení commitů</h3>
-            <p>Abychom si lépe představili, jak vypadá náš repozitář s commity, můžeme si ho graficky znázornit. 
-            Jednotlivé commity se zobrazují jako <b>kolečka spojená linkou</b>. 
-            Na těchto ilustracích se ukazuje, jak fungují různé příkazy, co se děje s commity atd.
-            Aktuální commit, na kterém se právě nacházíme (poslední, co jsme provedli) se označuje <b>HEAD</b>, také ukazatel nebo pointer. 
-            <b>Main</b> (v minulosti master) je hlavní větev, <b>Feature</b> je druhá větev.</p>
-            <div class="parent">
-                <img src="/images/kap5/commits-ilustrated.png" class="learn-img-medium">
-            </div>
-
-            <h3>Historie commitů</h3>
-            <p>Všechny commity se ukládají v našem repu a proto se můžeme kdykoliv podívat na jejich seznam.
-
-            Příkaz <b>git&nbsplog</b> nám umožňuje <b>prohlížet historii</b> commitů v repozitáři. 
-            Každý výpis commitu obsahuje jeho unikátní, 40 písmenný hash. Je to něco jako jeho ID, poznávací číslo. 
-            Dále obsahuje jméno a email autora (které jsme zadávali v kapitole <a href="/kapitola-4-inicializace" >Inicializace</a>), 
-            datum vytvoření a popisek. Nejnovější, poslední, commit je úplně nahoře, první úplně dole.</p>
-
-            <p class="code"> git log </p>
-
-            <div class="parent">
-                <img src="/images/kap5/git_log.jpg" class="learn-img-big">
-            </div>
-
-            <p>Můžeme také použít zkrácenou formu <b>git log --oneline</b>, která vypíše zkrácený 7 písmenný hash commitu a popisek, vše hezky na <b>jednom řádku</b>. 
-            To usnadňuje procházení historie commitů, což se vyplatí, když už máme commitů hodně.</p>
-            <p class="code"> git log --oneline </p>
-            <div class="parent">
-                <img src="/images/kap5/git_log_oneline.jpg" class="learn-img-wide-medium">
-            </div>
-
-            <p>Později se nám také určitě stane to, že konzole neukáže všechny řádky, ale na konci zůstane jen <b>dvojtečka</b>. 
-            Není to žádná chyba, nebo zaseknutí, je to zcela normální. Znamená to, že výpis má více řádků, než se vejde do okna konzole.
-            Pokračování výpisu spustíme stiskem <b>mezerníku</b>, výpis jednoho dalšího řádku enterem. Poté ale stále nebudeme pryč, tentokrát se zobrazuje <b>(END)</b>. 
-            Odsud vyjdeme zase do normální konzole stiskem <b>klávesy Q</b>.</p>
-            
-            <div class="parent">
-                <img src="/images/kap5/git_log_notfull.jpg" class="learn-img-medium ">
-                <br>
-                <img src="/images/kap5/git_log_end.jpg" class="learn-img-medium ">
-            </div>
-            
-            
-            <h3>Upravení posledního commitu</h3>
-            <p>Pokud se nám stane, že provedeme commit, ale <b>zapomněli</b> jsme do něj například přidat soubor, nebo jsme commit špatně pojmenovali, můžeme to ještě napravit.
-            To lze ale <b>pouze s posledním</b> commitem.
-            Pomůže nám příkaz: </p>
-            <p class="code">git commit --amend</p>
-            <p>Zapomenutý <b>soubor</b> nejdříve přidáme do <b>StageArea</b> jako kdybychom dělali normální commit. 
-            Napíšeme příkaz a otevře se soubor COMMIT_EDITMSG.
-            Na <b>prvním řádku</b> je náš <b>popisek</b> posledního commitu. Ten můžeme také přepsat, pokud potřebujeme. 
-            Kousek níže si zkontrolujeme, jestli v "Changes to be commited" máme ten soubor, který jsme zapomněli.
-            Pak křížkem soubor <b>zavřeme</b>, tím se <b>potvrdí</b> změny commitu. Můžeme zkontrolovat git log, že se commit opravil. </p>
-            
-            <div class="parent">
-                <img src="/images/kap5/git-amend1.jpg" class="learn-img-big "> <br>
-                <p class="image-descr">Zde vidíme nepřidaný soubor soubor3.txt, ale poslední commit má v názvu, že se přidal</p> <br><br>
-                <img src="/images/kap5/git-amend2.jpg" class="learn-img-big "> <br>
-                <p class="image-descr">Přidali jsme soubor do StageArea a napsali amend. Otevřel se soubor COMMIT_EDITMSG, zkontrolovali jsme změny</p> <br><br>
-                <img src="/images/kap5/git-amend3.jpg" class="learn-img-wide-medium "><br>
-                <p class="image-descr">Soubor jsme zavřeli, commit se tím opravil a název zůstal stejný</p> <br>
-            </div>
-
-            <p>Jestliže chceme změnit jen popisek commitu, nemusíme otevírat celý soubor. 
-            Stačí příkaz napsat podobně, jako píšeme normální commit:</p>
-            <p class="code">git commit --amend -m "novy popisek"</p>
-
-            
-            <h3>Smazání commitu</h3>
-            <p>Pro smazání commitu existují <b>3 možnosti</b>: soft, mixed a hard.
-            Tyto možnosti určují, jaké změny jsou zachovány v pracovní složce po provedení příkazu <b>git reset</b>. 
-            K němu se připisuje, který typ chceme a na který commit se chceme přesunout. 
-            Můžeme napsat zkrácený hash commitu, nebo "HEAD~1", což znamená předchozí commit.</p>
-
-                <li> <b>Soft</b> = přesune aktuální pozici (head) na zadaný commit a zároveň zachová provedené změny ve StagingArea </li> 
-                <li> <b>Mixed</b> = přesune head na zadaný commit, změny zachová, ale ne ve StagingArea. Výchozí možnost </li> 
-                <li> <b>Hard</b> = úplně smaže poslední commit i se všemi provedenými změnami = nebezpečné, nedá se vrátit </li> 
-
-            <p class="margin_top">Příkaz, který se používá je tento: </p>
-            <p class="code"> git reset --soft  <i>hash-commitu</i> </p>
-            <p> Jiný způsob může být: </p>
-            <p class="code"> git reset --hard HEAD~1 </p>
-            
-            <h3>Info o commitu</h3>
-            <p>V konzoli si můžeme příkazem ukázat informace o jednom commitu. 
-            Vypíše se info jako s git log a k tomu provedené změny v souborech.
-            Není to ale moc přehledné, takže to nejspíš moc používat nebudete. Kdyby přeci jen, příkaz je následující:</p>
-            <p class="code">git show <i>hash-commitu</i></p>
-
-            <h3>Přepínání commitů</h3>
-            <p>Přepínání commitů je vlastně to stále zmiňované <b>vrácení se zpět v projektu </b>. 
-            Naše pracovní složka a soubory se přepnou do podoby, jakou měly v daném commitu. 
-            Pozor! Při přepnutí na commit se nacházíme v tzv. <b>detached HEAD</b> stavu, což znamená, 
-            že nejsme na žádné větvi a naše změny se nebudou ukládat do repozitáře, 
-            dokud se nepřepneme zpět na aktuální větev, nebo nevytvoříme novou. Přepnutí na poslední commit nepomůže.
-            Můžeme dělat změny a zkoušet, ale nedoporučuje se poté dělat commity, je obtížné je najít.</p>
-            <p class="code">git checkout <i>hash-commitu</i></p>
-            <p> Přepnutí zpět do větve: </p>
-            <p class="code">git switch <i>nazev-vetve</i></p>
-            `,
-            quiz: [
+        <h3>Přepínání commitů</h3>
+        <p>Přepínání commitů je vlastně to stále zmiňované <b>vrácení se zpět v projektu </b>. 
+        Naše pracovní složka a soubory se přepnou do podoby, jakou měly v daném commitu. 
+        Pozor! Při přepnutí na commit se nacházíme v tzv. <b>detached HEAD</b> stavu, což znamená, 
+        že nejsme na žádné větvi a naše změny se nebudou ukládat do repozitáře, 
+        dokud se nepřepneme zpět na aktuální větev, nebo nevytvoříme novou. Přepnutí na poslední commit nepomůže.
+        Můžeme dělat změny a zkoušet, ale nedoporučuje se poté dělat commity, je obtížné je najít.</p>
+        <p class="code">git checkout <i>hash-commitu</i></p>
+        <p> Přepnutí zpět do větve: </p>
+        <p class="code">git switch <i>nazev-vetve</i></p>
+        `,
+        quiz: [
             {
                 question: "Který příkaz nám ukáže, jaké změny se staly od posledního commitu?",
                 answers: ["git log", "git state", "git status"],
@@ -472,7 +461,6 @@ const chaptersData = {
     },
     kap6: {
         html:`
-        
         <h1>Branches</h1>
         <p><b>Branch = větev</b>. Jak jsme si už řekli, je to taková odchylka od hlavního toku práce. 
         Ten hlavní tok je ale také větev, a to <b>hlavní větev</b>, pojmenovaná <b>MAIN</b> (nebo master). </p> 
@@ -484,7 +472,6 @@ const chaptersData = {
         <p> Další větve se používají například při <b>opravách chyb</b> ve starších commitech, nebo když chceme vyzkoušet nějakou <b>novou funkci</b>. 
         Také se často nepracuje přímo v hlavní větvi, ale ve vedlejších a do hlavní se <b>slučují</b>, aby v ní byl jen čistý a funkční kód.
         To se dá uplatnit i v <b>týmu</b> více lidí, každý pak pracuje s vlastní větví a svým prostředím. </p>
-
 
         <h3>Vytvoření větve</h3>
         <p>Novou větev můžeme buď vytvořit přímo na commitu, kde právě jsme, nebo se vrátit na nějaký v historii a tam ji vytvořit.
@@ -502,7 +489,6 @@ const chaptersData = {
             <img src="/images/kap6/branch_name.jpg" class="learn-img-wide-medium ">
         </div>  
 
-
         <h3>Přepínání mezi větvemi</h3>
         <p>Na jinou větev přepneme pomocí příkazu:</p>
         <p class="code"> git switch <i>nazev-vetve</i> </p>
@@ -512,13 +498,11 @@ const chaptersData = {
         <p class="margin_top">Příkazem git switch také můžeme vytvořit novou větev a rovnou se do ní přepnout. Jen příkaz trochu upravíme:</p>
         <p class="code"> git switch -c <i>nazev-vetve</i> </p>
 
-
         <h3>Přejmenování větve</h3>
         <p>Jestli jsme omylem pojmenovali větev jinak, než jsme chtěli, nemusíme ji hned mazat a vytvářet novou. Můžeme ji přejmenovat. 
         Podmínkou je, že v té větvi musíme být, protože se v příkazu neurčuje, co chceme přejmenovat. </p>
         <p class="code"> git branch -m <i>novy-nazev</i> </p>
         
-
         <h3>Smazání větve</h3>
         <p>Prázdná větev bez commitů se maže příkazem:</p>
         <p class="code"> git branch -d <i>nazev-vetve</i> </p>
@@ -526,10 +510,6 @@ const chaptersData = {
         <p>Pokud už máme ve větvi commity, tímto příkazem se nám to nepodaří. Git nám sám poradí napsat velké D a důvod "The branch '<i>nazev-vetve</i>' is not fully merged".
         To znamená právě to, že v ní jsou commity. A co je to to mergování, to se dozvíme v <a href=/kapitola-7-mergovani>příští kapitole</a>.</p>
         <p class="code"> git branch -D <i>nazev-vetve</i> </p>
-
-        
-        <!-- https://www.atlassian.com/git/tutorials/using-branches -->
-
         `,
         quiz: [
             {
@@ -542,7 +522,6 @@ const chaptersData = {
                 answers: ["git alter", "git change", "git switch"],
                 correctAnswer: 3
             }
-
         ],
         title: "Git - Branches",
         url:"/kapitola-6-branches",
@@ -551,79 +530,75 @@ const chaptersData = {
     },
     kap7: {
         html: `
-            <h1>Mergování</h1>
-            <p>Mergování je <b>spojování větví</b> k sobě. 
-            Spojujeme k sobě 2 větve (i více) a musíme být přepnutí na té, ke které chceme připojovat druhou. <br><u>Například:</u><br>
-            Pracujeme na hlavní větvi, máme na ní commity. Poté vytvoříme novou větev, třeba kvůli nějaké chybě. Tu postupně opravíme. 
-            A pak tu větev chceme spojit s hlavní, abychom mohli pracovat dál, s opravenou chybou. Přepneme se tedy na hlavní větev, mergneme je, a je to.</p>
-            <div class="parent">
-                <img src="/images/kap7/merging.png" class="learn-img-wide-medium ">
-            </div> 
+        <h1>Mergování</h1>
+        <p>Mergování je <b>spojování větví</b> k sobě. 
+        Spojujeme k sobě 2 větve (i více) a musíme být přepnutí na té, ke které chceme připojovat druhou. <br><u>Například:</u><br>
+        Pracujeme na hlavní větvi, máme na ní commity. Poté vytvoříme novou větev, třeba kvůli nějaké chybě. Tu postupně opravíme. 
+        A pak tu větev chceme spojit s hlavní, abychom mohli pracovat dál, s opravenou chybou. Přepneme se tedy na hlavní větev, mergneme je, a je to.</p>
+        <div class="parent">
+            <img src="/images/kap7/merging.png" class="learn-img-wide-medium ">
+        </div> 
 
-            <p>Základní příkaz pro mergování je:</p>
-            <p class="code">git merge <i>vedlejsi-vetev</i></p>
+        <p>Základní příkaz pro mergování je:</p>
+        <p class="code">git merge <i>vedlejsi-vetev</i></p>
 
-            <p>Existuje více typů mergování, zde je jen pár nejznámějších a nejpoužívanějších:</p>
-            
-            <h3>Fast-forward</h3>
-            <p>Tento typ se použije sám automaticky, pokud na větvi, ke které chceme mergovat, nemáme žádné nové commity od doby, co jsme vytvořili druhou větev. 
-            Vedlejší větev se jakoby přesune na hlavní a je z nich jedna na stejné úrovni.</p>
-            <div class="parent">
-                <img src="/images/kap7/merging-FF.png" class="learn-img-medium ">
-            </div> 
-
-            <h3>Non-fast-forward (three-way)</h3>
-            <p>Toto je základní typ mergování. Provede se, pokud jsme na hlavní větvi už udělali nějaké commity poté, co se vedlejší větev vytvořila. 
-            V tomto typu merge se zachová větev na druhé úrovni a automaticky se vytvoří prázdný commit, který větve spojuje = mergovací commit. </p>
-            <div class="parent">
-                <img src="/images/kap7/merging-nonFF.png" class="learn-img-medium ">
-            </div> 
-            <p>Non-fast-forward můžeme použít sami, i když commity v hlavní branchi nemáme. Stačí do příkazu připsat:</p>
-            <p class="code"> git merge --no-ff <i>vedlejsi-vetev</i> </p>
-            <p>Zde se také vytvoří mergovací commit. Schéma by vypadalo takto:</p>
-            <div class="parent">
-                <img src="/images/kap7/merging-noFF.png" class="learn-img-medium ">
-            </div> 
-
-            <h3>Konflikt</h3>
-            <p>Konflikty nastanou, když chceme mergovat k větvi, ve které máme nové commity, a v nějakém tom commitu jsme upravili ve stejném souboru a stejný řádek jako na druhé větvi.
-            Git tedy neví, kterou verzi má uložit. To si musíme určit sami. Chybová hláška vypadá takto:</p>
-            <div class="parent">
-                <img src="/images/kap7/merging-conflict-error.png" class="learn-img-wide-medium ">
-            </div> 
-            <p>Ve VSCode se otevře daný soubor a ukáže se nám, kde přesně nastal konflikt. </p>
-            <div class="parent">
-                <img src="/images/kap7/merging-conflict-edit.png" class="learn-img-wide-medium ">
-            </div> 
-            <p>Zde si určíme, jaký text chceme zachovat. Buď klikneme na jednu z nabízených možností: 
-            <ul>
-                <li>Accept <b>Current</b> Change = přijme verzi na aktuální větvi,</li>
-                <li>Accept <b>Incoming</b> Change = přijme verzi na vedlejší větve,</li>
-                <li>Accept <b>Both</b> Changes = přijme obě verze, každá na jednom řádku,</li>
-                <li><b>Compare</b> Changes = zobrazí konflikt přehledněji, oba soubory dá vedle sebe.</li>
-            </ul>
-            Nebo si sami odmažeme řádky, které tam nechceme. Nebo můžeme klidně napsat úplně nový text, prostě jak je to potřeba. </p>
-            <p>Soubor poté zavřeme, přidáme do StageArea a commitneme. </p>
-
-            <h3>Rebase</h3>
-            <p>Tento typ není úplně normální mergování, ale dá se tak také použít. Funguje tak, že vezme všechny commity z vedlejší větve a přesune je za nejnovější commit v hlavní větvi.</p>
-            <div class="parent">
-                <img src="/images/kap7/merging-rebase.png" class="learn-img-medium ">
-            </div> 
-            <p>Pozor, zde je přepínání větví naopak. Nejdříve musíme být na vedlejší větvi. Z ní napíšeme příkaz:</p>
-            <p class="code">git rebase <i>hlavni-vetev</i></p>
-            <p>Má to své výhody i nevýhody. Výhodou je, že zachovává čistou historii commitů, ale nevýhodou, že není vidět, kdy byla vedlejší větev vytvořena, nebo ke které větvi commity vůbec patří.</p>
-
-
-            <h3>Octopus</h3>
-            <p>Tento typ merge se použije <b>automaticky</b> při mergování 3 a více větví k sobě. Všechny větve se spojí v jednom commitu. </p>
-            <div class="parent">
-                <img src="/images/kap7/merging-octopus.png" class="learn-img-medium ">
-            </div> 
+        <p>Existuje více typů mergování, zde je jen pár nejznámějších a nejpoužívanějších:</p>
         
-            <!-- https://lukemerrett.com/different-merge-types-in-git/ -->
-            <!-- https://xdg.me/git-merge-no-ff/  -->
-            <!-- https://www.freblogg.com/git-octopus-merge -->
+        <h3>Fast-forward</h3>
+        <p>Tento typ se použije sám automaticky, pokud na větvi, ke které chceme mergovat, nemáme žádné nové commity od doby, co jsme vytvořili druhou větev. 
+        Vedlejší větev se jakoby přesune na hlavní a je z nich jedna na stejné úrovni.</p>
+        <div class="parent">
+            <img src="/images/kap7/merging-FF.png" class="learn-img-medium ">
+        </div> 
+
+        <h3>Non-fast-forward (three-way)</h3>
+        <p>Toto je základní typ mergování. Provede se, pokud jsme na hlavní větvi už udělali nějaké commity poté, co se vedlejší větev vytvořila. 
+        V tomto typu merge se zachová větev na druhé úrovni a automaticky se vytvoří prázdný commit, který větve spojuje = mergovací commit. </p>
+        <div class="parent">
+            <img src="/images/kap7/merging-nonFF.png" class="learn-img-medium ">
+        </div> 
+        <p>Non-fast-forward můžeme použít sami, i když commity v hlavní branchi nemáme. Stačí do příkazu připsat:</p>
+        <p class="code"> git merge --no-ff <i>vedlejsi-vetev</i> </p>
+        <p>Zde se také vytvoří mergovací commit. Schéma by vypadalo takto:</p>
+        <div class="parent">
+            <img src="/images/kap7/merging-noFF.png" class="learn-img-medium ">
+        </div> 
+
+        <h3>Konflikt</h3>
+        <p>Konflikty nastanou, když chceme mergovat k větvi, ve které máme nové commity, a v nějakém tom commitu jsme upravili ve stejném souboru a stejný řádek jako na druhé větvi.
+        Git tedy neví, kterou verzi má uložit. To si musíme určit sami. Chybová hláška vypadá takto:</p>
+        <div class="parent">
+            <img src="/images/kap7/merging-conflict-error.png" class="learn-img-wide-medium ">
+        </div> 
+        <p>Ve VSCode se otevře daný soubor a ukáže se nám, kde přesně nastal konflikt. </p>
+        <div class="parent">
+            <img src="/images/kap7/merging-conflict-edit.png" class="learn-img-wide-medium ">
+        </div> 
+        <p>Zde si určíme, jaký text chceme zachovat. Buď klikneme na jednu z nabízených možností: 
+        <ul>
+            <li>Accept <b>Current</b> Change = přijme verzi na aktuální větvi,</li>
+            <li>Accept <b>Incoming</b> Change = přijme verzi na vedlejší větve,</li>
+            <li>Accept <b>Both</b> Changes = přijme obě verze, každá na jednom řádku,</li>
+            <li><b>Compare</b> Changes = zobrazí konflikt přehledněji, oba soubory dá vedle sebe.</li>
+        </ul>
+        Nebo si sami odmažeme řádky, které tam nechceme. Nebo můžeme klidně napsat úplně nový text, prostě jak je to potřeba. </p>
+        <p>Soubor poté zavřeme, přidáme do StageArea a commitneme. </p>
+
+        <h3>Rebase</h3>
+        <p>Tento typ není úplně normální mergování, ale dá se tak také použít. Funguje tak, že vezme všechny commity z vedlejší větve a přesune je za nejnovější commit v hlavní větvi.</p>
+        <div class="parent">
+            <img src="/images/kap7/merging-rebase.png" class="learn-img-medium ">
+        </div> 
+        <p>Pozor, zde je přepínání větví naopak. Nejdříve musíme být na vedlejší větvi. Z ní napíšeme příkaz:</p>
+        <p class="code">git rebase <i>hlavni-vetev</i></p>
+        <p>Má to své výhody i nevýhody. Výhodou je, že zachovává čistou historii commitů, ale nevýhodou, že není vidět, kdy byla vedlejší větev vytvořena, nebo ke které větvi commity vůbec patří.</p>
+
+
+        <h3>Octopus</h3>
+        <p>Tento typ merge se použije <b>automaticky</b> při mergování 3 a více větví k sobě. Všechny větve se spojí v jednom commitu. </p>
+        <div class="parent">
+            <img src="/images/kap7/merging-octopus.png" class="learn-img-medium ">
+        </div> 
         `,
         quiz: [
             {
@@ -641,12 +616,10 @@ const chaptersData = {
                 answers: ["Fast-forward se provede rychleji", "Non-fast-forward je bezpečnější","Fast-forward nemá mergovací commit"],
                 correctAnswer:3
             }
-
         ],
         title: "Git - Mergování",
         url:"/kapitola-7-mergovani",
         aside:"Mergování"
-
     },
     kap8: {
         html: `
@@ -693,7 +666,6 @@ const chaptersData = {
             <li> <b>Merge</b> = mergovat větve</li>
             <li> <b>Remote</b> = přidat remote, pushnout...</li>
         </ul>
-        <!-- Není toho popsanýho až moc?? -->
         
         <h3>VSCode</h3>
         <p>VSCode podporuje Git, proto má už předinstalované lehké GUI. Nachází se v liště nalevo.</p>
@@ -708,7 +680,6 @@ const chaptersData = {
             <img src="/images/kap8/gui-vscode2.png" class="learn-img-small">
         </div>
 
-
         <h3>GitKraken</h3>
         <div class="parent">
             <img src="/images/kap8/GitKraken-logo.svg" class="gui-logo">
@@ -717,8 +688,7 @@ const chaptersData = {
         Názorně zobrazuje commity a větve v našem repozitáři v <b>reálném čase</b> bez potřeby manuálně refreshovat.
         Velice <b>snadno</b> se zde vytváří, přepínají a mazají větve, lze provádět commity, zapisovat do souborů, porovnávat změny v souborech, pushovat, pullovat... 
         Je vhodný i pro práci v týmech, umožňuje přímé propojení s <b>GitHubem</b>, GitBucketem nebo nástroji jako Jira a Trello. Také kompatibilní s Linuxem i macOS.
-        Má verze zdarma i placené, pro domácí použití ale bohatě stačí jen ty <b>bezplatné</b>.
-        </p>
+        Má verze zdarma i placené, pro domácí použití ale bohatě stačí jen ty <b>bezplatné</b>.</p>
         <div class="parent">
             <img src="/images/kap8/GitKraken-app.png" class="learn-img-big-big">
         </div>
@@ -731,13 +701,11 @@ const chaptersData = {
         Používají ho například společnosti: Apple, Google, Amazon, Twitter, Facebook... </p>
         <div class="parent">
             <img src="/images/kap8/Tower-app.png" class="learn-img-big-big">
-            <!-- zdroj: https://www.git-tower.com/windows -->
         </div>
 
         <h3>Fork</h3>
         <div class="parent">
             <img src="/images/kap8/Fork-logo.png" class="gui-logo">
-            <!-- zdroj: https://www.pikpng.com/pngvi/hhxowiR_appicon-fork-git-logo-clipart/  -->
         </div>
         <p>Má bezplatnou i placenou verzi. Má základní funkce jako správa více repozitářů, řešení konfliktů při mergování a porovnání souborů, ale chybí mu nějaké pokročilejší.
         I tak ale pro základy postačí.</p>
@@ -747,14 +715,9 @@ const chaptersData = {
         <h3>Sourcetree</h3>
         <div class="parent">
             <img src="/images/kap8/Sourcetree-logo.png" class="gui-logo">
-            <!-- zdroj: https://icon-icons.com/icon/Sourcetree-macOS-BigSur/189711  -->
         </div>
         <p>Toto GUI je zcela zdarma, vytvořila ho firma Atlassian. Je také dobrou volbou pro grafické rozhraní. Podporuje jak Git, tak i Mercurial. 
-        Nevýhodou je ne moc přehledné prostředí.</p>
-
-        <!-- https://www.trustradius.com/products/sourcetree/reviews?qs=pros-and-cons#reviews -->
-        <!-- https://www.gitkraken.com/blog/best-git-gui-client -->
-        
+        Nevýhodou je ne moc přehledné prostředí.</p>        
         `,
         title:"Git - GUI",
         url:"/kapitola-8-gui",
@@ -889,17 +852,16 @@ const chaptersData = {
         <p> Zde pokaždé musíte napsat název napojení a větve, což je zdlouhavé. Proto se nastavuje Upstream.</p>
         <p class="margin_top">Pro každou větev se musí nastavit Push zvlášť, po pushnutí se větev na GitHubu vytvoří sama.</p>
 
-
         <h3>Pull</h3>
-        <p><b>Git pull</b> je naopak stažení změn z GitHubu do lokálního repozitáře. Nejdříve otestuje, jestli na vzdáleném repozitáři jsou změny, pokud ano, tak je stáhne a rovnou aktualizuje soubory v pracovní složce.</p>
+        <p><b>Git pull</b> je naopak stažení změn z GitHubu do lokálního repozitáře. 
+        Nejdříve otestuje, jestli na vzdáleném repozitáři jsou změny, pokud ano, tak je stáhne a rovnou aktualizuje soubory v pracovní složce.</p>
         <p class="code">git pull</p>
-
 
         <h3>Fetch</h3>
         <p><b>Git fetch</b> je podobný git pull, také otestuje a stáhne změny z GitHubu, ale <b>neaktualizuje</b> pracovní složku. Je tím pádem bezpečnější.
         <p class="code">git fetch</p>
         
-        Na změny (commity) ze vzdáleného repa se můžeme podívat příkazem:  </p>
+        <p> Na změny (commity) ze vzdáleného repa se můžeme podívat příkazem:  </p>
         <p class="code"> git log origin/main </p>
         <p> Aktuální pozice je označena HEAD -> main, pozice remote je označena origin/main.</p>
         
@@ -907,7 +869,6 @@ const chaptersData = {
         <p class="code"> git merge origin/main </p>
 
         <p class="margin_top">Jestliže ale pracujeme sami, a přesně víme, jaké změny se staly, nemusíme se pullování bát. </p>
-
 
         <h3>Clone</h3>
         <p> <b>Git clone</b> se používá k nakopírování repozitáře z GitHubu k nám na počítač. Takto si můžeme naklonovat vlastní repozitář ale i cizí.</p>
@@ -924,7 +885,6 @@ const chaptersData = {
         url: "/kapitola-10-push-pull",
         aside:"Push & Pull"
     },
-
 }
 
 export { chaptersData }
