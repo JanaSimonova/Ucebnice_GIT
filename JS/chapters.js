@@ -132,8 +132,13 @@ const chaptersData = {
         html: `
         
         <h1>Základní příkazy</h1>
-        <p>Základní příkazy Gitu jsou stejné jako v Linuxu. Pro ukázky je použita aplikace Git Bash, která se instaluje spolu s Gitem. Můžete použít také terminal ve VSCode, který přepnete vpravo na Git Bash.</p>
-        
+        <p>Tyto příkazy nejsou spojené s Gitem. Jsou to základní příkazy pro manipulaci se soubory a složkami: vytváření, čtení, procházení...
+        <br>
+        Tyto příkazy se mohou hodit, pokud se například budeme potřebovat dostat v příkazové řádce do určité složky, nebo přes konzoli vytvořit soubor.
+        <br>
+        Pro ukázky je použita aplikace Git Bash, která se instaluje spolu s Gitem. Můžete použít také terminal ve VSCode, který přepnete vpravo na Git Bash.<br> 
+        Ve Windows Příkazovém řádku (cmd) nebudou fungovat všechny příkazy, protože GitBash je založen na prostředí ve stylu Unix.</p>
+             
         <h3>ls</h3>
         <p><b>List files.</b> Tento příkaz nám vypíše složky a soubory ze složky ve které se nacházíme. Výchozí složkou je náš adresář, tedy C:/Users/&ltjméno&gt. </p>
         <div class="parent">
@@ -325,12 +330,19 @@ const chaptersData = {
             Pokud žádné změny ještě neproběhly, konzole vypíše, že není nic ke commitování.</p>
             <p class="code">git status </p>
 
-            <p>Zdě můžeme vidět upravený a už také stagenutý soubor "test.txt" a nově vytvořený, nesledovaný, soubor "new-file.txt":</p>
+            <p>Zde můžeme vidět upravený a už také stagenutý soubor "test.txt" a nově vytvořený, nesledovaný, soubor "new-file.txt":</p>
             <div class="parent">
                 <img src="/images/kap5/git_status.jpg" class="learn-img-wide-medium">
             </div>
 
-            <!-- Grafická ukázka/ vyobrazení commitů -->
+            <h3>Soubor .gitignore</h3>
+            <p>Gitignore je soubor, do kterého se píšou názvy jiných souborům, které <b>nechceme</b> aby se <b>trackovali</b>. 
+            Často jde o nějaké soubory s <b>nastavením</b> nebo moduly, např. konfigurační soubor <i>settings.json</i> pro VS Code Live Server, složka s moduly Node.js, nebo soubory s hesly a citlivými údaji.</p>
+            <p>Soubor <b>vytváříme my</b> sami a dává se přímo do inicializované složky, ne do žádné podsložky. Soubor je tedy normálně <b>viditelný</b>, není skrytý jako složka .git. 
+            Není povinné vytvářet gitignore, používá se, když ho potřebujeme.</p>
+            <div class="parent">
+                <img src="/images/kap5/gitignore.png" class="learn-img-big-big">
+            </div>
 
             <h3>Grafické zobrazení commitů</h3>
             <p>Abychom si lépe představili, jak vypadá náš repozitář s commity, můžeme si ho graficky znázornit. 
@@ -390,11 +402,11 @@ const chaptersData = {
             
             <div class="parent">
             <img src="/images/kap5/git-amend1.jpg" class="learn-img-big "> <br>
-            <i class="image-descr">Zde vidíme nepřidaný soubor soubor3.txt, ale poslední commit má v názvu, že se přidal</i> <br>
+            <p class="image-descr">Zde vidíme nepřidaný soubor soubor3.txt, ale poslední commit má v názvu, že se přidal</p> <br><br>
             <img src="/images/kap5/git-amend2.jpg" class="learn-img-big "> <br>
-            <i class="image-descr">Přidali jsme soubor do StageArea a napsali amend. Otevřel se soubor COMMIT_EDITMSG, zkontrolovali jsme změny</i> <br>
+            <p class="image-descr">Přidali jsme soubor do StageArea a napsali amend. Otevřel se soubor COMMIT_EDITMSG, zkontrolovali jsme změny</p> <br><br>
             <img src="/images/kap5/git-amend3.jpg" class="learn-img-wide-medium "><br>
-            <i class="image-descr">Soubor jsme zavřeli, commit se tím opravil a název zůstal stejný</i> <br>
+            <p class="image-descr">Soubor jsme zavřeli, commit se tím opravil a název zůstal stejný</p> <br>
             </div>
 
             <p>Jestliže chceme změnit jen popisek commitu, nemusíme otevírat celý soubor. 
@@ -849,7 +861,11 @@ const chaptersData = {
     },
     kap10: {
         html: `
-        <h1></h1>
+        <h1>Napojení lokálního repa s Githubem</h1>
+        Push
+        pull
+        fetch
+        clone
 
         `,
         title:"Git - Push, Pull",
