@@ -1,5 +1,6 @@
 
 function toggleAside(item) {
+    // if aside is = we are on page kapitoly
     var aside = document.getElementById("aside");
     if (aside) {
         aside.classList.toggle("hidden");
@@ -23,12 +24,14 @@ function toggleAside(item) {
 // Function to close the menu if the click is outside of the menu
 function closeMenuOnClickOutside(event) {
     var aside = document.getElementById("aside");
-    var item = document.querySelector("header .toggle-aside-open"); // Change this selector to match your toggle button
+    var item = document.querySelector("header .toggle-aside-open");
+    var header = document.getElementById("header");
 
     // Check if the clicked target is outside of the menu and the toggle button
     if (!aside.contains(event.target) && !item.contains(event.target)) {
         aside.classList.add("hidden");
         item.classList.remove("active");
+        header.classList.remove("active");
         // Remove the event listener since the menu is closed
         document.removeEventListener('click', closeMenuOnClickOutside);
     }
