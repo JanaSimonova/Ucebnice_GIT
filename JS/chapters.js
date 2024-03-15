@@ -134,7 +134,7 @@ const chaptersData = {
         Ve Windows Příkazovém řádku (cmd) nebudou fungovat všechny příkazy, protože GitBash je založen na prostředí Unix.</p>
              
         <h3>ls</h3>
-        <p><b>List files.</b> Tento příkaz nám vypíše složky a soubory ze složky ve které se nacházíme. Výchozí složkou je náš adresář, tedy C:/Users/&ltjméno&gt. </p>
+        <p><b>List files.</b> Tento příkaz nám vypíše obsah složky, ve které se nacházíme. Výchozí složkou je náš adresář, tedy C:/Users/&ltjméno&gt. </p>
         <div class="parent">
             <img src="/images/kap3/ls2.jpg" class="learn-img-big" >
         </div>

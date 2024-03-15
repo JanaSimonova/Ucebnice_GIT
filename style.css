@@ -576,6 +576,51 @@ hr {
     margin-left: 10px;
 }
 
+/* --------------- SEZNAM PŘÍKAZŮ  -------------------- */
+
+.table-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-div {
+    margin: 15px 5% ;
+    
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+table {
+    margin-top: 20px;
+
+    border-collapse: collapse;
+    align-self: center;
+}
+
+table,
+td {
+    border: 1px solid;
+    padding: 10px;
+}
+
+caption {
+    font-size: x-large;
+    text-align: left;
+}
+
+.col1 {
+    width: 20%;
+}
+
+.col2 {
+    width: 20%;
+}
+
+
 /* --------------------- MEDIA QUERY --------------------------- */
 
 @media (width < 1052px) {
