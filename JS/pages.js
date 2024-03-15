@@ -17,7 +17,7 @@ const pagesData = {
         html: ` 
         <div class="landing">
             <div class="container">
-                <img src="images/misc/landing-image.svg" class="landing-image" />   
+                <img src="images/misc/landing-image.svg" class="landing-image" draggable="false" />   
                 <div class="text-box">
                     <h1>GIT</h1>
                     <p>Nejpoužívanější verzovací systém na světě. </p> 

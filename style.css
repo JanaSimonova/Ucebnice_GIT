@@ -569,6 +569,7 @@ h3::before {
 
 .image-source{
     font-size:small;
+    word-spacing: 0;
     margin-top: 10px;
 }
 
