@@ -861,10 +861,20 @@ const chaptersData = {
     },
     kap10: {
         html: `
-        <h1>Napojení lokálního repa s Githubem</h1>
-        Push
-        pull
+        <h1>Založení repa na Githubu</h1>
+        <p>Jako si zakládáme repozitáře lokální, tak si můžeme založit repozitář na GitHubu. Přes náš profil dojdeme na záložku <b>Repositories</b> a dáme <b>New</b>.</p>
+        <div class="parent">
+            <img src="/images/kap10/github-repo.png" class="learn-img-big-big">
+        </div>
+        
+        <h1>Propojení lokálního repa s Githubem</h1>
+        
+        Push 
+        
+        pull        
+
         fetch
+        
         clone
 
         `,
