@@ -14,49 +14,54 @@ const handleLocation = () => {
     const path = window.location.pathname;
     const pathString = path.substring(1)
 
-    const aside = `<div id="aside" class="hidden"></div>`
-    const learnText = `<div id="learntext" class="learn-text"></div> `
-    const container = `<div id="learn-container" class="learn-container"></div>`
+    const container = document.createElement('div');
+    container.id = 'learn-container';
+    container.className = 'learn-container';
+    
+    const aside = document.createElement('aside');
+    aside.id = 'aside';
+    aside.className = 'hidden';
+    
+    const learnText = document.createElement('div');
+    learnText.id = 'learntext';
+    learnText.className = 'learn-text';
+
 
     const page = Object.values(pagesData).find(page => page.url === path) || pagesData.notFound;
 
     const html = page.html;
 
     // find path route in pagesData
-    // const kapitolaExists = routes[path] != null;
     const kapitolaExists = Object.values(pagesData).find(page => page.url === path);
 
 
     if (kapitolaExists && (pathString.includes("kapitola"))) {
-        // možná neni potřeba ten uvod
+        
+        document.getElementById("main").innerHTML = '';
+        document.getElementById("main").appendChild(container);
 
-        document.getElementById("main").innerHTML = container;
+        document.getElementById("learn-container").appendChild(aside); 
 
-        document.getElementById("learn-container").innerHTML = aside;
-        document.getElementById("learn-container").innerHTML += learnText
-        document.getElementById("learntext").innerHTML += html // kapitola
+        document.getElementById("learn-container").appendChild(learnText)
 
-        // function ↓ (div id=aside, path=url)
+        document.getElementById("learntext").innerHTML = html;
+
+        // // function ↓ (div id=aside, path=url)
         generateAside(document.getElementById("aside"), path);
 
-        
         if (page.quiz && page.quiz.length > 0) {
             // makes instance of class QuizModule
             const quiz = new QuizModule(page.quiz, "learntext");
             quiz.generate();
         }
 
-        if(page.exam && page.exam.length > 0 )
-        {
+        if (page.exam && page.exam.length > 0) {
             const exam = new examModule(page.exam, "learntext");
             exam.generate2();
         }
-
-
     }
     else {
         document.getElementById("main").innerHTML = html;
-        // document.getElementById("header").classList.toggle("toggle-aside-hidden");
 
     }
     document.title = page.title

@@ -112,8 +112,6 @@ class QuizModule {
     submit() {
         for (let i = 0; i < this.data.length; i++) {
 
-            console.log(this.choosedAnswer[i])
-
             // if choosed answer (in section i) is the same as correct answer (in ):
             if (this.choosedAnswer[i] == this.data[i].correctAnswer) {
                 this.score++;

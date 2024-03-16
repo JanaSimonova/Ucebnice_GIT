@@ -12,7 +12,7 @@ const chaptersData = {
         <div class="parent">
             <img src="images/kap1/git_branch.webp" class="learn-img-big-big">  <!-- dole https://www.g2.com/compare/phpstorm-vs-gitkraken-client -->
             <p class="image-descr">Příklad větvení v aplikaci GitKraken</p> 
-            <p class="image-source">Zdroj obrázku: <a href="https://www.g2.com/compare/phpstorm-vs-gitkraken-client">g2.com</a></p>
+            <p class="image-source">Zdroj obrázku: <a href="https://www.g2.com/compare/phpstorm-vs-gitkraken-client" target="_blank">g2.com</a></p>
         </div>
 
         <h2>Výhody VCS</h2>
@@ -84,7 +84,7 @@ const chaptersData = {
         <h1>Instalace</h1>
         
         <h2 style="margin-top:5px;">Git na Windows</h2>
-        <h3>Stáhneme si nejnovější verzi Gitu na <a href="https://git-scm.com" class="underline" >git-scm.com</a> </h3>
+        <h3>Stáhneme si nejnovější verzi Gitu na <a href="https://git-scm.com" target="_blank" >git-scm.com</a> </h3>
         <div class="parent">
             <img src="/images/kap2/git_download2.jpg" class="learn-img-big">
         </div>
@@ -855,7 +855,7 @@ const chaptersData = {
         </div>
         
         <h3>Založení účtu</h3>
-        <p> Na stránce <a href="https://github.com">github.com</a> si založíme účet. K registraci není potřeba nic speciálního, pouze <b>email</b>. Na ten přijde ověřovací kód, zadáme ho, a je to!</p>
+        <p> Na stránce <a href="https://github.com" target="_blank">github.com</a> si založíme účet. K registraci není potřeba nic speciálního, pouze <b>email</b>. Na ten přijde ověřovací kód, zadáme ho, a je to!</p>
         <p>Měli bychom být na hlavní stránce GitHubu. V pravém horním rohu je ikonka s obrázkem, to je náš profilový obrázek. Přes něj se dostaneme na <b>profil</b> a tam si můžeme upravit jméno, profilový obrázek, bio, atd.
         <div class="parent">
             <img src="/images/kap9/github-to-profile.png" class="learn-img-medium">
