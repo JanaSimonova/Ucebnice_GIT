@@ -708,6 +708,28 @@ const chaptersData = {
                 correctAnswer:3
             }
         ],
+        exam:[
+            {
+                task: ` Vše řešte pomocí příkazů, začínáme v naší domovské složce: <br>
+                <li> Založte nové, nebo otevřete staré repozitory</li>
+                <li> Proveďte pár commitů, pokud nejsou </li>
+                <li> Vytvořte novou větev </li>
+                <li> Přepněte se do ní a proveďte zase pár commitů </li>
+                <li> Přepněte se zpátky na hlavní větev </li>
+                <li> Slučte vedlejší větev ke hlavní </li>
+                <li> Vyřešte případné kolize </li>
+                `,
+                solution: ` Použity by měly být postupně tyto příkazy: 
+                <li> (git init) </li>
+                <li> git add, git commit </li>
+                <li> git branch <i>nazev-vetve</i> </li>
+                <li> git switch <i>nazev-vetve</i>, git commit... </li>
+                <li> git switch main </li>
+                <li> git merge <i>nazev-vetve</i> </li>
+                <li> --- </i>
+                `,
+            }
+        ],
         title: "Git - Mergování",
         url:"/kapitola-7-mergovani",
         aside:"Mergování"
@@ -970,6 +992,18 @@ const chaptersData = {
         <p> V neinicializované složce se vytvoří složka s repozitářem, inicializovaná. A repozitář je u nás!
          Pokud je náš, nebo na něj máme oprávnění, můžeme do něj pushovat změny.</p>
         `,
+        quiz: [
+            {
+                question: "Jaký je nejpoužívanější název připojení na GitHub?",
+                answers: ["git-origin", "origin","original"],
+                correctAnswer:2
+            },
+            {
+                question: "Jaký je rozdíl mezi Pull a Fetch?",
+                answers: ["Fetch stáhne změny rovnou do pracovní složky", "Pull posílá změny na GitHub","Pull stáhne změny rovnou do pracovní slsožky"],
+                correctAnswer:1
+            }
+        ],
         title:"Git - Push, Pull",
         url: "/kapitola-10-push-pull",
         aside:"Push & Pull"
