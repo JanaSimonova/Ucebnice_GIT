@@ -207,10 +207,32 @@ const chaptersData = {
         ],
         exam:[
             {
-                task: `Hi <br> sdjhfg <p>pragrap</p> <i>isfislg</i><bbold></bbold>
-                <li>poolzdak</li> fds jgl fjgkf gkfjgfljgdlkfjglkfjgdlfgjsldkgh
+                task: ` Vše řešte pomocí příkazů, začínáme v naší domovské složce: <br>
+                <li> Vypište obsah složky </li>
+                <li> Přejděte na plochu </li>
+                <li> Vytvořte složku <i>Kniha</i> </li>
+                <li> Přejděte do složky <i>Kniha</i> </li>
+                <li> Vytvořte zde 3 soubory: uvod.txt, kapitola.txt, zaver.txt </li>
+                <li> Otevřete soubor uvod.txt v poznámkovém bloku, něco do něj napište a uložte </li>
+                <li> Vypište obsah souboru uvod.txt přes příkaz </li>
+                <li> Smažte všechny sobory </li>
+                <li> Vyjděte ze složky o jednu výš</li>
+                <li> Smažte složku <i>Kniha</i> </li>
                 `,
-                solution:"a tady je text řešení bububu"
+                solution:` Použity by měli být postupně tyto příkazy: <br>
+                <li> ls </li>
+                <li> cd Desktop/ </li>
+                <li> mkdir Kniha </li>
+                <li> cd Kniha/ </li>
+                <li> touch uvod.txt kapitola.txt zaver.txt </li>
+                <li> --- </li>
+                <li> cat uvod.txt </li>
+                <li> rm uvod.txt kapitola.txt zaver.txt </li>
+                <li> cd ..</li>
+                <li> rmdir Kniha </li>
+
+                
+                `
             }
         ],
         title: "Git - Základní příkazy",

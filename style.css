@@ -645,11 +645,11 @@ caption {
     border: 1px solid var(--primary-color);
     margin-top: 10px;   
     padding: 10px;
-    cursor: pointer;
 }
 
 .exam-tile h2{
     margin: 0;
+    cursor: pointer;
 }
 
 .exam-content {
