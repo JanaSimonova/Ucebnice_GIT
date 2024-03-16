@@ -592,6 +592,28 @@ const chaptersData = {
                 correctAnswer: 3
             }
         ],
+        exam:[
+            {
+                task: ` Vše řešte pomocí příkazů, začínáme v naší domovské složce: <br>
+                <li> Založte nové, nebo otevřete staré repozitory</li>
+                <li> Vytvořte novou větev feature </li>
+                <li> Přepněte se do ní </li>
+                <li> Provedte pár commitů </li>
+                <li> Přejmenujte větev </li>
+                <li> Přepněte se zpátky do hlavní větve </li>
+                <li> Smažte druhou větev </li>
+                `,
+                solution: ` Použity by měly být postupně tyto příkazy: 
+                <li> (git init) </li>
+                <li> git branch feature </li>
+                <li> git switch feature </li>
+                <li> git add, git commit ... </li>
+                <li> git branch -m <i>novy-nazev</i></li>
+                <li> git switch main </li>
+                <li> git branch -D <i>nazev-vetve</i> </li>
+                `,
+            }
+        ],
         title: "Git - Branches",
         url:"/kapitola-6-branches",
         aside:"Branches"
