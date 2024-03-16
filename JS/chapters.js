@@ -207,7 +207,9 @@ const chaptersData = {
         ],
         exam:[
             {
-                task: "Tohle je text zadani",
+                task: `Hi <br> sdjhfg <p>pragrap</p> <i>isfislg</i><bbold></bbold>
+                <li>poolzdak</li> fds jgl fjgkf gkfjgfljgdlkfjglkfjgdlfgjsldkgh
+                `,
                 solution:"a tady je text řešení bububu"
             }
         ],

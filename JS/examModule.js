@@ -48,7 +48,7 @@ class examModule {
 
 
         const content1 = document.createElement("p")
-        content1.textContent = this.data[0].task
+        content1.innerHTML = this.data[0].task
         examContentDiv1.appendChild(content1)
 
         const content2 = document.createElement("p")
