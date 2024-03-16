@@ -644,7 +644,7 @@ caption {
 .exam-tile {
     border: 1px solid var(--primary-color);
     margin-top: 10px;   
-    padding: 10px;
+    padding: 20px;
 }
 
 .exam-tile h2{
@@ -656,6 +656,9 @@ caption {
     display: none;
     cursor: auto;
     padding-top: 10px;
+}
+.exam-content li {
+    line-height: 30px;
 }
 
 

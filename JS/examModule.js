@@ -15,7 +15,7 @@ class examModule {
         main.appendChild(hr);
 
         const h1 = document.createElement("h1")
-        h1.textContent = "Praktický příklad"
+        h1.textContent = "Příklad na procvičení"
         main.appendChild(h1)
 
         const examTile1 = document.createElement("div")
