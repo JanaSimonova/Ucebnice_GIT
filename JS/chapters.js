@@ -219,7 +219,7 @@ const chaptersData = {
                 <li> Vyjděte ze složky o jednu výš</li>
                 <li> Smažte složku <i>Kniha</i> </li>
                 `,
-                solution:` Použity by měli být postupně tyto příkazy: <br>
+                solution:` Použity by měly být postupně tyto příkazy: <br>
                 <li> ls </li>
                 <li> cd Desktop/ </li>
                 <li> mkdir Kniha </li>
@@ -230,8 +230,6 @@ const chaptersData = {
                 <li> rm uvod.txt kapitola.txt zaver.txt </li>
                 <li> cd ..</li>
                 <li> rmdir Kniha </li>
-
-                
                 `
             }
         ],
@@ -484,6 +482,47 @@ const chaptersData = {
                 answers: ["mezerník a pak Q", "mezerník a pak X", "enter a pak Z "],
                 correctAnswer: 1,
             },
+        ],
+        exam: [
+            {
+                task: `Vše řešte pomocí příkazů, začínáme v naší domovské složce: <br>  
+                <li> Přejděte na plochu </li>
+                <li> Vytvořte složku <i>Farma</i> a přejděte do ní </li>
+                <li> Inicializujte složku </li>
+                <li> Vytvořte soubor zvirata.txt </li>
+                <li> Proveďte první commit se zprávou "inital commit" (nezapomeňte přidat do StageArea)</li>
+                <li> Otevřete soubor a připište nějaké zvíře </li>
+                <li> Podívejte se na změny </li>
+                <li> Proveďte další commit </li>
+                <li> Vytvořte soubor krmivo.txt </li>
+                <li> Připište do něj nějaké krmivo </li>
+                <li> Proveďte commit </li>
+                <li> Vypište si všechny commit, dlouhým i zkráceným zápisem </li>
+                <li> Udělejte několik dalších úprav a commitů, třeba i nové soubory, nebo smazat jiné, nové složky... </li>
+                <li> Do posledního commitu přidejte nějaké změny. </li>
+                <li> Přepněte se zpět na nějaký commit v minulosti.</li>
+                <li> Trénujte, jak potřebujete </li>
+                `,
+                solution: ` Použity by měly být postupně tyto příkazy: 
+                <li> cd Desktop/ </li>
+                <li> mkdir Farma, cd Farma/ </li>
+                <li> git init </li>
+                <li> touch zvirata.txt </li>
+                <li> git add zvirata.txt, git commit -m "inital commit"</li>
+                <li> --- </li>
+                <li> git status </li>
+                <li> git commit -m "např: pridano zvire"</li>
+                <li> touch krmivo.txt </li>
+                <li> --- </li>
+                <li> git commit -m "vytvoreno krmivo"</li>
+                <li> git log, git log --oneline </li>
+                <li> commit, touch, mkdir, rm... </li>
+                <li> gut commit --amend </li>
+                <li> git checkout <i>hash-commitu</i>, git switch <i>main</i> </li>
+                <li> atd... </li>
+                
+                `
+            }
         ],
         title: "Git - Commity",
         url:"/kapitola-5-commity",
@@ -739,8 +778,6 @@ const chaptersData = {
         </div>
         <p>Má bezplatnou i placenou verzi. Má základní funkce jako správa více repozitářů, řešení konfliktů při mergování a porovnání souborů, ale chybí mu nějaké pokročilejší.
         I tak ale pro základy postačí.</p>
-
-
 
         <h3>Sourcetree</h3>
         <div class="parent">
