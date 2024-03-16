@@ -1,5 +1,6 @@
 import { pagesData } from "./pages.js";
 import QuizModule from './QuizModule.js';
+import examModule from './examModule.js'
 
 const route = (event) => {
     event = event || window.event;
@@ -38,10 +39,17 @@ const handleLocation = () => {
         // function ↓ (div id=aside, path=url)
         generateAside(document.getElementById("aside"), path);
 
-        // if 
+        
         if (page.quiz && page.quiz.length > 0) {
+            // makes instance of class QuizModule
             const quiz = new QuizModule(page.quiz, "learntext");
             quiz.generate();
+        }
+
+        if(page.exam && page.exam.length > 0 )
+        {
+            const exam = new examModule(page.exam, "learntext");
+            exam.generate2();
         }
 
 

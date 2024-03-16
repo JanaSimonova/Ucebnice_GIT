@@ -205,6 +205,12 @@ const chaptersData = {
                 correctAnswer: 1,
             }
         ],
+        exam:[
+            {
+                task: "Tohle je text zadani",
+                solution:"a tady je text řešení bububu"
+            }
+        ],
         title: "Git - Základní příkazy",
         url:"/kapitola-3-zakladni-prikazy",
         aside:"Základní příkazy"
